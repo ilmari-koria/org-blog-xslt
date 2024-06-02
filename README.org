@@ -1,1 +1,3 @@
 WIP XSL workflow for my blog [[https://ilmarikoria.xyz]].
+
+XML conversion via https://github.com/ndw/org-to-xml.
