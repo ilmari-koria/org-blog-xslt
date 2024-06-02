@@ -1,0 +1,21 @@
+body {
+  max-width: 65rem;
+  margin: 1rem; /* top, right, bottom, and left */
+  padding: 0.5rem;
+  font-family: "Noto Serif TC", "Source Han Serif", serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Noto Color Emoji", "Android Emoji", "EmojiSymbols",
+    "EmojiOne Mozilla", "Twemoji Mozilla", "Segoe UI Symbol";
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: sans-serif;
+}
+
+p {
+  text-align: justify;
+  text-justify: inter-word;
+}
