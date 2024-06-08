@@ -7,41 +7,56 @@ STATIC_DIR="../tmp/html/static"
 IMAGES_DIR="../images"
 BIB_DIR="../tmp/bib"
 
-XSL_FILE="../xsl/stylesheet.xsl"
 CSS_FILE="../css/style.css"
+BIB_FILE="../bib/bibliography.bib"
+LOG_FILE="update-website.log"
+
+XSLT="../xsl/main.xsl"
 
 SAXON_JAR="../saxon/SaxonHE12-4J/saxon-he-12.4.jar"
 
+DELIM="echo -e \n\n\n"
+
+# log output
+touch $LOG_FILE
+exec > >(tee $LOG_FILE) 2>&1
+
 # call om-to-xml via emacs and mv xml
-emacs --batch -l ./my-convert-blog-posts-to-xml.el -f my-convert-blog-posts-to-xml
+emacs --batch -l my-convert-blog-posts-to-xml.el -f my-convert-blog-posts-to-xml
 mv $ORG_DIR/*.xml $XML_DIR
 
-# convert bib.tex to xhtml
-cd $XML_DIR
-bibtex2html --footer "" --header "" --no-header --nodoc --nobibsource --ignore-errors --sort-as-bibtex ../../bib/bibliography.bib
-tidy -q --numeric-entities yes -asxhtml -o bibliography.xml bibliography.html
-cd ../../script
+# convert bib.tex to html
+$DELIM
+bibtex2html --style "ieeetr" --footer "" --header "" --no-header --nodoc --nobibsource --ignore-errors --sort-as-bibtex --output $HTML_DIR/bibliography $BIB_FILE
 
-# xsl call
+#convert bib html to xhtml
+$DELIM
+tidy -q --numeric-entities yes -asxhtml -o $XML_DIR/bibliography.xml $HTML_DIR/bibliography.html
+
+# xsl call blog posts
+$DELIM
 for xml_file in $XML_DIR/*.xml; do
     if [ -f "$xml_file" ]; then
         html_file="$HTML_DIR/$(basename "$xml_file" .xml).html"
-        java -jar $SAXON_JAR -t -s:"$xml_file" -xsl:"$XSL_FILE" -o:"$html_file"
+        java -jar $SAXON_JAR -t -s:"$xml_file" -xsl:"$XSLT" -o:"$html_file"
     fi
 done
 
 # clean up bib files
-rm $XML_DIR/bibliography.xml && rm $XML_DIR/bibliography.html && rm $HTML_DIR/bibliography.html
+$DELIM
+rm --verbose $XML_DIR/bibliography.xml
+rm --verbose $XML_DIR/bibliography.html
+rm --verbose $HTML_DIR/bibliography.html
 
-# html tidy
+# tidy html files
+$DELIM
 for html_file in $HTML_DIR/*.html; do
     tidy -utf8 -indent -modify $html_file        
 done
 
-
-
-# bib an style.css
-cp $CSS_FILE $HTML_DIR
+# cp css 
+$DELIM
+cp --verbose $CSS_FILE $HTML_DIR
 
 # create gallery
 # fgallery $IMAGES_DIR $STATIC_DIR
