@@ -96,7 +96,7 @@
 
   </xsl:template>
 
-  <xsl:template match="//org:headline">
+  <xsl:template match="//org:headline" priority="1">
     <xsl:choose>
       <xsl:when test="@level = 1">
         <h3>
@@ -121,10 +121,16 @@
   </xsl:template>
 
   <xsl:template match="org:section">
-    <xsl:apply-templates select="org:paragraph | org:footnote-definition" />
+    <xsl:apply-templates select="org:paragraph | org:footnote-definition | org:quote-block" />
   </xsl:template>
 
-  <xsl:template match="org:headline[@raw-value='References']">
+  <xsl:template match="org:quote-block">
+    <blockquote>
+      <xsl:apply-templates select="org:paragraph"/>
+    </blockquote>
+  </xsl:template>
+
+  <xsl:template match="org:headline[@raw-value='References']" priority="2">
      <xsl:apply-templates />
    </xsl:template>
 
@@ -197,12 +203,6 @@
     </figcaption>
   </xsl:template>
 
-  <xsl:template match="org:quote-block">
-    <blockquote>
-      <xsl:apply-templates select="org:paragraph"/>
-    </blockquote>
-  </xsl:template>
-
   <xsl:template match="org:footnote-reference">
     <a href="#footnote{@label}">
       <xsl:value-of select="@label" />
@@ -210,21 +210,20 @@
   </xsl:template>
 
   <xsl:template match="org:footnote-definition">
-    <span>[ 
-    <xsl:value-of select="@label" />]</span>
+    <span>[<xsl:value-of select="@label" />]</span>
     <p id="footnote{@label}">
       <xsl:apply-templates />
     </p>
+  </xsl:template>
+
+  <xsl:template name="generate-timestamp">
+    <xsl:value-of select="current-date()" />
   </xsl:template>
 
   <xsl:template match="node()|@*">
     <xsl:copy>
       <xsl:apply-templates select="node()|@*" />
     </xsl:copy>
-  </xsl:template>
-
-  <xsl:template name="generate-timestamp">
-    <xsl:value-of select="current-date()" />
   </xsl:template>
 
 </xsl:stylesheet>
