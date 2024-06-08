@@ -1,6 +1,8 @@
 #!/bin/bash
 
-ORG_DIR="../posts"
+POSTS_DIR="../posts"
+OTHER_DIR="../other-pages"
+
 XML_DIR="../tmp/xml"
 HTML_DIR="../tmp/html"
 STATIC_DIR="../tmp/html/static"
@@ -11,7 +13,8 @@ CSS_FILE="../css/style.css"
 BIB_FILE="../bib/bibliography.bib"
 LOG_FILE="update-website.log"
 
-XSLT="../xsl/main.xsl"
+XSL_POSTS="../xsl/posts.xsl"
+XSL_OTHER="../xsl/other.xsl"
 
 SAXON_JAR="../saxon/SaxonHE12-4J/saxon-he-12.4.jar"
 
@@ -38,7 +41,16 @@ $DELIM
 for xml_file in $XML_DIR/*.xml; do
     if [ -f "$xml_file" ]; then
         html_file="$HTML_DIR/$(basename "$xml_file" .xml).html"
-        java -jar $SAXON_JAR -t -s:"$xml_file" -xsl:"$XSLT" -o:"$html_file"
+        java -jar $SAXON_JAR -t -s:"$xml_file" -xsl:"$XSL_POSTS" -o:"$html_file"
+    fi
+done
+
+# xsl call other pages
+$DELIM
+for xml_file in $XML_DIR/*.xml; do
+    if [ -f "$xml_file" ]; then
+        html_file="$HTML_DIR/$(basename "$xml_file" .xml).html"
+        java -jar $SAXON_JAR -t -s:"$xml_file" -xsl:"$XSL_OTHER" -o:"$html_file"
     fi
 done
 
