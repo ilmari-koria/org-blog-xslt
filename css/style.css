@@ -7,7 +7,11 @@ body {
     "EmojiOne Mozilla", "Twemoji Mozilla", "Segoe UI Symbol";
 }
 
-h1,
+h1 {
+    font-variant: small-caps;
+    font-weight: normal;
+}
+
 h2,
 h3,
 h4,
@@ -34,14 +38,29 @@ p {
     margin: 0 1.25rem 0 0;    
 }
 
-.footnote-reference p {
+.footnote p {
     display: inline-block;
+    margin: 0 0 1rem 0;
+}
+
+#container {
+    display: flex;
 }
 
 #preamble {
     width: 20%;
     margin: 1.5rem;
     border-right: 2px solid black;
+}
+
+#preamble ul {
+    list-style: none;
+    margin: 0 0 1.25rem 0;
+    padding: 0 0 0 0;
+}
+
+#preamble li {
+    margin: 0 0 1rem 0;
 }
 
 #content {
@@ -52,3 +71,5 @@ p {
 #postamble {
     border-top: 2px solid black;
 }
+
+
