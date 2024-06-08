@@ -19,3 +19,36 @@ p {
   text-align: justify;
   text-justify: inter-word;
 }
+
+#references > ul {
+    list-style: none;
+    margin: 0 0 1.25rem 0;
+    padding: 0 0 0 0;
+}
+
+#references > li {
+    padding: 0 0 0 0;
+}
+
+#references ul li span {
+    margin: 0 1.25rem 0 0;    
+}
+
+.footnote-reference p {
+    display: inline-block;
+}
+
+#preamble {
+    width: 20%;
+    margin: 1.5rem;
+    border-right: 2px solid black;
+}
+
+#content {
+    width: 80%;
+    margin: 1.5rem;
+}
+
+#postamble {
+    border-top: 2px solid black;
+}
