@@ -18,21 +18,18 @@
     <html>
       <head>
         <meta charset="UTF-8" />
-
         <meta name="description" content="{$meta-description}" />
         <meta name="author"      content="ilmarikoria@posteo.net" />
         <meta name="viewport"    content="initial-scale=1.0,maximum-scale=1.0,user-scalable=no" />
-
         <link rel="canonical"  href="https://ilmarikoria.xyz" />
         <link rel="stylesheet" href="style.css" type="text/css" />
-
         <title>
           <xsl:value-of select="//org:keyword[@key='TITLE']/@value" />
         </title>
       </head>
-
       <body>
-        <div class="preamble">
+        <div id="container">
+        <div id="preamble">
           <h1>Ilmari's Webpage</h1>
           <ul>
             <li>
@@ -49,36 +46,38 @@
             </li>
           </ul>
         </div>
-
-        <hr />
-
-        <div class="content">
+        <div id="content">
         <h2>
           <xsl:value-of select="//org:keyword[@key='TITLE']/@value" />
         </h2>
         <p>Posted: 
         <xsl:value-of select="//org:keyword[@key='DATE']/@value" /></p>
         <xsl:apply-templates select="//org:headline" />
-        <h2>References</h2>
+
+         <div id="footnotes">
+            <h3>Footnotes</h3>
+            <xsl:apply-templates select="//org:footnote-definition" />
+          </div>
+                
         	<div id="references">
+                <h3>References</h3>
         	  <xsl:for-each-group select="//org:citation-reference"
         	                      group-by="@key">
         	  <xsl:apply-templates select="current-group()[1]" />
         	  </xsl:for-each-group>
         	</div>
+
         </div>
-
-        <hr />
-
-        <div class="postamble">
+        </div>
+        <div id="postamble">
         <ul>
           <li>This page was last modified on 
           <xsl:call-template name="generate-timestamp" />.</li>
-          <li>Created/generated with: 
+          <li>Generated with: 
           	<ol>
-          	  <li>GNU Emacs</li>
-          	  <li>org-mode and om-to-xml</li>
-          	  <li>Saxon HE/XSL</li>
+          	  <li><a href="https://www.gnu.org/software/emacs/">GNU Emacs</a></li>
+          	  <li><a href="https://orgmode.org/">org-mode</a> and <a href="https://github.com/ndw/org-to-xml">org-to-xml</a></li>
+          	  <li><a href="https://www.saxonica.com/download/java.xml">SaxonJ-HE</a></li>
           	</ol>
           </li>
           <li>Public Key: <a href="https://ilmarikoria.xyz/static/ilmari-koria-public-key.asc">D8DA 85D0 4C6A BD1F 8DA4 2895 3E3B 85AB 3A8D FFD4</a></li>
@@ -90,13 +89,11 @@
           </li>
         </ul>
         </div>
-
       </body>
     </html>
-
   </xsl:template>
 
-  <xsl:template match="//org:headline" priority="1">
+  <xsl:template match="//org:headline[not(org:tags = 'ignore')]">
     <xsl:choose>
       <xsl:when test="@level = 1">
         <h3>
@@ -121,7 +118,7 @@
   </xsl:template>
 
   <xsl:template match="org:section">
-    <xsl:apply-templates select="org:paragraph | org:footnote-definition | org:quote-block" />
+    <xsl:apply-templates select="org:paragraph | org:quote-block" />
   </xsl:template>
 
   <xsl:template match="org:quote-block">
@@ -130,9 +127,9 @@
     </blockquote>
   </xsl:template>
 
-  <xsl:template match="org:headline[@raw-value='References']" priority="2">
-     <xsl:apply-templates />
-   </xsl:template>
+  <xsl:template match="org:tags" />
+
+  <xsl:template match="org:headline[@raw-value='References']" priority="3" />
 
   <xsl:template match="org:paragraph">
     <p>
@@ -210,10 +207,12 @@
   </xsl:template>
 
   <xsl:template match="org:footnote-definition">
-    <span>[<xsl:value-of select="@label" />]</span>
-    <p id="footnote{@label}">
-      <xsl:apply-templates />
-    </p>
+    <div class="footnote">
+      <span>[<xsl:value-of select="@label" />]</span>
+      <p id="footnote{@label}">
+        <xsl:apply-templates />
+      </p>
+    </div>
   </xsl:template>
 
   <xsl:template name="generate-timestamp">
