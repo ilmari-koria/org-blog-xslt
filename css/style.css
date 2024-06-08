@@ -85,3 +85,8 @@ figure {
 figure figcaption {
   font-size: small;
 }
+
+#references li {
+    font-family: monospace;
+    font-size: 110%;
+}
