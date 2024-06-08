@@ -72,4 +72,16 @@ p {
     border-top: 2px solid black;
 }
 
+img {
+  height: auto;
+  max-width: 350px;
+}
 
+figure {
+  display: block;
+  width: auto;
+}
+
+figure figcaption {
+  font-size: small;
+}
