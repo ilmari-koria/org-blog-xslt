@@ -2,31 +2,33 @@
 
 <xsl:stylesheet version="3.0"
                 xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-                xmlns:org="https://nwalsh.com/ns/org-to-xml"
+                xpath-default-namespace="org:https://nwalsh.com/ns/org-to-xml"
                 exclude-result-prefixes="org">
 
   <xsl:output method="xml" indent="yes" omit-xml-declaration="yes" />
 
   <xsl:variable name="meta-description"
-                select="//org:keyword[@key='DESCRIPTION']/@value" />
+                select="//keyword[@key='DESCRIPTION']/@value" />
   <xsl:variable name="footnote-number"
-                select="//org:footnote-reference/@label" />
+                select="//footnote-reference/@label" />
   <xsl:variable name="bibliography"
                 select="document('../tmp/xml/bibliography.xml')" />
 
   <xsl:template match="/">
     <html>
       <head>
+
         <meta charset="UTF-8" />
         <meta name="description" content="{$meta-description}" />
-        <meta name="author"      content="ilmarikoria@posteo.net" />
-        <meta name="viewport"    content="initial-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+        <meta name="author" content="ilmarikoria@posteo.net" />
+        <meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0,user-scalable=no" />
         <link rel="canonical"  href="https://ilmarikoria.xyz" />
         <link rel="stylesheet" href="style.css" type="text/css" />
         <title>
-          <xsl:value-of select="//org:keyword[@key='TITLE']/@value" />
+          <xsl:value-of select="//keyword[@key='TITLE']/@value" />
         </title>
       </head>
+
       <body>
         <div id="container">
         <div id="preamble">
@@ -48,20 +50,20 @@
         </div>
         <div id="content">
         <h2>
-          <xsl:value-of select="//org:keyword[@key='TITLE']/@value" />
+          <xsl:value-of select="//keyword[@key='TITLE']/@value" />
         </h2>
         <p>Posted: 
-        <xsl:value-of select="//org:keyword[@key='DATE']/@value" /></p>
-        <xsl:apply-templates select="//org:headline" />
+        <xsl:value-of select="//keyword[@key='DATE']/@value" /></p>
+        <xsl:apply-templates select="//headline" />
 
          <div id="footnotes">
             <h3>Footnotes</h3>
-            <xsl:apply-templates select="//org:footnote-definition" />
+            <xsl:apply-templates select="//footnote-definition" />
           </div>
                 
         	<div id="references">
                 <h3>References</h3>
-        	  <xsl:for-each-group select="//org:citation-reference"
+        	  <xsl:for-each-group select="//citation-reference"
         	                      group-by="@key">
         	  <xsl:apply-templates select="current-group()[1]" />
         	  </xsl:for-each-group>
@@ -93,7 +95,7 @@
     </html>
   </xsl:template>
 
-  <xsl:template match="//org:headline[not(org:tags = 'ignore')]">
+  <xsl:template match="//headline[not(tags = 'ignore')]">
     <xsl:choose>
       <xsl:when test="@level = 1">
         <h3>
@@ -114,43 +116,43 @@
         <xsl:value-of select="@raw-value" />
       </xsl:otherwise>
     </xsl:choose>
-    <xsl:apply-templates select="org:section" />
+    <xsl:apply-templates select="section" />
   </xsl:template>
 
-  <xsl:template match="org:section">
-    <xsl:apply-templates select="org:paragraph | org:quote-block" />
+  <xsl:template match="section">
+    <xsl:apply-templates select="paragraph | quote-block" />
   </xsl:template>
 
-  <xsl:template match="org:quote-block">
+  <xsl:template match="quote-block">
     <blockquote>
-      <xsl:apply-templates select="org:paragraph"/>
+      <xsl:apply-templates select="paragraph"/>
     </blockquote>
   </xsl:template>
 
-  <xsl:template match="org:tags" />
+  <xsl:template match="tags" />
 
-  <xsl:template match="org:headline[@raw-value='References']" priority="3" />
+  <xsl:template match="headline[@raw-value='References']" priority="3" />
 
-  <xsl:template match="org:paragraph">
+  <xsl:template match="paragraph">
     <p>
-      <xsl:apply-templates select="node()" />
+      <xsl:apply-templates />
     </p>
   </xsl:template>
 
-  <xsl:template match="org:italic">
+  <xsl:template match="italic">
     <i>
-      <xsl:apply-templates select="node()" />
+      <xsl:apply-templates />
     </i>
   </xsl:template>
 
-  <xsl:template match="org:bold">
+  <xsl:template match="bold">
     <b>
-      <xsl:apply-templates select="node()" />
+      <xsl:apply-templates />
     </b>
   </xsl:template>
 
-  <xsl:template match="org:citation">
-    <xsl:for-each select="org:citation-reference">
+  <xsl:template match="citation">
+    <xsl:for-each select="citation-reference">
       <xsl:variable name="key"
                     select="@key" />
       <xsl:variable name="bib-entry"
@@ -161,7 +163,7 @@
     </xsl:for-each>
   </xsl:template>
 
-  <xsl:template match="org:citation-reference">
+  <xsl:template match="citation-reference">
     <xsl:variable name="key" select="@key" />
     <xsl:variable name="bib-entry"
                   select="$bibliography//*:a[@name = $key]/ancestor::*:tr" />
@@ -175,7 +177,7 @@
     </ul>
   </xsl:template>
 
-  <xsl:template match="org:link">
+  <xsl:template match="link">
     <a href="{@raw-link}">
       <xsl:choose>
         <xsl:when test="@format = 'plain'">
@@ -188,25 +190,25 @@
     </a>
   </xsl:template>
 
-  <xsl:template match="org:link[@type='file']">
+  <xsl:template match="link[@type='file']">
     <figure>
       <img src="{@raw-link}" alt="{@path}"></img>
     </figure>
   </xsl:template>
 
-  <xsl:template match="org:caption" mode="figcaption">
+  <xsl:template match="caption" mode="figcaption">
     <figcaption>
-      <xsl:apply-templates select="node()" />
+      <xsl:apply-templates />
     </figcaption>
   </xsl:template>
 
-  <xsl:template match="org:footnote-reference">
+  <xsl:template match="footnote-reference">
     <a href="#footnote{@label}">
       <xsl:value-of select="@label" />
     </a>
   </xsl:template>
 
-  <xsl:template match="org:footnote-definition">
+  <xsl:template match="footnote-definition">
     <div class="footnote">
       <span>[<xsl:value-of select="@label" />]</span>
       <p id="footnote{@label}">
