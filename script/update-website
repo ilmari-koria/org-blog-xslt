@@ -2,7 +2,6 @@
 
 POSTS_DIR="../posts"
 OTHER_DIR="../other-pages"
-
 XML_DIR="../tmp/xml"
 HTML_DIR="../tmp/html"
 STATIC_DIR="../tmp/html/static"
@@ -26,7 +25,12 @@ exec > >(tee $LOG_FILE) 2>&1
 
 # call om-to-xml via emacs and mv xml
 emacs --batch -l my-convert-blog-posts-to-xml.el -f my-convert-blog-posts-to-xml
-mv $ORG_DIR/*.xml $XML_DIR
+mv $POSTS_DIR/*.xml $XML_DIR/posts/
+
+# concat blog xml files
+for xml_file in $XML_DIR/posts/*.xml; do 
+    cat "$xml_file" >> $XML_DIR/concat/posts-concat.xml
+done
 
 # convert bib.tex to html
 $DELIM
@@ -46,13 +50,13 @@ for xml_file in $XML_DIR/*.xml; do
 done
 
 # xsl call other pages
-$DELIM
-for xml_file in $XML_DIR/*.xml; do
-    if [ -f "$xml_file" ]; then
-        html_file="$HTML_DIR/$(basename "$xml_file" .xml).html"
-        java -jar $SAXON_JAR -t -s:"$xml_file" -xsl:"$XSL_OTHER" -o:"$html_file"
-    fi
-done
+# $DELIM
+# for xml_file in $XML_DIR/*.xml; do
+#     if [ -f "$xml_file" ]; then
+#         html_file="$HTML_DIR/$(basename "$xml_file" .xml).html"
+#         java -jar $SAXON_JAR -t -s:"$xml_file" -xsl:"$XSL_OTHER" -o:"$html_file"
+#     fi
+# done
 
 # clean up bib files
 $DELIM
