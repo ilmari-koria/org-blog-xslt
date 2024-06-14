@@ -1,3 +1,15 @@
-WIP XSL workflow for my blog [[https://ilmarikoria.xyz]].
+* About
+- WIP XSL/XProc workflow for my blog [[https://ilmarikoria.xyz]].
+- XML conversion via https://github.com/ndw/org-to-xml.
 
-XML conversion via https://github.com/ndw/org-to-xml.
+* Notes
+** Usage
+~java com.xmlcalabash.drivers.Main --version~
+
+** Logging Dependency
+On Debian stable, add Java logging library jar files (e.g. ~slf4j-nop-2.0.13.jar~, including ~slf4j-api-2.0.13.jar~) to ~$CLASSPATH~:
+
+#+begin_src sh
+export CLASSPATH=$HOME/my-files/blog/java/calabash/xmlcalabash-1.5.7-120/lib/*.jar:$HOME/my-files/blog/java/calabash/xmlcalabash-1.5.7-120/xmlcalabash-1.5.7-120.jar
+#+end_src
+
