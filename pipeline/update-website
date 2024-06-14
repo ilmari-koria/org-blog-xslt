@@ -33,15 +33,12 @@ for xml_file in $XML_DIR/posts/*.xml; do
 done
 
 # convert bib.tex to html
-$DELIM
 bibtex2html --style "ieeetr" --footer "" --header "" --no-header --nodoc --nobibsource --ignore-errors --sort-as-bibtex --output $HTML_DIR/bibliography $BIB_FILE
 
 #convert bib html to xhtml
-$DELIM
 tidy -q --numeric-entities yes -asxhtml -o $XML_DIR/bibliography.xml $HTML_DIR/bibliography.html
 
 # xsl call blog posts
-$DELIM
 for xml_file in $XML_DIR/*.xml; do
     if [ -f "$xml_file" ]; then
         html_file="$HTML_DIR/$(basename "$xml_file" .xml).html"
@@ -50,7 +47,6 @@ for xml_file in $XML_DIR/*.xml; do
 done
 
 # xsl call other pages
-# $DELIM
 # for xml_file in $XML_DIR/*.xml; do
 #     if [ -f "$xml_file" ]; then
 #         html_file="$HTML_DIR/$(basename "$xml_file" .xml).html"
@@ -59,19 +55,16 @@ done
 # done
 
 # clean up bib files
-$DELIM
 rm --verbose $XML_DIR/bibliography.xml
 rm --verbose $XML_DIR/bibliography.html
 rm --verbose $HTML_DIR/bibliography.html
 
 # tidy html files
-$DELIM
 for html_file in $HTML_DIR/*.html; do
     tidy -utf8 -indent -modify $html_file        
 done
 
 # cp css 
-$DELIM
 cp --verbose $CSS_FILE $HTML_DIR
 
 # create gallery
