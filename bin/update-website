@@ -1,0 +1,87 @@
+#!/bin/bash
+
+POSTS_DIR="../pages/posts"
+OTHER_DIR="../pages/other-pages"
+XML_DIR="../tmp/xml"
+HTML_DIR="../tmp/html"
+STATIC_DIR="../tmp/html/static"
+IMAGES_DIR="../images"
+BIB_DIR="../tmp/bib"
+
+CSS_FILE="../static/css/style.css"
+BIB_FILE="../bib/bibliography.bib"
+LOG_FILE="update-website.log"
+
+XSL_POSTS="../xsl/style.xsl"
+SAXON_JAR="../saxon/saxon-he-12.4.jar"
+
+echo "Updating Website."
+
+# log output
+touch $LOG_FILE
+exec > >(tee $LOG_FILE) 2>&1 
+
+# call om-to-xml via emacs and mv xml
+# TODO DRY
+emacs --batch -l my-convert-blog-posts-to-xml.el -f my-convert-blog-posts-to-xml
+emacs --batch -l my-convert-blog-posts-to-xml.el -f my-convert-blog-pages-to-xml
+mv $POSTS_DIR/*.xml $XML_DIR/posts/
+mv $OTHER_DIR/*.xml $XML_DIR/
+
+# concat blog xml files
+for xml_file in $XML_DIR/posts/*.xml; do 
+    cat "$xml_file" >> $XML_DIR/concat/posts-concat.xml
+done
+
+# convert bib.tex to html
+bibtex2html --style "ieeetr" --footer "" --header "" --no-header --nodoc --nobibsource --ignore-errors --sort-as-bibtex --output $HTML_DIR/bibliography $BIB_FILE
+
+#convert bib html to xhtml
+tidy -q --numeric-entities yes -asxhtml -o $XML_DIR/bibliography/bibliography.xml $HTML_DIR/bibliography.html
+rm $HTML_DIR/bibliography.html
+
+# xsl call blog posts
+# TODO DRY
+for xml_file in $XML_DIR/posts/*.xml; do
+    if [ -f "$xml_file" ]; then
+        html_file="$HTML_DIR/$(basename "$xml_file" .xml).html"
+        java -jar $SAXON_JAR -t -s:"$xml_file" -xsl:"$XSL_POSTS" -o:"$html_file"
+    fi
+done
+
+# xsl call pages
+for xml_file in $XML_DIR/*.xml; do
+    if [ -f "$xml_file" ]; then
+        html_file="$HTML_DIR/$(basename "$xml_file" .xml).html"
+        java -jar $SAXON_JAR -t -s:"$xml_file" -xsl:"$XSL_POSTS" -o:"$html_file"
+    fi
+done
+
+
+# # clean up bib files
+rm --verbose $XML_DIR/bibliography.xml
+# rm --verbose $XML_DIR/bibliography.html
+# rm --verbose $HTML_DIR/bibliography.html
+
+# # tidy html files
+for html_file in $HTML_DIR/*.html; do
+    tidy -utf8 -indent -modify $html_file        
+done
+
+# # cp css 
+cp --verbose $CSS_FILE $HTML_DIR
+
+# # create gallery
+# # fgallery $IMAGES_DIR $STATIC_DIR
+
+# # sync files
+# # rsync -avz --cvs-exclude --delete ~/my-files/blog/tmp/html/ root@ilmarikoria.xyz:/var/www/ilmarikoria/
+
+# # update sitemap
+# # cd $HTML_DIR
+# # sitemap-generator -l https://ilmarikoria.xyz
+# # rsync -avz --cvs-exclude --delete ~/my-files/blog/ilmarikoria/sitemap.xml root@ilmarikoria.xyz:/var/www/ilmarikoria/sitemap.xml
+
+# # cd
+# # echo "--"
+echo "Done!"

@@ -16,9 +16,19 @@
 (require 'om-to-xml)
 
 (defun my-convert-blog-posts-to-xml ()
-  "Run 'om-to-xml' on all .org files in DIRECTORY."
   (interactive)
-  (let ((directory "~/my-files/blog/posts/"))
+  (let ((directory (concat (getenv "HOME") "/my-files/blog/pages/posts/")))
+    (when (file-directory-p directory)
+      (dolist (file (directory-files directory t "\\.org$"))
+        (when (file-regular-p file)
+          (with-current-buffer (find-file-noselect file)
+            (om-to-xml)
+            (save-buffer)
+            (kill-buffer)))))))
+
+(defun my-convert-blog-pages-to-xml ()
+  (interactive)
+  (let ((directory (concat (getenv "HOME") "/my-files/blog/pages/other-pages/")))
     (when (file-directory-p directory)
       (dolist (file (directory-files directory t "\\.org$"))
         (when (file-regular-p file)

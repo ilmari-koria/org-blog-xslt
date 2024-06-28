@@ -2,16 +2,12 @@ body {
   max-width: 65rem;
   margin: 1rem; /* top, right, bottom, and left */
   padding: 0.5rem;
-  font-family: "Noto Serif TC", "Source Han Serif", serif, "Apple Color Emoji",
-    "Segoe UI Emoji", "Noto Color Emoji", "Android Emoji", "EmojiSymbols",
-    "EmojiOne Mozilla", "Twemoji Mozilla", "Segoe UI Symbol";
+  font-family: sans-serif;
+  background: black;
+  color: white;
 }
 
-h1 {
-    font-variant: small-caps;
-    font-weight: normal;
-}
-
+h1,
 h2,
 h3,
 h4,
@@ -22,6 +18,25 @@ h5 {
 p {
   text-align: justify;
   text-justify: inter-word;
+  line-height: 175%;
+}
+
+.banner img {
+  background-repeat: no-repeat;
+  height: auto;
+  width: 100%;
+ }
+
+.lbl-toggle,
+a:link,
+a:visited {
+    text-decoration: underline;
+    color: white;
+}
+
+a:hover,
+a:active {
+  text-decoration: underline;
 }
 
 #references > ul {
@@ -49,8 +64,9 @@ p {
 
 #preamble {
     width: 20%;
-    margin: 1.5rem;
-    border-right: 2px solid black;
+    border-right: 2px solid grey;
+    text-transform: uppercase;
+    padding-right: 1rem;
 }
 
 #preamble ul {
