@@ -26,7 +26,9 @@ Hearing such a recording is, therefore, a way of tuning-in into this cosmic broa
 * Conclusion
 This post explored in brief the electro-acoustic reproduction of /nianfo/ in contemporary Taiwanese Buddhism and Taiwanese Buddhist monasticism. This is especially in terms of the passive hearer, enveloped in a religious soundscape, in which processes of mutual resonance and attunement take place. Although this post is under-theorised, I believe these kinds of sensory approaches can provide complimentary insights in the study of contemporary East-Asian Buddhism. Future directions could potentially take into account other forms of sensory architecture, such as those created by smell and taste. It would be interesting to learn more about how, for example, incense offerings in the context of contemporary Pure Land Buddhism enhance religious space. This is particularly in regards to the ambition of Foguang shan to establish a this-worldy Pure Land, an attractive framework for the above efforts.
 
-* Footnotes                                                          :ignore:
+* References                                                         
+
+* Footnotes                                                          
 [fn:1] The original advert can be viewed [[./static/fgsbmr-flier.jpg][here]] (picture).
 
 [fn:2] I believe this is also generally referred to as the /kouzhong ji/ 叩鐘偈, which also includes a rendition for the morning (/Chenzhong ji/ 晨鐘偈). A poor quality version of the Foguang /Muzhong ji/ (sans drums) can be listened to at YouTube via https://www.youtube.com/watch?v=xBfevsR5F8c.
@@ -36,5 +38,3 @@ This post explored in brief the electro-acoustic reproduction of /nianfo/ in con
 [fn:4] Known in Sanskrit as the Land of Bliss (S., sukhāvatī; sometimes rendered into Chinese as /jile jingtu/ 極樂凈土).
 
 [fn:5] Often referred to as the /Longer/ ([[http://tripitaka.cbeta.org/T12n0360][T.360.12]]), /Shorter/ ([[http://tripitaka.cbeta.org/T12n0366][T.366.12]]) and /Contemplation sutrā/ ([[http://tripitaka.cbeta.org/T12n0365][T.365.12]]) respectively.   
-* References                                                         
-#+BIBLIOGRAPHY: bibliography.bib plain option:-a option:-noabstract option:-heveaurl limit:t
