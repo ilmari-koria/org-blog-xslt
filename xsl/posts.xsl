@@ -73,7 +73,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
             </table>
           </div>
         </div>
-        <div id="postamble">
+         <div id="postamble">
           <ul>
             <li>This page was last modified on 
             <xsl:call-template name="generate-timestamp" />.</li>
@@ -82,13 +82,11 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
               <li>
                 <a href="https://www.gnu.org/software/emacs/">GNU
                 Emacs</a>
-            <ul>
+              </li>
               <li>
-              <a href="https://orgmode.org/">org-mode</a> and 
+              <a href="https://orgmode.org/">org-mode</a>and 
               <a href="https://github.com/ndw/org-to-xml">
               org-to-xml</a></li>
-            </ul>
-              </li>
               <li>
                 <a href="https://www.saxonica.com/download/java.xml">
                 SaxonJ-HE</a>
