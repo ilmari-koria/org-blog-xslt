@@ -1,0 +1,81 @@
+body {
+  max-width: 65rem;
+  margin: 1rem; /* top, right, bottom, and left */
+  padding: 0.5rem;
+  font-family: sans-serif;
+  background: black;
+  color: white;
+}
+
+p {
+  text-align: justify;
+  text-justify: inter-word;
+  line-height: 175%;
+}
+
+.lbl-toggle,
+a:link,
+a:visited {
+    text-decoration: underline;
+    color: white;
+}
+
+a:hover,
+a:active {
+  text-decoration: underline;
+}
+
+#container {
+    display: flex;
+}
+
+#preamble {
+    width: 25%;
+    border-right: 2px solid grey;
+    text-transform: lowercase;
+    padding-right: 1rem;
+}
+
+#preamble h1 {
+    color: green;
+    font-size: 160%;
+}
+
+#preamble ul {
+    list-style: none;
+    margin: 0 0 1.25rem 0;
+    padding: 0 0 0 0;
+}
+
+#preamble li {
+    margin: 0 0 1rem 0;
+}
+
+#content {
+    width: 80%;
+    margin: 1.5rem;
+}
+
+#postamble {
+    border-top: 2px solid gray;
+}
+
+img {
+  height: auto;
+  max-width: 350px;
+}
+
+figure {
+  display: block;
+  width: auto;
+}
+
+figure figcaption {
+  font-size: 85%;
+}
+
+td {
+    vertical-align: top;
+    padding: 0 1rem 1rem 0;
+}
+
