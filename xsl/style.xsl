@@ -57,7 +57,8 @@ exclude-result-prefixes="org">
             </xsl:if>
             <xsl:apply-templates select="*" />
 
-            <xsl:if test="//org:headline/@raw-value = 'References'">
+
+            <xsl:if test="//org:link[contains(@raw-link, 'cite:')] != ''">
               <div id="references">
                 <h2>References</h2>
                 <table>
@@ -73,8 +74,9 @@ exclude-result-prefixes="org">
                   </table>
               </div>
             </xsl:if>
+
             
-<xsl:if test="//org:footnote-definition">
+            <xsl:if test="//org:footnote-definition != ''">
   <div class="footnotes">
     <h2>Footnotes</h2>
     <table>
@@ -89,7 +91,7 @@ exclude-result-prefixes="org">
       </xsl:for-each-group>
     </table>
   </div>
-</xsl:if>
+            </xsl:if>
 
             
           </div>
@@ -229,5 +231,5 @@ exclude-result-prefixes="org">
       <xsl:apply-templates />
     </blockquote>
   </xsl:template>
-  <xsl:template match="org:nil|org:structure|org:item/org:structure|org:tags" />
+  <xsl:template match="org:nil|org:structure|org:item/org:structure|org:tags|org:footnote-definition/org:paragraph" />
 </xsl:stylesheet>
