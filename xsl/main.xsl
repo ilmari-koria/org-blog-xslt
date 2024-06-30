@@ -45,6 +45,14 @@ exclude-result-prefixes="org">
                 <a href="https://freesound.org/people/ilmari_freesound/">
                 Freesound</a>
               </li>
+              <li>
+                <a href="https://www.linkedin.com/in/ilmari-koria-3151a5291/">
+                LinkedIn</a>
+              </li>
+              <li>
+                <a href="https://www.youtube.com/@ilmarikoria">
+                YouTube</a>
+              </li>
             </ul>
           </div>
           <div id="content">
@@ -245,5 +253,11 @@ exclude-result-prefixes="org">
     <xsl:value-of select="$html-code-block"
     disable-output-escaping="yes" />
   </xsl:template>
+  <xsl:template match="org:link[@type='mailto']">
+    <xsl:variable name="mailto-link" select="@path"/>
+    <a href="mailto:{normalize-space($mailto-link)}"><xsl:value-of select="."/></a>
+  </xsl:template>
   <xsl:template match="org:nil|org:structure|org:item/org:structure|org:tags|org:footnote-definition/org:paragraph" />
 </xsl:stylesheet>
+
+

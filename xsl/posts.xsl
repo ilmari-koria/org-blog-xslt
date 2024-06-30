@@ -38,6 +38,14 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                 <a href="https://freesound.org/people/ilmari_freesound/">
                 Freesound</a>
               </li>
+              <li>
+                <a href="https://www.linkedin.com/in/ilmari-koria-3151a5291/">
+                LinkedIn</a>
+              </li>
+              <li>
+                <a href="https://www.youtube.com/@ilmarikoria">
+                YouTube</a>
+              </li>
             </ul>
           </div>
           <div id="content">
@@ -74,11 +82,13 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
               <li>
                 <a href="https://www.gnu.org/software/emacs/">GNU
                 Emacs</a>
-              </li>
+            <ul>
               <li>
-              <a href="https://orgmode.org/">org-mode</a>and 
+              <a href="https://orgmode.org/">org-mode</a> and 
               <a href="https://github.com/ndw/org-to-xml">
               org-to-xml</a></li>
+            </ul>
+              </li>
               <li>
                 <a href="https://www.saxonica.com/download/java.xml">
                 SaxonJ-HE</a>
