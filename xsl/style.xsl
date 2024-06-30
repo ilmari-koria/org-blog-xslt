@@ -231,5 +231,14 @@ exclude-result-prefixes="org">
       <xsl:apply-templates />
     </blockquote>
   </xsl:template>
+  <xsl:template match="org:quote-block">
+    <blockquote>
+      <xsl:apply-templates />
+    </blockquote>
+  </xsl:template>
+  <xsl:template match="org:export-block[@type='HTML']">
+    <xsl:variable name="html-code-block" select="normalize-space(@value)" />
+    <xsl:value-of select="$html-code-block" disable-output-escaping="yes" />
+  </xsl:template>
   <xsl:template match="org:nil|org:structure|org:item/org:structure|org:tags|org:footnote-definition/org:paragraph" />
 </xsl:stylesheet>
