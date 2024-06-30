@@ -57,7 +57,6 @@ exclude-result-prefixes="org">
             </xsl:if>
             <xsl:apply-templates select="*" />
             <xsl:if test="//org:link[contains(@raw-link, 'cite:')] != ''">
-
               <div id="references">
                 <h2>References</h2>
                 <table>
@@ -71,8 +70,7 @@ exclude-result-prefixes="org">
                     select="$bib-entry//*:a[@name = $key]/text()" />
                     <tr>
                       <td>
-                        <a href="#{$key}">[
-                        <xsl:value-of select="$number" />]</a>
+                        <a href="#{$key}">[<xsl:value-of select="$number" />]</a>
                       </td>
                       <td>
                         <xsl:value-of select="$bib-entry//*:td[@class = 'bibtexitem']" />
@@ -92,10 +90,7 @@ exclude-result-prefixes="org">
                       <xsl:variable name="footnote-label"
                       select="@label" />
                       <tr>
-                        <td id="footnote{$footnote-label}">[
-                        <a href="#footnote{$footnote-label}">
-                          <xsl:value-of select="$footnote-label" />
-                        </a>]</td>
+                        <td id="footnote{$footnote-label}">[<a href="#footnote{$footnote-label}"><xsl:value-of select="$footnote-label" /></a>]</td>
                         <td>
                           <xsl:value-of select="normalize-space(org:paragraph)" />
                         </td>
@@ -216,13 +211,12 @@ exclude-result-prefixes="org">
     select="$bibliography//*:a[@name = $key]/ancestor::*:tr" />
     <xsl:variable name="number"
     select="$bib-entry//*:a[@name = $key]/text()" />
-    <a href="#{$key}">[
-    <xsl:value-of select="$number" />]</a>
+    <a href="#{$key}">[<xsl:value-of select="$number" />]</a>
   </xsl:template>
   <xsl:template match="org:footnote-reference">
-    <a href="#footnote{@label}">
+    <sup><a href="#footnote{@label}">
       <xsl:value-of select="@label" />
-    </a>
+    </a></sup>
   </xsl:template>
   <xsl:template match="org:link[@path and (substring(@path, string-length(@path) - 3) = '.gif' or substring(@path, string-length(@path) - 3) = '.jpg' or substring(@path, string-length(@path) - 4) = '.jpeg' or substring(@path, string-length(@path) - 3) = '.png')]">
     <figure>
