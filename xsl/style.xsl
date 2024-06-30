@@ -128,7 +128,7 @@
 
   <xsl:template match="org:paragraph">
     <p>
-      <xsl:apply-templates/>
+      <xsl:apply-templates select="*[not(self::org:caption)] | text()"/>
     </p>
   </xsl:template>
 
@@ -188,6 +188,19 @@
             </p>
         </div>
     </xsl:template>
+
+<xsl:template match="org:link[@path and (substring(@path, string-length(@path) - 3) = '.gif' or substring(@path, string-length(@path) - 3) = '.jpg' or substring(@path, string-length(@path) - 4) = '.jpeg' or substring(@path, string-length(@path) - 3) = '.png')]">
+    <figure>
+        <img src="{@path}" alt="{@raw-link}"/>
+        <xsl:apply-templates select="preceding-sibling::org:caption[1]"/>
+    </figure>
+</xsl:template>
+
+<xsl:template match="org:caption">
+    <figcaption>
+        <xsl:apply-templates/>
+    </figcaption>
+</xsl:template>
 
 
     <!-- this stuff I don't want anywhere -->
@@ -287,14 +300,6 @@
     <!--     </b> -->
     <!-- </xsl:template> -->
 
-
-
-
-
-
-
-
-
     <!-- <xsl:template match="org:link"> -->
     <!--     <a href="{@raw-link}"> -->
     <!--         <xsl:choose> -->
@@ -325,17 +330,6 @@
     <!--         <xsl:apply-templates/> -->
     <!--     </figcaption> -->
     <!-- </xsl:template> -->
-
-
-
-
-
-
-
-
-
-
-
 
 
     <!-- <xsl:template match="node() | @*"> -->
