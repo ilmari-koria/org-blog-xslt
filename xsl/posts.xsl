@@ -47,9 +47,27 @@ exclude-result-prefixes="org">
           </div>
           <div id="content">
             <h2>Posts</h2>
-            <ul>
-              <xsl:apply-templates select="$posts/*:root/*:document/*:keyword[@key='TITLE']" />
-            </ul>
+
+              <table>
+                 <xsl:for-each-group select="$posts/*:root/*:document/*:keyword[@key='TITLE']" group-by=".">
+                   <xsl:for-each select="current-group()">
+                   <xsl:variable name="title" select="@value" />
+                   <xsl:variable name="date" select="../*:keyword[@key='DATE']/@value" />
+                     <tr>
+                       <td>
+                         <xsl:value-of select="$date" />
+                       </td>
+                       <td>
+                         <a href="https://ilmarikoria.xyz/{$date}-blog.html">
+                           <xsl:value-of select="$title" />
+                         </a>
+                       </td>
+                     </tr>
+                   </xsl:for-each>
+                 </xsl:for-each-group>
+                 </table>
+
+              <!-- <xsl:apply-templates select="$posts/*:root/*:document/*:keyword[@key='TITLE']" /> -->
           </div>
         </div>
         <div id="postamble">
@@ -87,23 +105,7 @@ exclude-result-prefixes="org">
       </body>
     </html>
   </xsl:template>
-  <xsl:template match="$posts/*:root/*:document/*:keyword[@key='TITLE']">
-    <xsl:variable name="title" select="./@value" />
-    <xsl:variable name="date"
-    select="../*:keyword[@key='DATE']/@value" />
-    <table class="posts">
-      <tr>
-        <td>
-          <xsl:value-of select="$date" />
-        </td>
-        <td>
-          <a href="https://ilmarikoria.xyz/{$date}-blog.html">
-            <xsl:value-of select="$title" />
-          </a>
-        </td>
-      </tr>
-    </table>
-  </xsl:template>
+
   <xsl:template name="generate-timestamp">
     <xsl:value-of select="current-date()" />
   </xsl:template>
