@@ -56,44 +56,55 @@ exclude-result-prefixes="org">
               <xsl:value-of select="//org:keyword[@key = 'DATE']/@value" /></p>
             </xsl:if>
             <xsl:apply-templates select="*" />
-
-
             <xsl:if test="//org:link[contains(@raw-link, 'cite:')] != ''">
+
               <div id="references">
                 <h2>References</h2>
                 <table>
-                <xsl:for-each-group select="//org:link[contains(@raw-link, 'cite:')]" group-by="@raw-link">
-                  <xsl:variable name="key" select="substring-after(@raw-link, 'cite:')" />
-                  <xsl:variable name="bib-entry" select="$bibliography//*:a[@name = $key]/ancestor::*:tr" />
-                  <xsl:variable name="number" select="$bib-entry//*:a[@name = $key]/text()" />                  
-                  <tr>
-                  <td><a href="#{$key}">[<xsl:value-of select="$number" />]</a></td>
-                  <td><xsl:value-of select="$bib-entry//*:td[@class = 'bibtexitem']" /></td>
-                  </tr>
-                </xsl:for-each-group>
-                  </table>
+                  <xsl:for-each-group select="//org:link[contains(@raw-link, 'cite:')]"
+                  group-by="@raw-link">
+                    <xsl:variable name="key"
+                    select="substring-after(@raw-link, 'cite:')" />
+                    <xsl:variable name="bib-entry"
+                    select="$bibliography//*:a[@name = $key]/ancestor::*:tr" />
+                    <xsl:variable name="number"
+                    select="$bib-entry//*:a[@name = $key]/text()" />
+                    <tr>
+                      <td>
+                        <a href="#{$key}">[
+                        <xsl:value-of select="$number" />]</a>
+                      </td>
+                      <td>
+                        <xsl:value-of select="$bib-entry//*:td[@class = 'bibtexitem']" />
+                      </td>
+                    </tr>
+                  </xsl:for-each-group>
+                </table>
               </div>
             </xsl:if>
-
-            
             <xsl:if test="//org:footnote-definition != ''">
-  <div class="footnotes">
-    <h2>Footnotes</h2>
-    <table>
-      <xsl:for-each-group select="//org:footnote-definition" group-by="org:paragraph">
-        <xsl:for-each select="current-group()">
-          <xsl:variable name="footnote-label" select="@label"/>
-          <tr>
-            <td id="footnote{$footnote-label}">[<a href="#footnote{$footnote-label}"><xsl:value-of select="$footnote-label" /></a>]</td>
-            <td><xsl:value-of select="normalize-space(org:paragraph)" /></td>
-          </tr>
-        </xsl:for-each>
-      </xsl:for-each-group>
-    </table>
-  </div>
+              <div class="footnotes">
+                <h2>Footnotes</h2>
+                <table>
+                  <xsl:for-each-group select="//org:footnote-definition"
+                  group-by="org:paragraph">
+                    <xsl:for-each select="current-group()">
+                      <xsl:variable name="footnote-label"
+                      select="@label" />
+                      <tr>
+                        <td id="footnote{$footnote-label}">[
+                        <a href="#footnote{$footnote-label}">
+                          <xsl:value-of select="$footnote-label" />
+                        </a>]</td>
+                        <td>
+                          <xsl:value-of select="normalize-space(org:paragraph)" />
+                        </td>
+                      </tr>
+                    </xsl:for-each>
+                  </xsl:for-each-group>
+                </table>
+              </div>
             </xsl:if>
-
-            
           </div>
         </div>
         <div id="postamble">
@@ -198,7 +209,6 @@ exclude-result-prefixes="org">
 </code>
 </pre>
   </xsl:template>
-
   <xsl:template match="org:link[contains(@raw-link, 'cite:')]">
     <xsl:variable name="key"
     select="substring-after(@raw-link, 'cite:')" />
@@ -206,15 +216,14 @@ exclude-result-prefixes="org">
     select="$bibliography//*:a[@name = $key]/ancestor::*:tr" />
     <xsl:variable name="number"
     select="$bib-entry//*:a[@name = $key]/text()" />
-    <a href="#{$key}">[<xsl:value-of select="$number" />]</a>
+    <a href="#{$key}">[
+    <xsl:value-of select="$number" />]</a>
   </xsl:template>
-
   <xsl:template match="org:footnote-reference">
     <a href="#footnote{@label}">
       <xsl:value-of select="@label" />
     </a>
   </xsl:template>
-
   <xsl:template match="org:link[@path and (substring(@path, string-length(@path) - 3) = '.gif' or substring(@path, string-length(@path) - 3) = '.jpg' or substring(@path, string-length(@path) - 4) = '.jpeg' or substring(@path, string-length(@path) - 3) = '.png')]">
     <figure>
       <img src="{@path}" alt="{@raw-link}" />
@@ -237,8 +246,10 @@ exclude-result-prefixes="org">
     </blockquote>
   </xsl:template>
   <xsl:template match="org:export-block[@type='HTML']">
-    <xsl:variable name="html-code-block" select="normalize-space(@value)" />
-    <xsl:value-of select="$html-code-block" disable-output-escaping="yes" />
+    <xsl:variable name="html-code-block"
+    select="normalize-space(@value)" />
+    <xsl:value-of select="$html-code-block"
+    disable-output-escaping="yes" />
   </xsl:template>
   <xsl:template match="org:nil|org:structure|org:item/org:structure|org:tags|org:footnote-definition/org:paragraph" />
 </xsl:stylesheet>
