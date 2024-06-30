@@ -6,7 +6,6 @@
                 exclude-result-prefixes="org">
   
  <xsl:output method="xml" indent="yes" omit-xml-declaration="yes"/>
-
   
    <xsl:variable name="meta-description" select="//org:keyword[@key = 'DESCRIPTION']/@value"/>
    <xsl:variable name="footnote-number" select="//org:footnote-reference/@label"/>
@@ -26,7 +25,6 @@
                 </title>
             </head>
             <body>
-
                     <div id="container">
                     <div id="preamble">
                         <h1>Ilmari's Webpage</h1>
@@ -45,44 +43,34 @@
                             </li>
                         </ul>
                     </div>
-
                     <div id="content">
 
                         <h2><xsl:value-of select="//org:keyword[@key = 'TITLE']/@value"/></h2>
-
-
                         <xsl:if test="//org:keyword[@key = 'DATE']">
                         <p>Posted: <xsl:value-of select="//org:keyword[@key = 'DATE']/@value"/></p>
                         </xsl:if>
 
-
-                        
-                        <xsl:apply-templates select="//org:headline"/>
-
- 
-                        <xsl:if test="//org:headline/@raw-value = 'Footnotes'">
-                        <div id="footnotes">
-                            <xsl:apply-templates select="//org:footnote-definition"/>
-                        </div>
-                        </xsl:if>
-
+                       <xsl:apply-templates select="*" />
 
                          <xsl:if test="//org:headline/@raw-value = 'References'">
                            <div id="references">
-                             <h3>References</h3>
-                             <xsl:for-each-group select="//org:citation-reference" group-by="@key">
+                             <h2>References</h2>
+                             <xsl:for-each-group select="//org:link[contains(@raw-link, 'cite:')]" group-by="@raw-link">
+                               <xsl:variable name="key" select="substring-after(@raw-link, 'cite:')"/>
+                               <xsl:variable name="bib-entry" select="$bibliography//*:a[@name = $key]/ancestor::*:tr"/>
                                <xsl:apply-templates select="current-group()[1]"/>
+                               <p class="bib-entry">
+                                 <xsl:value-of select="$bib-entry//*:td[@class = 'bibtexitem']"/>
+                               </p>
                              </xsl:for-each-group>
                            </div>
                          </xsl:if>
-                    </div>
-                    </div>
 
-                    
+                    </div>
+                    </div>
                 <div id="postamble">
                     <ul>
-                        <li>This page was last modified on <xsl:call-template
-                            name="generate-timestamp"/>.</li>
+                        <li>This page was last modified on <xsl:call-template name="generate-timestamp"/>.</li>
                         <li>Generated with: <ol> <li><a href="https://www.gnu.org/software/emacs/"
                             >GNU Emacs</a></li> <li><a href="https://orgmode.org/">org-mode</a> and
                             <a href="https://github.com/ndw/org-to-xml">org-to-xml</a></li> <li><a
@@ -99,143 +87,107 @@
                         </li>
                     </ul>
                 </div>
-
-
             </body>
         </html>
     </xsl:template>
 
-
-    <xsl:template match="//org:headline[not(tags = 'ignore')]">
-        <xsl:choose>
-            <xsl:when test="@level = 1">
-                <h3>
-                    <xsl:value-of select="@raw-value"/>
-                </h3>
-            </xsl:when>
-            <xsl:when test="@level = 2">
-                <h4>
-                    <xsl:value-of select="@raw-value"/>
-                </h4>
-            </xsl:when>
-            <xsl:when test="@level = 3">
-                <h5>
-                    <xsl:value-of select="@raw-value"/>
-                </h5>
-            </xsl:when>
-            <xsl:otherwise>
-                <xsl:value-of select="@raw-value"/>
-            </xsl:otherwise>
-        </xsl:choose>
-        <xsl:apply-templates select="org:section"/>
+    <xsl:template name="generate-timestamp">
+        <xsl:value-of select="current-date()"/>
     </xsl:template>
 
-
-    <xsl:template match="org:section">
-        <xsl:apply-templates select="org:paragraph | org:quote-block"/>
+     <xsl:template match="org:headline/org:title">
+       <xsl:if test="not(ancestor::org:headline[org:tags='ignore'])">
+       <xsl:element name="h{../@level}">
+       <xsl:apply-templates/>
+       </xsl:element>
+       </xsl:if>
     </xsl:template>
+  
+  <xsl:template match="org:headline/org:section">
+    <xsl:apply-templates/>
+  </xsl:template>
 
+  <xsl:template match="org:plain-list[@type='unordered']">
+    <ul>
+      <xsl:apply-templates/>
+    </ul>
+  </xsl:template>
 
-    <xsl:template match="org:quote-block">
-        <blockquote>
-            <xsl:apply-templates select="org:paragraph"/>
-        </blockquote>
-    </xsl:template>
+  <xsl:template match="org:plain-list[@type='ordered']">
+    <ol>
+      <xsl:apply-templates/>
+    </ol>
+  </xsl:template>
 
+  <xsl:template match="org:item">
+    <li>
+      <xsl:apply-templates/>
+    </li>
+  </xsl:template>
 
-    
-    <xsl:template match="org:tags"/>
+  <xsl:template match="org:paragraph">
+    <p>
+      <xsl:apply-templates/>
+    </p>
+  </xsl:template>
 
+  <xsl:template match="org:bold">
+    <b><xsl:apply-templates/></b>
+  </xsl:template>
 
-    
-    <xsl:template match="org:headline[@raw-value = 'References']" priority="3"/>
+  <xsl:template match="org:italic">
+    <i><xsl:apply-templates/></i>
+  </xsl:template>
 
+  <xsl:template match="org:code">
+    <code>
+      <xsl:apply-templates/>
+    </code>
+  </xsl:template>
 
-    
-    <xsl:template match="org:paragraph">
-        <p>
-            <xsl:apply-templates/>
-        </p>
-    </xsl:template>
+  <xsl:template match="org:link[@type='http' or @type='https']">
+    <a href="{@raw-link}">
+      <xsl:choose>
+        <xsl:when test="@format='bracket'">
+          <xsl:apply-templates/>
+        </xsl:when>
+        <xsl:otherwise>
+          <xsl:value-of select="@raw-link"/>
+        </xsl:otherwise>
+      </xsl:choose>
+    </a>
+  </xsl:template>
 
+  <xsl:template match="org:src-block">
+    <pre>
+      <code>
+        <xsl:apply-templates/>
+      </code>
+    </pre>
+  </xsl:template>
 
+  <xsl:template match="org:link[contains(@raw-link, 'cite:')]">
+    <xsl:variable name="key" select="substring-after(@raw-link, 'cite:')"/>
+    <xsl:variable name="bib-entry" select="$bibliography//*:a[@name = $key]/ancestor::*:tr"/>
+    <xsl:variable name="number" select="$bib-entry//*:a[@name = $key]/text()"/>
+    <a href="#{$key}">[<xsl:value-of select="$number"/>]</a>
+  </xsl:template>
 
-    
-    <xsl:template match="org:italic">
-        <i>
-            <xsl:apply-templates/>
-        </i>
-    </xsl:template>
-
-
-
-    <xsl:template match="org:bold">
-        <b>
-            <xsl:apply-templates/>
-        </b>
-    </xsl:template>
-
-
-
-
-
-    <xsl:template match="org:citation">
-        <xsl:for-each select="org:citation-reference">
-            <xsl:variable name="key" select="@key"/>
-            <xsl:variable name="bib-entry" select="$bibliography//*:a[@name = $key]/ancestor::*:tr"/>
-            <xsl:variable name="number" select="$bib-entry//*:a[@name = $key]"/>
-            <a href="#{$key}">[<xsl:value-of select="$number"/>]</a>
-        </xsl:for-each>
-    </xsl:template>
-
-
-
-    <xsl:template match="org:citation-reference">
-        <xsl:variable name="key" select="@key"/>
-        <xsl:variable name="bib-entry" select="$bibliography//*:a[@name = $key]/ancestor::*:tr"/>
-        <xsl:variable name="number" select="$bib-entry//*:a[@name = $key]"/>
-        <ul>
-            <li>
-                <span id="{$key}">[<xsl:value-of select="$number"/>]</span>
-                <xsl:value-of select="$bib-entry//*:td[@class = 'bibtexitem']"/>
-            </li>
-        </ul>
-    </xsl:template>
-
-
-
-
-    <xsl:template match="org:link">
-        <a href="{@raw-link}">
-            <xsl:choose>
-                <xsl:when test="@format = 'plain'">
-                    <xsl:value-of select="@raw-link"/>
-                </xsl:when>
-                <xsl:otherwise>
-                    <xsl:apply-templates/>
-                </xsl:otherwise>
-            </xsl:choose>
-        </a>
-    </xsl:template>
-
-
-
-
-
-    <xsl:template match="org:link[@type = 'file']">
-        <figure>
-            <img src="{@raw-link}" alt="{@path}"/>
-        </figure>
-    </xsl:template>
-
-
-
-    <xsl:template match="org:caption" mode="figcaption">
-        <figcaption>
-            <xsl:apply-templates/>
-        </figcaption>
-    </xsl:template>
-
+    <!-- <xsl:template match="org:link[contains(@raw-link, 'cite:')]"> -->
+    <!--     <xsl:variable name="key" select="substring-after(@raw-link, 'cite:')"/> -->
+    <!--     <xsl:variable name="bib-entry" select="$bibliography//*:a[@name = $key]/ancestor::*:tr"/> -->
+    <!--     <xsl:variable name="number" select="$bib-entry//*:a[@name = $key]"/> -->
+    <!--     <table> -->
+    <!--     <tr> -->
+    <!--         <td style="vertical-align: top;"> -->
+    <!--             [<xsl:value-of select="$number"/>] -->
+    <!--         </td> -->
+    <!--         <td> -->
+    <!--             <xsl:value-of select="$bib-entry//*:td[@class = 'bibtexitem']"/> -->
+    <!--         </td> -->
+    <!--     </tr> -->
+    <!--   </table> -->
+    <!--   </xsl:template> -->
 
 
 
@@ -244,9 +196,6 @@
             <xsl:value-of select="@label"/>
         </a>
     </xsl:template>
-
-
-
 
     <xsl:template match="org:footnote-definition">
         <div class="footnote">
@@ -260,17 +209,155 @@
 
 
 
-    <xsl:template name="generate-timestamp">
-        <xsl:value-of select="current-date()"/>
-    </xsl:template>
+  <!-- <xsl:template match="element()"> -->
+  <!--   <xsl:message>Unhandled: <xsl:value-of select="local-name(.)"/></xsl:message> -->
+
+  <!--   <xsl:variable name="error" as="node()*"> -->
+  <!--     <xsl:text>&lt;</xsl:text> -->
+  <!--     <xsl:value-of select="local-name(.)"/> -->
+  <!--     <xsl:text>&gt;</xsl:text> -->
+  <!--     <xsl:apply-templates/> -->
+  <!--     <xsl:text>&lt;/</xsl:text> -->
+  <!--     <xsl:value-of select="local-name(.)"/> -->
+  <!--     <xsl:text>&gt;</xsl:text> -->
+  <!--   </xsl:variable> -->
+
+  <!--   <xsl:choose> -->
+  <!--     <xsl:when test="ancestor::org:paragraph"> -->
+  <!--       <span class="error"><xsl:sequence select="$error"/></span> -->
+  <!--     </xsl:when> -->
+  <!--     <xsl:otherwise> -->
+  <!--       <div class="error"><xsl:sequence select="$error"/></div> -->
+  <!--     </xsl:otherwise> -->
+  <!--   </xsl:choose> -->
+  <!-- </xsl:template> -->
+
+
+    <!-- <xsl:template match="//org:headline[not(tags = 'ignore')]"> -->
+    <!--     <xsl:choose> -->
+    <!--         <xsl:when test="@level = 1"> -->
+    <!--             <h3> -->
+    <!--                 <xsl:value-of select="@raw-value"/> -->
+    <!--             </h3> -->
+    <!--         </xsl:when> -->
+    <!--         <xsl:when test="@level = 2"> -->
+    <!--             <h4> -->
+    <!--                 <xsl:value-of select="@raw-value"/> -->
+    <!--             </h4> -->
+    <!--         </xsl:when> -->
+    <!--         <xsl:when test="@level = 3"> -->
+    <!--             <h5> -->
+    <!--                 <xsl:value-of select="@raw-value"/> -->
+    <!--             </h5> -->
+    <!--         </xsl:when> -->
+    <!--         <xsl:otherwise> -->
+    <!--             <xsl:value-of select="@raw-value"/> -->
+    <!--         </xsl:otherwise> -->
+    <!--     </xsl:choose> -->
+    <!--     <xsl:apply-templates select="org:section"/> -->
+    <!-- </xsl:template> -->
+
+
+    <!-- <xsl:template match="org:section"> -->
+    <!--     <xsl:apply-templates select="org:paragraph | org:quote-block"/> -->
+    <!-- </xsl:template> -->
+
+
+    <!-- <xsl:template match="org:quote-block"> -->
+    <!--     <blockquote> -->
+    <!--         <xsl:apply-templates select="org:paragraph"/> -->
+    <!--     </blockquote> -->
+    <!-- </xsl:template> -->
+
+
+    
+    <!-- <xsl:template match="org:tags"/> -->
+
+
+    
+    <!-- <xsl:template match="org:headline[@raw-value = 'References']" priority="3"/> -->
+
+
+    
+    <!-- <xsl:template match="org:paragraph"> -->
+    <!--     <p> -->
+    <!--         <xsl:apply-templates/> -->
+    <!--     </p> -->
+    <!-- </xsl:template> -->
 
 
 
-    <xsl:template match="node() | @*">
-        <xsl:copy>
-            <xsl:apply-templates select="node() | @*"/>
-        </xsl:copy>
-    </xsl:template>
+    
+    <!-- <xsl:template match="org:italic"> -->
+    <!--     <i> -->
+    <!--         <xsl:apply-templates/> -->
+    <!--     </i> -->
+    <!-- </xsl:template> -->
+
+
+
+    <!-- <xsl:template match="org:bold"> -->
+    <!--     <b> -->
+    <!--         <xsl:apply-templates/> -->
+    <!--     </b> -->
+    <!-- </xsl:template> -->
+
+
+
+
+
+
+
+
+
+    <!-- <xsl:template match="org:link"> -->
+    <!--     <a href="{@raw-link}"> -->
+    <!--         <xsl:choose> -->
+    <!--             <xsl:when test="@format = 'plain'"> -->
+    <!--                 <xsl:value-of select="@raw-link"/> -->
+    <!--             </xsl:when> -->
+    <!--             <xsl:otherwise> -->
+    <!--                 <xsl:apply-templates/> -->
+    <!--             </xsl:otherwise> -->
+    <!--         </xsl:choose> -->
+    <!--     </a> -->
+    <!-- </xsl:template> -->
+
+
+
+
+
+    <!-- <xsl:template match="org:link[@type = 'file']"> -->
+    <!--     <figure> -->
+    <!--         <img src="{@raw-link}" alt="{@path}"/> -->
+    <!--     </figure> -->
+    <!-- </xsl:template> -->
+
+
+
+    <!-- <xsl:template match="org:caption" mode="figcaption"> -->
+    <!--     <figcaption> -->
+    <!--         <xsl:apply-templates/> -->
+    <!--     </figcaption> -->
+    <!-- </xsl:template> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- <xsl:template match="node() | @*"> -->
+    <!--     <xsl:copy> -->
+    <!--         <xsl:apply-templates select="node() | @*"/> -->
+    <!--     </xsl:copy> -->
+    <!-- </xsl:template> -->
 
 
 </xsl:stylesheet>
