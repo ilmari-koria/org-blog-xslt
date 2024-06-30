@@ -56,9 +56,9 @@ exclude-result-prefixes="org">
             </ul>
           </div>
           <div id="content">
-            <h2>
+            <h1>
               <xsl:value-of select="//org:keyword[@key = 'TITLE']/@value" />
-            </h2>
+            </h1>
             <xsl:if test="//org:keyword[@key = 'DATE']">
               <p>Posted: 
               <xsl:value-of select="//org:keyword[@key = 'DATE']/@value" /></p>
