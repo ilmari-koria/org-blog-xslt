@@ -9,7 +9,7 @@ BIB_DIR="../tmp/bib"
 
 CSS_FILE="../css/style.css"
 BIB_FILE="../bib/bibliography.bib"
-LOG_FILE="update-website.log"
+RESUME_FILE="../resume/ilmari-koria-resume.pdf"
 
 XSL_MAIN="../xsl/main.xsl"
 XSL_POSTS="../xsl/posts.xsl"
@@ -56,24 +56,25 @@ for xml_file in $XML_DIR/*.xml; do
 done
 
 
-rm --verbose $XML_DIR/bibliography.xml
-rm --verbose $HTML_DIR/bibliography.html
-
-
 for html_file in $HTML_DIR/*.html; do
     tidy -utf8 -indent -modify $html_file        
 done
 
 
 cp --verbose $CSS_FILE $HTML_DIR
-cp --verbose $STATIC_DIR $HTML_DIR
+cp --verbose $RESUME_FILE $HTML_DIR
+rsync -v $STATIC_DIR $HTML_DIR
 
-# # sync files
-# # rsync -avz --cvs-exclude --delete ~/my-files/blog/tmp/html/ root@ilmarikoria.xyz:/var/www/ilmarikoria/
 
-# # update sitemap
-# # cd $HTML_DIR
-# # sitemap-generator -l https://ilmarikoria.xyz
-# # rsync -avz --cvs-exclude --delete ~/my-files/blog/ilmarikoria/sitemap.xml root@ilmarikoria.xyz:/var/www/ilmarikoria/sitemap.xml
+rm --verbose $HTML_DIR/bibliography.html
+
+
+rsync -avz --delete $HTML_DIR/ root@ilmarikoria.xyz:/var/www/ilmarikoria/
+
+
+cd $HTML_DIR
+sitemap-generator -l https://ilmarikoria.xyz
+rsync -avz --delete $HTML_DIR/sitemap.xml root@ilmarikoria.xyz:/var/www/ilmarikoria/sitemap.xml
+
 
 echo "Done!"
