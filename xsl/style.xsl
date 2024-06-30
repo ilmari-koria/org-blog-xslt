@@ -107,17 +107,18 @@
     <xsl:apply-templates/>
   </xsl:template>
 
-  <xsl:template match="org:plain-list[@type='unordered']">
-    <ul>
-      <xsl:apply-templates/>
-    </ul>
-  </xsl:template>
+ <xsl:template match="org:plain-list[@type='ordered']">
+        <ol>
+            <xsl:apply-templates select="org:item/org:paragraph"/>
+        </ol>
+    </xsl:template>
 
-  <xsl:template match="org:plain-list[@type='ordered']">
-    <ol>
-      <xsl:apply-templates/>
-    </ol>
-  </xsl:template>
+    <!-- Template to match paragraph elements within item elements -->
+    <xsl:template match="org:item/org:paragraph">
+        <li>
+            <xsl:value-of select="."/>
+        </li>
+    </xsl:template>
 
   <xsl:template match="org:item">
     <li>
@@ -173,24 +174,6 @@
     <a href="#{$key}">[<xsl:value-of select="$number"/>]</a>
   </xsl:template>
 
-    <!-- <xsl:template match="org:link[contains(@raw-link, 'cite:')]"> -->
-    <!--     <xsl:variable name="key" select="substring-after(@raw-link, 'cite:')"/> -->
-    <!--     <xsl:variable name="bib-entry" select="$bibliography//*:a[@name = $key]/ancestor::*:tr"/> -->
-    <!--     <xsl:variable name="number" select="$bib-entry//*:a[@name = $key]"/> -->
-    <!--     <table> -->
-    <!--     <tr> -->
-    <!--         <td style="vertical-align: top;"> -->
-    <!--             [<xsl:value-of select="$number"/>] -->
-    <!--         </td> -->
-    <!--         <td> -->
-    <!--             <xsl:value-of select="$bib-entry//*:td[@class = 'bibtexitem']"/> -->
-    <!--         </td> -->
-    <!--     </tr> -->
-    <!--   </table> -->
-    <!--   </xsl:template> -->
-
-
-
     <xsl:template match="org:footnote-reference">
         <a href="#footnote{@label}">
             <xsl:value-of select="@label"/>
@@ -207,6 +190,8 @@
     </xsl:template>
 
 
+    <!-- this stuff I don't want anywhere -->
+   <xsl:template match="nil|structure|item/structure"/>
 
 
   <!-- <xsl:template match="element()"> -->
