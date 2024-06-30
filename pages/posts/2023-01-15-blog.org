@@ -1,8 +1,7 @@
 #+title: 2022 in Sound
 #+filetags: sound field-recording phonography
 #+description: Assorted audio projects
-#+options: toc:t
-#+date: <2023-01-15 18:52>
+#+date: 2023-01-15
 
 * Introduction
 This post contains assorted audio projects (in no particular order) that I worked on during 2022. The purpose of this post is mainly archival. All pieces are licensed Public Domain (Creative Commons 0) and can be downloaded. On most browsers this involves right clicking on the link and saving the file. Feel free to use them in any way you want!
