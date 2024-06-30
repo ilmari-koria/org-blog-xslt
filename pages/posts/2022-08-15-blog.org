@@ -3,11 +3,8 @@
 #+description: Notes on academic workshop.
 #+date: 2022-08-15
 
-* metadata-top                                                       :ignore:
-#+begin_quote
-*Event Title*: /Sentience Beyond the Human/ 多物種感知國際工作坊 (https://clab.org.tw/en/events/sentience-beyond-the-human/)
-*Date/Location*: 2022/07/07, Taiwan Contemporary Culture Lab (C-LAB), Taipei 臺灣當代文化實驗場
-#+end_quote
+- *Event Title*: /Sentience Beyond the Human/ 多物種感知國際工作坊 (https://clab.org.tw/en/events/sentience-beyond-the-human/)
+- *Date/Location*: 2022/07/07, Taiwan Contemporary Culture Lab (C-LAB), Taipei 臺灣當代文化實驗場
 
 * Introduction
 What does the non-human world have to say to us, and how do we listen? Facing an uncertain future, one situated within an Anthropocene, we must critically examine how we situate ourselves with our earthly co-inhabitants. This involves working with non-anthropocentric viewpoints, and questioning our inherent assumptions of non-human "sentience(s)," in terms of the political, historical, and relational. This event report seeks to offer a succinct account of four different (but interrelated) perspectives, pointing to such more-than-human viewpoints. The talks, presented at a workshop held at the Taiwan Contemporary Culture Lab (C-Lab) 臺灣當代文化實驗場 engage with environmental humanities, animal studies, media, international law, sensory anthropology, and history. And, as the original conference program rightly explains, explore ‘pathways toward ecological togetherness beyond the apocalyptic imagination of Anthropocene futures.’ With this in mind, this work will discuss the talks presented during the latter half of the full-day workshop, introducing their contents and conclusions. Additionally, this piece contains a brief discussion section further summarizing and fleshing out the points made above. Due to space considerations, this report emphasizes some details over others. Therefore, I invite readers to consult the above scholar's published works on the subject.  
