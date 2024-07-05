@@ -25,7 +25,7 @@ mv $POSTS_DIR/*.xml $XML_DIR/posts/
 mv $OTHER_DIR/*.xml $XML_DIR/
 
 
-bibtex2html --style "apalike" --footer "" --header "" --no-header --nodoc --nobibsource --ignore-errors --sort-as-bibtex --output $HTML_DIR/bibliography $BIB_FILE
+bibtex2html --style "ieeetr" --footer "" --header "" --no-header --nodoc --nobibsource --ignore-errors --sort-as-bibtex --output $HTML_DIR/bibliography $BIB_FILE
 tidy -q --numeric-entities yes -asxhtml -o $XML_DIR/bibliography/bibliography.xml $HTML_DIR/bibliography.html
 
 
