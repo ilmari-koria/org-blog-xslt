@@ -94,6 +94,11 @@ td {
     display: initial;
   }
 
+  p {
+    text-align: initial;
+    text-justify: initial;
+  }
+
   #preamble {
     width: initial;
     border: initial;
