@@ -7,11 +7,11 @@ body {
   color: white;
 }
 
-h1 {font-size: 150%;}
-h2 {font-size: 140%;}
-h3 {font-size: 130%;}
-h4 {font-size: 120%;}
-h5 {font-size: 110%;}
+h1 {font-size: 145%;}
+h2 {font-size: 120%;}
+h3 {font-size: 100%;}
+h4 {font-size: 100%;}
+h5 {font-size: 100%;}
 
 p {
   text-align: justify;
@@ -85,3 +85,26 @@ td {
     padding: 0 1rem 1rem 0;
 }
 
+@media (max-width: 768px) {
+  body {
+    font-size: 120%;
+  }
+
+  #container {
+    display: initial;
+  }
+
+  #preamble {
+    width: initial;
+    border: initial;
+  }
+
+  #content {
+    width: initial;
+    margin: 2rem 0 0 0;
+  }
+
+  h1,h2,h3,h4,h5 {
+      font-size: 140%;
+  }
+}
