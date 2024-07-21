@@ -5,19 +5,11 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
   omit-xml-declaration="yes" />
   <xsl:variable name="posts"
   select="document('../tmp/xml/concat/posts-concat.xml')" />
+  <xsl:include href="head.xsl" />
+  <xsl:include href="footer.xsl" />
   <xsl:template match="/">
     <html>
-      <head>
-        <meta charset="UTF-8" />
-        <meta name="description" content="blog posts archive" />
-        <meta name="author" content="ilmarikoria@posteo.net" />
-        <meta name="viewport"
-        content="initial-scale=1.0,maximum-scale=1.0,user-scalable=no" />
-        <link rel="canonical"
-        href="https://ilmarikoria.xyz/posts.html" />
-        <link rel="stylesheet" href="style.css" type="text/css" />
-        <title>Blog Posts</title>
-      </head>
+      <xsl:call-template name="header-boilerplate" />
       <body>
         <div id="container">
           <div id="preamble">
@@ -51,17 +43,21 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
           <div id="content">
             <h2>Posts</h2>
             <table>
-              <xsl:for-each-group select="$posts/*:root/*:document/*:keyword[@key='TITLE']" group-by=".">
+              <xsl:for-each-group select="$posts/*:root/*:document/*:keyword[@key='TITLE']"
+              group-by=".">
                 <xsl:for-each select="current-group()">
-                  <xsl:sort select="../*:keyword[@key='DATE']/@value" order="descending" data-type="text"/>
+                  <xsl:sort select="../*:keyword[@key='DATE']/@value"
+                  order="descending" data-type="text" />
                   <xsl:variable name="title" select="@value" />
-                  <xsl:variable name="date" select="../*:keyword[@key='DATE']/@value" />
+                  <xsl:variable name="date"
+                  select="../*:keyword[@key='DATE']/@value" />
                   <tr>
                     <td>
                       <xsl:value-of select="$date" />
                     </td>
                     <td>
                       <a href="https://ilmarikoria.xyz/{$date}-blog.html">
+
                         <xsl:value-of select="$title" />
                       </a>
                     </td>
@@ -71,29 +67,8 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
             </table>
           </div>
         </div>
-<div id="postamble">
-          <ul>
-            <li>This page was last modified on <xsl:call-template name="generate-timestamp" />.</li>
-            <li>Generated with: 
-                  <ol>
-                    <li><a href="https://www.gnu.org/software/emacs/">GNU Emacs</a>
-                      <ul>
-                        <li><a href="https://orgmode.org/">org-mode</a> and <a href="https://github.com/ndw/org-to-xml">org-to-xml</a></li>
-                      </ul>
-                    </li>
-                    <li><a href="https://www.saxonica.com/download/java.xml">SaxonJ-HE</a></li>
-                  </ol>
-            </li>
-            <li><a href="https://github.com/ilmari-koria">GitHub</a></li>
-            <li>Public Key: <a href="https://ilmarikoria.xyz/static/ilmari-koria-public-key.asc">D8DA 85D0 4C6A BD1F 8DA4 2895 3E3B 85AB 3A8D FFD4</a></li>
-            <li><a href="https://creativecommons.org/licenses/by-nc/4.0/">License</a></li>
-            <li><a href="#top">Top</a></li>
-          </ul>
-        </div>
+        <xsl:call-template name="footer-boilerplate" />
       </body>
     </html>
-  </xsl:template>
-  <xsl:template name="generate-timestamp">
-    <xsl:value-of select="current-date()" />
   </xsl:template>
 </xsl:stylesheet>
