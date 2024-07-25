@@ -32,7 +32,6 @@ p {
 #preamble {
     width: 25%;
     border-right: 2px solid grey;
-    text-transform: lowercase;
     padding-right: 1rem;
 }
 
