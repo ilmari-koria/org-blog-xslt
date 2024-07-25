@@ -31,6 +31,9 @@
       <li>
         <a href="https://www.youtube.com/@ilmarikoria">YouTube</a>
       </li>
+      <li>
+        <a href="https://www.meetup.com/london-cantonese-language-meetup/">Cantonese Language Meetup</a>
+      </li>
     </ul>
   </div>
 </xsl:template>
