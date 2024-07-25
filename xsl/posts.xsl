@@ -15,32 +15,10 @@
 
   <xsl:template match="/">
     <html>
-      <xsl:call-template name="header-boilerplate" />
+      <xsl:call-template name="header" />
       <body>
         <div id="container">
-          <div id="preamble">
-            <h1>Ilmari's Webpage</h1>
-            <ul>
-              <li>
-                <a href="https://ilmarikoria.xyz">Home</a>
-              </li>
-              <li>
-                <a href="https://ilmarikoria.xyz/posts.html">Posts</a>
-              </li>
-              <li>
-                <a href="https://ilmarikoria.xyz/ilmari-koria-resume.pdf">Résumé</a>
-              </li>
-              <li>
-                <a href="https://freesound.org/people/ilmari_freesound/">Freesound</a>
-              </li>
-              <li>
-                <a href="https://www.linkedin.com/in/ilmari-koria-3151a5291/">LinkedIn</a>
-              </li>
-              <li>
-                <a href="https://www.youtube.com/@ilmarikoria">YouTube</a>
-              </li>
-            </ul>
-          </div>
+          <xsl:call-template name="preamble" />
           <div id="content">
             <h2>Posts</h2>
             <table>
@@ -68,7 +46,7 @@
             </table>
           </div>
         </div>
-        <xsl:call-template name="footer-boilerplate" />
+        <xsl:call-template name="footer" />
       </body>
     </html>
   </xsl:template>

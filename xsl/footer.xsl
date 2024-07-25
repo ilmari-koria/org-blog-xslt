@@ -5,8 +5,7 @@
                 exclude-result-prefixes="org"
                 version="1.0">
 
-
-  <xsl:template name="footer-boilerplate">
+  <xsl:template name="footer">
     <div id="postamble">
       <ul>
         <li>This page was last modified on <xsl:call-template name="generate-timestamp" />.</li>
