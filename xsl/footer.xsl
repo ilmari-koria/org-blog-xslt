@@ -25,9 +25,6 @@
           </li>
         </ol>
         </li>
-        <li>
-          <a href="https://github.com/ilmari-koria">GitHub</a>
-        </li>
         <li>Public Key: <a href="https://ilmarikoria.xyz/static/ilmari-koria-public-key.asc">D8DA 85D0 4C6A BD1F 8DA4 2895 3E3B 85AB 3A8D FFD4</a></li>
         <li>
           <a href="https://creativecommons.org/licenses/by-nc/4.0/">License</a>
