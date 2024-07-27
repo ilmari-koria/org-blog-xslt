@@ -34,7 +34,6 @@ for xml_file in $XML_DIR/posts/*.xml; do
 done
 
 sed -i '/<?xml version="1\.0"?>/d' $XML_DIR/concat/posts-concat.xml
-sed -i '/<?xml version="1\.0"?>/d' $XML_DIR/concat/posts-concat.xml
 sed -i '1i\<root>' $XML_DIR/concat/posts-concat.xml
 sed -i '$a\<\/root>' $XML_DIR/concat/posts-concat.xml
 java -jar $SAXON_JAR -t -s:"$XML_DIR/concat/posts-concat.xml" -xsl:"$XSL_POSTS" -o:"$HTML_DIR/posts.html"
