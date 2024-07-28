@@ -13,6 +13,9 @@ RESUME_FILE="../resume/ilmari-koria-resume.pdf"
 
 XSL_MAIN="../xsl/main.xsl"
 XSL_POSTS="../xsl/posts.xsl"
+XSL_RECENT="../xsl/recent-posts.xsl"
+XSL_INDEX="../xsl/index.xsl"
+
 SAXON_JAR="../saxon/saxon-he-12.4.jar"
 
 
@@ -29,16 +32,34 @@ bibtex2html --style "ieeetr" --footer "" --header "" --no-header --nodoc --nobib
 tidy -q --numeric-entities yes -asxhtml -o $XML_DIR/bibliography/bibliography.xml $HTML_DIR/bibliography.html
 
 
+# create master file of posts
 for xml_file in $XML_DIR/posts/*.xml; do 
     cat "$xml_file" >> $XML_DIR/concat/posts-concat.xml
 done
 
+# create posts archive
 sed -i '/<?xml version="1\.0"?>/d' $XML_DIR/concat/posts-concat.xml
 sed -i '1i\<root>' $XML_DIR/concat/posts-concat.xml
 sed -i '$a\<\/root>' $XML_DIR/concat/posts-concat.xml
 java -jar $SAXON_JAR -t -s:"$XML_DIR/concat/posts-concat.xml" -xsl:"$XSL_POSTS" -o:"$HTML_DIR/posts.html"
 
 
+# create recent posts xml and index
+java -jar $SAXON_JAR -t -s:"$XML_DIR/concat/posts-concat.xml" -xsl:"$XSL_RECENT" -o:"$XML_DIR/recent-posts.xml"
+java -jar $SAXON_JAR -t -s:"$XML_DIR/concat/index.xml" -xsl:"$XSL_INDEX" -o:"$HTML_DIR/index.html"
+
+
+
+# xslt call other pages
+# for xml_file in $XML_DIR/*.xml; do
+#     if [ -f "$xml_file" ]; then
+#         html_file="$HTML_DIR/$(basename "$xml_file" .xml).html"
+#         java -jar $SAXON_JAR -t -s:"$xml_file" -xsl:"$XSL_MAIN" -o:"$html_file"
+#     fi
+# done
+
+
+# create blog posts html
 for xml_file in $XML_DIR/posts/*.xml; do
     if [ -f "$xml_file" ]; then
         html_file="$HTML_DIR/$(basename "$xml_file" .xml).html"
@@ -47,32 +68,20 @@ for xml_file in $XML_DIR/posts/*.xml; do
 done
 
 
-for xml_file in $XML_DIR/*.xml; do
-    if [ -f "$xml_file" ]; then
-        html_file="$HTML_DIR/$(basename "$xml_file" .xml).html"
-        java -jar $SAXON_JAR -t -s:"$xml_file" -xsl:"$XSL_MAIN" -o:"$html_file"
-    fi
-done
-
-
+# clean up files
 for html_file in $HTML_DIR/*.html; do
     tidy -utf8 -indent -modify $html_file        
 done
-
-
 cp --verbose $CSS_FILE $HTML_DIR
 cp --verbose $RESUME_FILE $HTML_DIR
 rsync -avz --delete $STATIC_DIR $HTML_DIR
-
-
 rm --verbose $HTML_DIR/bibliography.html
 
 
-rsync -avz --delete $HTML_DIR/ root@ilmarikoria.xyz:/var/www/ilmarikoria/
-
-
-sitemap-generator -l https://ilmarikoria.xyz
-rsync -avz --delete $HTML_DIR/sitemap.xml root@ilmarikoria.xyz:/var/www/ilmarikoria/sitemap.xml
+# rsync to remote
+# rsync -avz --delete $HTML_DIR/ root@ilmarikoria.xyz:/var/www/ilmarikoria/
+# sitemap-generator -l https://ilmarikoria.xyz
+# rsync -avz --delete $HTML_DIR/sitemap.xml root@ilmarikoria.xyz:/var/www/ilmarikoria/sitemap.xml
 
 
 echo "Done!"
