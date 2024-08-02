@@ -64,7 +64,7 @@ rsync -avz --delete $STATIC_DIR $HTML_DIR
 rm --verbose $HTML_DIR/bibliography.html
 rm --verbose $XML_DIR/concat/posts-concat.xml
 
-rsync to remote
+# rsync to remote
 rsync -avz --delete $HTML_DIR/ root@ilmarikoria.xyz:/var/www/ilmarikoria/
 sitemap-generator -l https://ilmarikoria.xyz
 rsync -avz --delete $HTML_DIR/sitemap.xml root@ilmarikoria.xyz:/var/www/ilmarikoria/sitemap.xml
