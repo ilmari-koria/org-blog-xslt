@@ -10,10 +10,10 @@
               omit-xml-declaration="yes" />
 
   <xsl:variable name="footnote-number"
-               select="//org:footnote-reference/@label" />
+                select="//org:footnote-reference/@label" />
 
   <xsl:variable name="bibliography"
-               select="document('../tmp/xml/bibliography/bibliography.xml')" />
+                select="document('../tmp/xml/bibliography/bibliography.xml')" />
 
   <xsl:include href="header.xsl" />
   <xsl:include href="footer.xsl" />
@@ -21,10 +21,12 @@
 
   <xsl:template match="/">
     <html>
-      <xsl:call-template name="header" />
+      <xsl:call-template name="header">
+        <xsl:with-param name="title" select="//org:keyword[@key = 'TITLE']/@value" />
+      </xsl:call-template>
       <body>
         <div id="container">
-         <xsl:call-template name="preamble" />
+          <xsl:call-template name="preamble" />
           <div id="content">
             <h1>
               <xsl:value-of select="//org:keyword[@key = 'TITLE']/@value" />

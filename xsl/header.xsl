@@ -13,6 +13,7 @@
                 select="//org:keyword[@key = 'DESCRIPTION']/@value" />
 
   <xsl:template name="header">
+    <xsl:param name="title" />
     <head>
       <meta charset="UTF-8" />
       <meta name="description"
@@ -27,7 +28,7 @@
             href="style.css"
             type="text/css" />
       <title>
-        <xsl:value-of select="//org:keyword[@key = 'TITLE']/@value" />
+        <xsl:value-of select="$title" />
       </title>
     </head>
   </xsl:template>

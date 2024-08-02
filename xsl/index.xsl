@@ -18,7 +18,9 @@
 
   <xsl:template match="/">
     <html>
-      <xsl:call-template name="header" />
+      <xsl:call-template name="header">
+        <xsl:with-param name="title" select="'About'" />
+      </xsl:call-template>
       <body>
         <div id="container">
           <xsl:call-template name="preamble" />
