@@ -38,7 +38,7 @@
             <xsl:apply-templates select="*" />
             <xsl:if test="//org:link[contains(@raw-link, 'cite:')] != ''">
               <div id="references">
-                <h2>References</h2>
+                <h1>References</h1>
                 <table>
                   <xsl:for-each-group select="//org:link[contains(@raw-link, 'cite:')]"
                                       group-by="@raw-link">
@@ -67,7 +67,7 @@
             </xsl:if>
             <xsl:if test="//org:footnote-definition != ''">
               <div class="footnotes">
-                <h2>Footnotes</h2>
+                <h1>Footnotes</h1>
                 <table>
                   <xsl:for-each-group select="//org:footnote-definition"
                                       group-by="org:paragraph">
