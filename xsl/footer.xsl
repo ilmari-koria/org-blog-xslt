@@ -37,7 +37,7 @@
   </xsl:template>
 
   <xsl:template name="generate-timestamp">
-    <xsl:value-of select="current-date()" />
+    <xsl:value-of select="format-dateTime(current-dateTime(), '[Y0001]-[M01]-[D01] [H01]:[m01]:[s01]')"/>
   </xsl:template>
 
 </xsl:stylesheet>
