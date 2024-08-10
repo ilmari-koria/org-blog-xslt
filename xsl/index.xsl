@@ -25,12 +25,20 @@
         <div id="container">
           <xsl:call-template name="preamble" />
           <div id="content">
-            <h1>About</h1>
-            <p>Hello! My name is Ilmari. This (work in progress) blog
-            is simply for me to share my interests in software, sound
-            and zen.</p>
-            <p>Feel free to contact me via
-            <a href="mailto:ilmarikoria@posteo.net">ilmarikoria@posteo.net</a>.</p>
+            <div id="container-index">
+
+              <div id="about">
+                <h1>About</h1>
+                <p>Hello! My name is Ilmari. This (work in progress) blog
+                is simply for me to share my interests in software, sound
+                and zen.</p>
+                <p>Feel free to contact me via
+                <a href="mailto:ilmarikoria@posteo.net">ilmarikoria@posteo.net</a>.</p>
+              </div>
+              <div id="profile-pic">
+                <img src="static/profile-pic.jpg" alt="Selfie with mid-30s caucasian man."/>
+              </div>
+            </div>
             <h2>Recent Posts</h2>
             <table>
               <xsl:for-each-group select="$posts/*:root/*:document/*:keyword[@key='TITLE']" group-by=".">
