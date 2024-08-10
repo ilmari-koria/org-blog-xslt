@@ -26,7 +26,6 @@
           <xsl:call-template name="preamble" />
           <div id="content">
             <div id="container-index">
-
               <div id="about">
                 <h1>About</h1>
                 <p>Hello! My name is Ilmari. This (work in progress) blog
