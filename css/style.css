@@ -55,6 +55,26 @@ p {
     margin: 1.5rem;
 }
 
+#container-index {
+    display: flex;
+}
+
+#about {
+    width: 70%;
+    padding-right: 1rem;
+}
+
+
+#profile-pic {
+    padding: 1rem 1rem 0 1rem;
+}
+
+#profile-pic img {
+    height: auto;
+    max-width: 200px;
+    border-radius: 5px;
+}
+
 #postamble {
     border-top: 2px solid gray;
 }
@@ -104,5 +124,20 @@ td {
 
   h1,h2,h3,h4,h5 {
       font-size: 140%;
+  }
+
+  #container-index {
+    display: initial;
+  }
+
+  #about {
+   display: initial;
+  }
+
+  #profile-pic {
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+   width: 50%;
   }
 }
