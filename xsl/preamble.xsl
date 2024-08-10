@@ -30,6 +30,10 @@
           <td><a href="https://freesound.org/people/ilmari_freesound/">Freesound</a></td>
         </tr>
         <tr>
+          <td>👔</td>
+          <td><a href="https://www.linkedin.com/in/ilmari-koria-3151a5291/">LinkedIn</a></td>
+        </tr>
+        <tr>
           <td>🗣️</td>
           <td><a href="https://ilmarikoria.xyz/static/ilmari-koria-name.mp3">How to Pronounce My Name</a></td>
         </tr>
