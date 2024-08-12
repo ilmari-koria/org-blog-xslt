@@ -12,40 +12,16 @@
   <xsl:template name="preamble">
     <div id="preamble">
       <h1 class="website-title">Ilmari's Webpage</h1>
-      <table>
-        <tr>
-          <td>🏠</td>
-          <td><a href="https://ilmarikoria.xyz">Home</a></td>
-        </tr>
-        <tr>
-          <td>📜</td>
-          <td><a href="https://ilmarikoria.xyz/posts.html">Posts</a></td>
-        </tr>
-        <tr>
-          <td>📑</td>
-          <td><a href="https://ilmarikoria.xyz/ilmari-koria-resume.pdf">Résumé</a></td>
-        </tr>
-        <tr>
-          <td>🎤</td>
-          <td><a href="https://freesound.org/people/ilmari_freesound/">Freesound</a></td>
-        </tr>
-        <tr>
-          <td>👔</td>
-          <td><a href="https://www.linkedin.com/in/ilmari-koria-3151a5291/">LinkedIn</a></td>
-        </tr>
-        <tr>
-          <td>🗣️</td>
-          <td><a href="https://ilmarikoria.xyz/static/ilmari-koria-name.mp3">How to Pronounce My Name</a></td>
-        </tr>
-        <tr>
-          <td>💻</td>
-          <td><a href="https://github.com/ilmari-koria">GitHub</a></td>
-        </tr>
-        <tr>
-          <td>🇭🇰</td>
-          <td><a href="https://www.meetup.com/london-cantonese-language-meetup/">Cantonese Language Meetup</a></td>
-        </tr>
-      </table>
+      <ul>
+        <li><a href="https://ilmarikoria.xyz">Home</a></li>
+        <li><a href="https://ilmarikoria.xyz/posts.html">Posts</a></li>
+        <li><a href="https://ilmarikoria.xyz/ilmari-koria-resume.pdf">Résumé</a></li>
+        <li><a href="https://freesound.org/people/ilmari_freesound/">Freesound</a></li>
+        <li><a href="https://www.linkedin.com/in/ilmari-koria-3151a5291/">LinkedIn</a></li>
+        <li><a href="https://ilmarikoria.xyz/static/ilmari-koria-name.mp3">How to Pronounce My Name</a></li>
+        <li><a href="https://github.com/ilmari-koria">GitHub</a></li>
+        <li><a href="https://www.meetup.com/london-cantonese-language-meetup/">Cantonese Language Meetup</a></li>
+      </ul>
     </div>
   </xsl:template>
 </xsl:stylesheet>
