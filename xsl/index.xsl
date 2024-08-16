@@ -38,7 +38,7 @@
                 <ul>
                   <li>cycling</li>
                   <li>field recording/phonography</li>
-                  <li>tinkering with FOSS tools</li>
+                  <li>tinkering with free and open-source software</li>
                   <li>language learning, and</li>
                   <li>Zazen.</li>
                 </ul>
