@@ -32,8 +32,9 @@
                 blog is simply for me to share assorted reflections on
                 software, sound and zen.</p>
                 <p>By trade I am a content markup technologies
-                professional, and I currently function as a (XML) Content
-                Analyst at Bloomsbury Publishing Plc in London.</p>
+                professional, and I currently function as a (XML)
+                Content Analyst at Bloomsbury Publishing in
+                London.</p>
                 <p>Some of my interests include:
                 <ul>
                   <li>cycling</li>
