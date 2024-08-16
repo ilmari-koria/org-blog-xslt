@@ -28,14 +28,31 @@
             <div id="container-index">
               <div id="about">
                 <h1>About</h1>
-                <p>Hello! My name is Ilmari. This (work in progress) blog
-                is simply for me to share my interests in software, sound
-                and zen.</p>
+                <p>Hello! My name is Ilmari. This (work in progress)
+                blog is simply for me to share assorted reflections on
+                software, sound and zen.</p>
+                <p>By trade I am a content markup technologies
+                professional, and I currently function as a (XML) Content
+                Analyst at Bloomsbury Publishing Plc in London.</p>
+                <p>Some of my interests include:
+                <ul>
+                  <li>cycling</li>
+                  <li>field recording/phonography</li>
+                  <li>tinkering with FOSS tools</li>
+                  <li>language learning, and</li>
+                  <li>Zazen.</li>
+                </ul>
+                </p>
                 <p>Feel free to contact me via
                 <a href="mailto:ilmarikoria@posteo.net">ilmarikoria@posteo.net</a>.</p>
               </div>
               <div id="profile-pic">
-                <img src="static/profile-pic.jpg" alt="Selfie with mid-30s caucasian man."/>
+                <figure>
+                  <img src="static/profile-pic.jpg" alt="Selfie with mid-30s caucasian man."/>
+                  <figcaption>
+                    Me in 2024.   
+                  </figcaption>
+                </figure>
               </div>
             </div>
             <h2>Recent Posts</h2>
