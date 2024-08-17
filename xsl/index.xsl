@@ -31,10 +31,6 @@
                 <p>Hello! My name is Ilmari. This (work in progress)
                 blog is simply for me to share assorted reflections on
                 software, sound and zen.</p>
-                <p>In the work side of things, I am a content markup
-                technologies professional, currently functioning as a
-                (XML) Content Analyst at Bloomsbury Publishing in
-                London.</p>
                 <p>Some of my interests include:
                 <ul>
                   <li>cycling</li>
@@ -44,8 +40,12 @@
                   <li>Zazen.</li>
                 </ul>
                 </p>
+                <p>On the work side of things, I am a content markup
+                technologies professional, currently functioning as a
+                (XML) Content Analyst at Bloomsbury Publishing in
+                London.</p>
                 <p>Feel free to contact me via
-                <a href="mailto:ilmarikoria@posteo.net">ilmarikoria@posteo.net</a>.</p>
+                <a href="mailto:ilmarikoria@posteo.net">ilmarikoria@posteo.net</a> (Please find my public key below.)</p>
               </div>
               <div id="profile-pic">
                 <figure>
