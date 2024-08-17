@@ -31,9 +31,9 @@
                 <p>Hello! My name is Ilmari. This (work in progress)
                 blog is simply for me to share assorted reflections on
                 software, sound and zen.</p>
-                <p>By trade I am a content markup technologies
-                professional, and I currently function as a (XML)
-                Content Analyst at Bloomsbury Publishing in
+                <p>In the work side of things, I am a content markup
+                technologies professional, currently functioning as a
+                (XML) Content Analyst at Bloomsbury Publishing in
                 London.</p>
                 <p>Some of my interests include:
                 <ul>
