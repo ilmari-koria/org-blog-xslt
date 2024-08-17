@@ -1,8 +1,8 @@
 body {
   max-width: 65rem;
   margin: 1rem; /* top, right, bottom, and left */
-  padding: 0.5rem;
   font-family: serif;
+  border: 2px solid black;
 }
 
 h1 {font-size: 145%;}
@@ -22,28 +22,29 @@ p {
 }
 
 #preamble {
-    width: 25%;
+    width: 20%;
     border-right: 2px solid black;
-    padding-right: 0.5rem;
-}
-
-#preamble h1 {
-    font-size: 160%;
-}
-
-#preamble ul {
-    list-style: none;
-    margin: 0 0 1.25rem 0;
-    padding: 0 0 0 0;
-}
-
-#preamble li {
-    padding-bottom: 0.75rem;
+    padding: 1rem;
 }
 
 #content {
     width: 80%;
-    margin: 1.5rem;
+    padding: 1rem;
+}
+
+#preamble h1 {
+    font-size: 160%;
+    margin: 1rem;
+}
+
+#preamble ul {
+    list-style: none;
+    margin: 2rem 0 0 0;
+    padding: 0 0 0 0;
+}
+
+#preamble li {
+    padding-bottom: 1rem;
 }
 
 #container-index {
@@ -62,18 +63,23 @@ p {
 }
 
 #profile-pic {
-    padding: 1rem 1rem 0 1rem;
+    width: 30%;
 }
 
 #profile-pic img {
     height: auto;
-    max-width: 200px;
+    max-width: 100%;
     border: 2px solid black;
 }
 
 #profile-pic figcaption {
-    text-align: center;
     font-style: italic;
+}
+
+#profile-pic figure {
+    text-align: center;
+    padding: 0;
+    margin: 0;
 }
 
 #postamble {
@@ -121,6 +127,7 @@ td {
   #content {
     width: initial;
     margin: 2rem 0 0 0;
+    border: initial
   }
 
   h1,h2,h3,h4,h5 {
