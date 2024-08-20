@@ -2,7 +2,6 @@ body {
   max-width: 65rem;
   margin: 1rem; /* top, right, bottom, and left */
   font-family: serif;
-  border: 2px solid black;
 }
 
 h1 {font-size: 145%;}
