@@ -15,6 +15,7 @@
       <ul>
         <li><a href="https://ilmarikoria.xyz">Home</a></li>
         <li><a href="https://ilmarikoria.xyz/posts.html">Posts</a></li>
+        <li><a href="https://ilmarikoria.xyz/rss.xml">Feed</a></li>
         <li><a href="https://ilmarikoria.xyz/ilmari-koria-resume.pdf">Résumé</a></li>
         <li><a href="https://freesound.org/people/ilmari_freesound/">Freesound</a></li>
         <li><a href="https://ilmarikoria.xyz/static/ilmari-koria-name.mp3">How to Pronounce My Name</a></li>
