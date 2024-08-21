@@ -51,7 +51,7 @@
                 <figure>
                   <img src="static/profile-pic.jpg" alt="Selfie with mid-30s caucasian man."/>
                   <figcaption>
-                    Me in 2024.   
+                    Me / 2024.   
                   </figcaption>
                 </figure>
               </div>
