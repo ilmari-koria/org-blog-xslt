@@ -2,9 +2,8 @@
 
 <xsl:stylesheet version="3.0"
                 xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-                xmlns:atom="http://www.w3.org/2005/Atom"
                 xmlns:org="https://nwalsh.com/ns/org-to-xml"
-                exclude-result-prefixes="org atom">
+                exclude-result-prefixes="org">
 
   <xsl:output method="xml"
               indent="yes"
@@ -17,8 +16,8 @@
 
     <feed xmlns:atom="http://www.w3.org/2005/Atom">
       <title>Ilmarikoria.xyz Feed</title>
-      <link href="https://ilmarikoria.xyz/feed.xml" rel="self"/>
-      <id>https://ilmarikoria.xyz/feed.xml</id>
+      <link href="https://ilmarikoria.xyz/atom.xml"/>
+      <id>https://ilmarikoria.xyz/atom.xml</id>
 
       <!-- i.e., latest post -->
       <updated>
