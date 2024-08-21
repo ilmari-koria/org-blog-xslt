@@ -14,9 +14,9 @@
 
   <xsl:template match="/">
 
-    <feed xmlns:atom="http://www.w3.org/2005/Atom">
+    <feed xmlns="http://www.w3.org/2005/Atom">
       <title>Ilmarikoria.xyz Feed</title>
-      <link href="https://ilmarikoria.xyz/atom.xml"/>
+      <link href="https://ilmarikoria.xyz/atom.xml" rel="self"/>
       <id>https://ilmarikoria.xyz/atom.xml</id>
 
       <!-- i.e., latest post -->
