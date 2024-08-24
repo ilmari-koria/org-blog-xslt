@@ -46,8 +46,6 @@
           <updated>
             <xsl:value-of select="concat($date, 'T00:00:00Z')"/>
           </updated>
-
-
           
           <summary>
             <xsl:variable name="text" select="(org:headline/org:section/org:paragraph)[1]" />
