@@ -24,6 +24,7 @@
       <body>
           <xsl:call-template name="preamble" />
           <div id="content">
+           <div id="recent-posts">
             <h2>Recent Posts</h2>
             <table>
               <xsl:for-each-group select="$posts/*:root/*:document/*:keyword[@key='TITLE']" group-by=".">
@@ -33,6 +34,7 @@
                     <xsl:variable name="title" select="@value" />
                     <xsl:variable name="date" select="../*:keyword[@key='DATE']/@value" />
                     <tr>
+                      <td>📍</td>
                       <td>
                         <xsl:value-of select="$date" />
                       </td>
@@ -46,6 +48,7 @@
                 </xsl:for-each>
               </xsl:for-each-group>
             </table>
+           </div>
           </div>
         <xsl:call-template name="footer" />
       </body>
