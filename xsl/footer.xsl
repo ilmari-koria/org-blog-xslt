@@ -7,25 +7,9 @@
 
   <xsl:template name="footer">
     <div id="postamble">
+      <hr />
       <ul>
-        <li>This page was last modified on <xsl:call-template name="generate-timestamp" />.</li>
-        <li>Generated with: 
-        <ol>
-          <li>
-            <a href="https://www.gnu.org/software/emacs/">GNU Emacs</a>
-            <ul>
-              <li>
-                <a href="https://orgmode.org/">org-mode</a> and 
-                <a href="https://github.com/ndw/org-to-xml">org-to-xml</a>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <a href="https://www.saxonica.com/download/java.xml">SaxonJ-HE</a>
-          </li>
-        </ol>
-        </li>
-        <li>Public Key: <a href="https://ilmarikoria.xyz/static/ilmari-koria-public-key.asc">D8DA 85D0 4C6A BD1F 8DA4 2895 3E3B 85AB 3A8D FFD4</a></li>
+        <li>This site was last generated on <xsl:call-template name="generate-timestamp" />.</li>
         <li>
           <a href="https://creativecommons.org/licenses/by-nc/4.0/">License</a>
         </li>
