@@ -15,6 +15,7 @@ XSL_MAIN="../xsl/main.xsl"
 XSL_POSTS="../xsl/posts.xsl"
 XSL_INDEX="../xsl/index.xsl"
 XSL_ATOM="../xsl/atom.xsl"
+XSL_ABOUT="../xsl/about.xsl"
 
 SAXON_JAR="../saxon/saxon-he-12.4.jar"
 
@@ -49,6 +50,10 @@ java -jar $SAXON_JAR -t -s:"$XML_DIR/concat/posts-concat.xml" -xsl:"$XSL_ATOM" -
 
 # # create index page
 java -jar $SAXON_JAR -t -s:"$XML_DIR/concat/posts-concat.xml" -xsl:"$XSL_INDEX" -o:"$HTML_DIR/index.html"
+
+
+# about page
+java -jar $SAXON_JAR -t -s:"$XML_DIR/concat/posts-concat.xml" -xsl:"$XSL_ABOUT" -o:"$HTML_DIR/about.html"
 
 
 # # create blog posts html
