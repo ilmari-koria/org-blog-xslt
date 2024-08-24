@@ -28,9 +28,9 @@
         <div id="container">
           <xsl:call-template name="preamble" />
           <div id="content">
-            <h1>
+            <h2>
               <xsl:value-of select="//org:keyword[@key = 'TITLE']/@value" />
-            </h1>
+            </h2>
             <xsl:if test="//org:keyword[@key = 'DATE']">
               <p>Posted: 
               <xsl:value-of select="//org:keyword[@key = 'DATE']/@value" /></p>
@@ -38,7 +38,7 @@
             <xsl:apply-templates select="*" />
             <xsl:if test="//org:link[contains(@raw-link, 'cite:')] != ''">
               <div id="references">
-                <h1>References</h1>
+                <h2>References</h2>
                 <table>
                   <xsl:for-each-group select="//org:link[contains(@raw-link, 'cite:')]"
                                       group-by="@raw-link">
@@ -67,7 +67,7 @@
             </xsl:if>
             <xsl:if test="//org:footnote-definition != ''">
               <div class="footnotes">
-                <h1>Footnotes</h1>
+                <h2>Footnotes</h2>
                 <table>
                   <xsl:for-each-group select="//org:footnote-definition"
                                       group-by="org:paragraph">
@@ -100,7 +100,10 @@
 
   <xsl:template match="org:headline/org:title">
     <xsl:if test="not(ancestor::org:headline[org:tags='ignore'])">
-      <xsl:element name="h{../@level}">
+
+      <!-- TODO keep website title as only H1? -->
+      <xsl:element name="h{../@level + 1}">
+
         <xsl:apply-templates />
       </xsl:element>
     </xsl:if>
