@@ -50,7 +50,7 @@ figure figcaption {
 
 td {
     vertical-align: top;
-    padding: 0 1rem 1rem 0;
+    padding: 0 1rem 0.25rem 0;
 }
 
 #postamble {
