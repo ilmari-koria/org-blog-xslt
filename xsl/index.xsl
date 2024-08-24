@@ -19,43 +19,11 @@
   <xsl:template match="/">
     <html>
       <xsl:call-template name="header">
-        <xsl:with-param name="title" select="'About'" />
+        <xsl:with-param name="title" select="'Index'" />
       </xsl:call-template>
       <body>
-        <div id="container">
           <xsl:call-template name="preamble" />
           <div id="content">
-            <div id="container-index">
-              <div id="about">
-                <h1>About</h1>
-                <p>Hello! My name is Ilmari. This (work in progress)
-                blog is simply for me to share assorted reflections on
-                software, sound and zen.</p>
-                <p>Some of my interests include:
-                <ul>
-                  <li>cycling</li>
-                  <li>field recording/phonography</li>
-                  <li>tinkering with free and open-source software</li>
-                  <li>language learning, and</li>
-                  <li>Zazen.</li>
-                </ul>
-                </p>
-                <p>On the work side of things, I am a content markup
-                technologies professional, currently functioning as a
-                (XML) Content Analyst at Bloomsbury Publishing in
-                London.</p>
-                <p>Feel free to contact me via
-                <a href="mailto:ilmarikoria@posteo.net">ilmarikoria@posteo.net</a> (Please find my public key below.)</p>
-              </div>
-              <div id="profile-pic">
-                <figure>
-                  <img src="static/profile-pic.jpg" alt="Selfie with mid-30s caucasian man."/>
-                  <figcaption>
-                    Me / 2024.   
-                  </figcaption>
-                </figure>
-              </div>
-            </div>
             <h2>Recent Posts</h2>
             <table>
               <xsl:for-each-group select="$posts/*:root/*:document/*:keyword[@key='TITLE']" group-by=".">
@@ -79,7 +47,6 @@
               </xsl:for-each-group>
             </table>
           </div>
-        </div>
         <xsl:call-template name="footer" />
       </body>
     </html>
