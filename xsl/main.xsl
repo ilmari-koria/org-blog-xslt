@@ -39,6 +39,7 @@
             <xsl:if test="//org:link[contains(@raw-link, 'cite:')] != ''">
               <div id="references">
                 <h2>References</h2>
+
                 <table>
                   <xsl:for-each-group select="//org:link[contains(@raw-link, 'cite:')]"
                                       group-by="@raw-link">
@@ -58,11 +59,12 @@
                         </a>
                       </td>
                       <td>
-                        <xsl:value-of select="$bib-entry//*:td[@class = 'bibtexitem']" />
+                        <xsl:apply-templates select="$bib-entry//*:td[@class = 'bibtexitem']" />
                       </td>
                     </tr>
                   </xsl:for-each-group>
                 </table>
+
               </div>
             </xsl:if>
             <xsl:if test="//org:footnote-definition != ''">
@@ -184,6 +186,20 @@
     <xsl:variable name="number"
                   select="$bib-entry//*:a[@name = $key]/text()" />
     <a href="#{$key}">[<xsl:value-of select="$number" />]</a>
+  </xsl:template>
+
+  <!-- bib links and emphasis -->
+  <!-- TODO consolidate/clean up bib stuff -->
+  <xsl:template match="*:a[@href]">
+    <a href="{@href}">
+      <xsl:apply-templates/>
+    </a>
+  </xsl:template>
+
+  <xsl:template match="*:em">
+    <em>
+      <xsl:apply-templates/>
+    </em>
   </xsl:template>
 
   <xsl:template match="org:footnote-reference">
