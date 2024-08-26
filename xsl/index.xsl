@@ -34,7 +34,6 @@
                     <xsl:variable name="title" select="@value" />
                     <xsl:variable name="date" select="../*:keyword[@key='DATE']/@value" />
                     <tr>
-                      <td>📌</td>
                       <td>
                         <xsl:value-of select="$date" />
                       </td>
