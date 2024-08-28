@@ -32,6 +32,8 @@
                             order="descending"
                             data-type="text" />
                   <xsl:variable name="title" select="@value" />
+                  <xsl:variable name="tags"
+                                select="tokenize(../*:keyword[@key='FILETAGS']/@value, ' ')" />
                   <xsl:variable name="date"
                                 select="../*:keyword[@key='DATE']/@value" />
                   <tr>
@@ -43,6 +45,18 @@
                         <xsl:value-of select="$title" />
                       </a>
                     </td>
+
+                      <td class="tags">
+                        <xsl:for-each select="$tags">
+                          <a href="{concat('http://example.com/', .)}">
+                            <xsl:value-of select="." />
+                          </a>
+                          <xsl:if test="position() != last()">
+                            <xsl:text> </xsl:text>
+                          </xsl:if>
+                        </xsl:for-each>
+                      </td>
+
                   </tr>
                 </xsl:for-each>
               </xsl:for-each-group>

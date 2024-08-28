@@ -33,6 +33,8 @@
                   <xsl:if test="position() &lt;= 3">
                     <xsl:variable name="title" select="@value" />
                     <xsl:variable name="date" select="../*:keyword[@key='DATE']/@value" />
+                                      <xsl:variable name="tags"
+                                select="tokenize(../*:keyword[@key='FILETAGS']/@value, ' ')" />
                     <tr>
                       <td>
                         <xsl:value-of select="$date" />
@@ -41,6 +43,16 @@
                         <a href="https://ilmarikoria.xyz/{$date}-blog.html">
                           <xsl:value-of select="$title" />
                         </a>
+                      </td>
+                      <td class="tags">
+                        <xsl:for-each select="$tags">
+                          <a href="{concat('http://example.com/', .)}">
+                            <xsl:value-of select="." />
+                          </a>
+                          <xsl:if test="position() != last()">
+                            <xsl:text> </xsl:text>
+                          </xsl:if>
+                        </xsl:for-each>
                       </td>
                     </tr>
                   </xsl:if>

@@ -76,10 +76,10 @@ rm --verbose $HTML_DIR/bibliography.html
 rm --verbose $XML_DIR/concat/*.xml
 
 # rsync to remote
-rsync -avz --delete $HTML_DIR/ root@ilmarikoria.xyz:/var/www/ilmarikoria/
-sitemap-generator -l https://ilmarikoria.xyz
-# TODO move this to tmp
-rsync -avz --delete sitemap.xml root@ilmarikoria.xyz:/var/www/ilmarikoria/sitemap.xml
+# rsync -avz --delete $HTML_DIR/ root@ilmarikoria.xyz:/var/www/ilmarikoria/
+# sitemap-generator -l https://ilmarikoria.xyz
+# # TODO move this to tmp
+# rsync -avz --delete sitemap.xml root@ilmarikoria.xyz:/var/www/ilmarikoria/sitemap.xml
 
 
 echo "Done!"
