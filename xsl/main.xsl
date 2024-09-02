@@ -25,16 +25,17 @@
         <xsl:with-param name="title" select="//org:keyword[@key = 'TITLE']/@value" />
       </xsl:call-template>
       <body>
-        <div id="container">
           <xsl:call-template name="preamble" />
           <div id="content">
-            <h2>
+            <div id="post-meta">
+            <h2 class="post-title">
               <xsl:value-of select="//org:keyword[@key = 'TITLE']/@value" />
             </h2>
             <xsl:if test="//org:keyword[@key = 'DATE']">
-              <p>Posted: 
+              <p class="post-date">Posted: 
               <xsl:value-of select="//org:keyword[@key = 'DATE']/@value" /></p>
             </xsl:if>
+            </div>
             <xsl:apply-templates select="*" />
             <xsl:if test="//org:link[contains(@raw-link, 'cite:')] != ''">
               <div id="references">
@@ -64,7 +65,6 @@
                     </tr>
                   </xsl:for-each-group>
                 </table>
-
               </div>
             </xsl:if>
             <xsl:if test="//org:footnote-definition != ''">
@@ -94,7 +94,6 @@
               </div>
             </xsl:if>
           </div>
-        </div>
         <xsl:call-template name="footer" />
       </body>
     </html>

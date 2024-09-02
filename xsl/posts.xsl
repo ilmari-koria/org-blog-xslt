@@ -20,7 +20,6 @@
         <xsl:with-param name="title" select="'Posts'" />
       </xsl:call-template>
       <body>
-        <div id="container">
           <xsl:call-template name="preamble" />
           <div id="content">
             <h2>Posts</h2>
@@ -48,7 +47,6 @@
               </xsl:for-each-group>
             </table>
           </div>
-        </div>
         <xsl:call-template name="footer" />
       </body>
     </html>

@@ -11,7 +11,7 @@
 
   <xsl:template name="preamble">
     <div id="preamble">
-      <h1 class="website-title">Ilmari's Webpage</h1>
+      <h1>Ilmari's Webpage</h1>
       <ul>
         <li><a href="https://ilmarikoria.xyz">Home</a></li>
         <li><a href="https://ilmarikoria.xyz/about.html">About</a></li>
