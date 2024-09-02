@@ -1,11 +1,16 @@
 body {
   max-width: 65rem;
   margin: 1rem; /* top, right, bottom, and left */
-  font-family: sans-serif;
+  font-family: serif;
 }
 
-h1,h2,h3,h4 {
-  text-transform: lowercase;
+#preamble li {
+    list-style: none;
+    padding: 0 0 0.25rem 0;
+}
+
+#preamble ul {
+    padding: 0;
 }
 
 p {
@@ -17,12 +22,26 @@ p {
 #recent-posts td:nth-child(1)::before {
     content:"📌 ";
     padding-right: 0.25rem;
-}
-                            
-#preamble li {
-  text-transform: lowercase;
+    font-size: 75%;
 }
 
+#post-meta {
+    border-left: 5px double black;
+    margin: 2.5rem 0 2rem 0;
+}
+
+.post-title {
+    margin-bottom: 0;
+    padding-left: 1rem;
+}
+
+.post-date {
+    margin-top: 0.45rem;
+    font-style: italic;
+    padding-left: 1rem;
+    
+}
+                            
 #about p {
   text-align: initial;
   text-justify: initial;
@@ -58,8 +77,12 @@ td {
     padding: 0 1rem 0.25rem 0;
 }
 
-#postamble {
-    text-transform: lowercase;
+#references td {
+    padding: 0 1rem 0.85rem 0;
+}
+
+.footnotes td {
+    padding: 0 1rem 0.85rem 0;
 }
 
 @media (max-width: 768px) {
