@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<resume>
+<resume xmlns:r="http://ilmarikoria.xyz/ilmari-koria-resume.pdf">
   <header>
     <title>Ilmari Koria Resume</title>
     <name>Ilmari Koria</name>
