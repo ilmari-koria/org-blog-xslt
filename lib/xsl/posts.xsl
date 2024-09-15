@@ -13,7 +13,7 @@
                 select="//org:footnote-reference/@label" />
 
   <xsl:variable name="bibliography"
-                select="document('../tmp/xml/bibliography/bibliography.xml')" />
+                select="document('../../tmp/xml/bibliography/bibliography.xml')" />
 
   <xsl:include href="header.xsl" />
   <xsl:include href="footer.xsl" />
