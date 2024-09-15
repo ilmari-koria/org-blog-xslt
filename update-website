@@ -23,11 +23,31 @@ SAXON="$LIB/saxon/saxon-he-12.4.jar"
 
 XML_CONCAT="$DIR_XML/concat/posts-concat.xml"
 
+FILE_BIB="./bib/bibliography.bib"
 
 cd "$LIB/el"
 emacs --batch -l convert-blog-posts-to-xml.el -f convert-blog-posts-to-xml
 cd ../..
 mv $DIR_POSTS/*.xml $DIR_XML/posts
+
+bibtex2html \
+    --style "ieeetr" \
+    --footer "" \
+    --header "" \
+    --no-header \
+    --nodoc \
+    --nobibsource \
+    --ignore-errors \
+    --sort-as-bibtex \
+    --output $DIR_XML/bibliography/bibliography \
+    $FILE_BIB
+
+tidy \
+    -q \
+    --numeric-entities yes \
+    -asxhtml \
+    -o $DIR_XML/bibliography/bibliography.xml \
+    $DIR_XML/bibliography/bibliography.html
 
 java -jar $SAXON -t -s:"$DIR_XML/posts/2021-06-07-blog.xml" -xsl:"$XSL_CONCAT_POSTS" -o:"$XML_CONCAT"
 java -jar $SAXON -t -s:"$XML_CONCAT" -xsl:"$XSL_ATOM" -o:"$DIR_HTML/atom.xml"
@@ -43,3 +63,4 @@ done
 # rsync -avz --delete $DIR_HTML/ root@ilmarikoria.xyz:/var/www/ilmarikoria/
 # sitemap-generator -l https://ilmarikoria.xyz
 # rsync -avz --delete sitemap.xml root@ilmarikoria.xyz:/var/www/ilmarikoria/sitemap.xml
+
