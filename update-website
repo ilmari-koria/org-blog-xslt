@@ -1,0 +1,62 @@
+#!/bin/bash
+
+DIR_POSTS="./posts"
+
+DIR_BIB="./tmp/bib"
+DIR_HTML="./tmp/html"
+DIR_XML="./tmp/xml"
+
+DIR_STATIC="./static"
+
+LIB="./lib"
+
+XSL_ABOUT="$LIB/xsl/about.xsl"
+XSL_ARCHive="$LIB/xsl/archive.xsl"
+XSL_ATOM="$LIB/xsl/atom.xsl"
+XSL_CSS="$LIB/xsl/css.xsl"
+XSL_INDEX="$LIB/xsl/index.xsl"
+XSL_POSTS="$LIB/xsl/posts.xsl"
+XSL_RESUME="$LIB/xsl/resume.xsl"
+XSL_CONCAT_POSTS="$LIB/xsl/concat-posts.xsl"
+
+SAXON="$LIB/saxon/saxon-he-12.4.jar"
+
+EL_CONVERT="$LIB/el/convert-blog-posts-to-xml.el"
+
+emacs --batch -l $EL_CONVERT -f $EL_CONVERT
+
+mv $DIR_POSTS/*.xml $DIR_XML/posts
+
+java -jar $SAXON_JAR -t -s:"L" -xsl:"$XSL_CONCAT_POSTS" -o:""
+java -jar $SAXON_JAR -t -s:"$XML_DIR/concat/posts-concat.xml" -xsl:"$XSL_ATOM" -o:"$HTML_DIR/atom.xml"
+java -jar $SAXON_JAR -t -s:"$XML_DIR/concat/posts-concat.xml" -xsl:"$XSL_ATOM" -o:"$HTML_DIR/atom.xml"
+java -jar $SAXON_JAR -t -s:"$XML_DIR/concat/posts-concat.xml" -xsl:"$XSL_INDEX" -o:"$HTML_DIR/index.html"
+java -jar $SAXON_JAR -t -s:"$XML_DIR/concat/posts-concat.xml" -xsl:"$XSL_ABOUT" -o:"$HTML_DIR/about.html"
+
+# archive
+for xml_file in $XML_DIR/posts/*.xml; do
+    if [ -f "$xml_file" ]; then
+        html_file="$HTML_DIR/$(basename "$xml_file" .xml).html"
+        java -jar $SAXON_JAR -t -s:"$xml_file" -xsl:"$XSL_MAIN" -o:"$html_file"
+    fi
+done
+
+
+# clean up files
+for html_file in $HTML_DIR/*.html; do
+    tidy -utf8 -indent -modify $html_file        
+done
+cp --verbose $CSS_FILE $HTML_DIR
+cp --verbose $RESUME_FILE $HTML_DIR
+rsync -avz --delete $STATIC_DIR $HTML_DIR
+rm --verbose $HTML_DIR/bibliography.html
+rm --verbose $XML_DIR/concat/*.xml
+
+# rsync to remote
+rsync -avz --delete $HTML_DIR/ root@ilmarikoria.xyz:/var/www/ilmarikoria/
+sitemap-generator -l https://ilmarikoria.xyz
+# TODO move this to tmp
+rsync -avz --delete sitemap.xml root@ilmarikoria.xyz:/var/www/ilmarikoria/sitemap.xml
+
+
+echo "Done!"
