@@ -10,7 +10,7 @@
               omit-xml-declaration="yes" />
 
   <xsl:variable name="posts"
-                select="document('../tmp/xml/concat/posts-concat.xml')" />
+                select="document('../../tmp/xml/concat/posts-concat.xml')" />
 
   <xsl:include href="header.xsl" />
   <xsl:include href="footer.xsl" />

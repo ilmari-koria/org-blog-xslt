@@ -10,7 +10,7 @@
               encoding="utf-8"/>
 
   <xsl:variable name="posts-concat"
-                select="document('../tmp/xml/concat/posts-concat.xml')" />
+                select="document('../../tmp/xml/concat/posts-concat.xml')" />
 
   <xsl:template match="/">
 
