@@ -24,7 +24,7 @@
     	<xsl:value-of select="resume/header/name"/>
     <xsl:text>}</xsl:text>
     <!-- top meta -->    
-        <xsl:text>Résumé: Updated </xsl:text><xsl:value-of select="format-date(current-date(), '[D01] [MNn] [Y0001]')"/>
+        <xsl:text>Résumé: Generated </xsl:text><xsl:value-of select="format-date(current-date(), '[D01] [MNn] [Y0001]')"/>
         <xsl:text> --- </xsl:text>
         <xsl:text>\href{mailto:</xsl:text>
         	<xsl:value-of select="resume/header/email/@mailto"/>
