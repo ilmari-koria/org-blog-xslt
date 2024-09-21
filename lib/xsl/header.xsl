@@ -22,6 +22,9 @@
             content="ilmarikoria@posteo.net" />
       <meta name="viewport"
             content="initial-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+      <link rel="alternate"
+            type="application/rss+xml"
+            href="atom.xml" title="atom feed" />
       <link rel="canonical"
             href="https://ilmarikoria.xyz" />
       <link rel="stylesheet"
