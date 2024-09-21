@@ -12,21 +12,17 @@
               encoding="UTF-8"
               indent="no"
               omit-xml-declaration="yes"/>
-
   <xsl:template match="/">
-
     <!-- header --> 
     <xsl:text>
       \input{../../lib/tex/resume-header.tex}
       \begin{document}
       \pagestyle{fancy}
     </xsl:text>
-
     <!-- name top --> 
     <xsl:text>\section*{</xsl:text>
     	<xsl:value-of select="resume/header/name"/>
     <xsl:text>}</xsl:text>
-
     <!-- top meta -->    
         <xsl:text>Résumé: Updated </xsl:text><xsl:value-of select="format-date(current-date(), '[D01] [MNn] [Y0001]')"/>
         <xsl:text> --- </xsl:text>
@@ -91,7 +87,6 @@
     	\subsection*{About}
     </xsl:text>
     <xsl:value-of select="resume/about" />
-
     <!-- experience -->
     <xsl:text>
       \subsection*{Experience}
@@ -124,8 +119,6 @@
                 <xsl:text>\end{itemize}</xsl:text>
       <xsl:text>\end{itemize}</xsl:text>
     </xsl:for-each>
-
-
     <xsl:text>
       \subsection*{Education}
     </xsl:text>
@@ -140,7 +133,6 @@
                   <xsl:value-of select="address"/>
         </xsl:for-each>
     <xsl:text>\end{itemize}</xsl:text>
-    
     <xsl:text>
       \subsection*{Technical Training}
     </xsl:text>
@@ -157,7 +149,6 @@
                   <xsl:value-of select="date"/>
         </xsl:for-each>
     <xsl:text>\end{itemize}</xsl:text>
-
     <xsl:text>
       \subsection*{Technical Tools and Language Skills }
     </xsl:text>
@@ -168,7 +159,6 @@
       </xsl:if>
     </xsl:for-each>
     <xsl:text> --- </xsl:text>
-
     <xsl:for-each select="resume/language-list/language-entry">
       <xsl:value-of select="language"/>
       <xsl:text>: </xsl:text>
@@ -179,7 +169,5 @@
     </xsl:for-each>
     <xsl:text>.</xsl:text>
   <xsl:text>\end{document}</xsl:text>
-
-
 </xsl:template>
 </xsl:stylesheet>
