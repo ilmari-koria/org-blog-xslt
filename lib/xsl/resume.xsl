@@ -2,8 +2,9 @@
 
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
                 xmlns:xs="http://www.w3.org/2001/XMLSchema"
-                exclude-result-prefixes="xs"
-                version="2.0">
+                xmlns:r="http://ilmarikoria.xyz/ilmari-koria-resume.pdf"
+                exclude-result-prefixes="xs r"
+                version="3.0">
 
   <xsl:strip-space elements="*"/>
 
@@ -13,131 +14,162 @@
               omit-xml-declaration="yes"/>
 
   <xsl:template match="/">
+
+    <!-- header --> 
     <xsl:text>
-      \hsize 17cm
-      \vsize 26.7cm
-      \hoffset -1cm
-      \voffset -1cm
-      \footline={}
-      \font\bigsmallcaps=cmcsc20
-      \font\smallcaps=cmcsc12
-
-      \def\sectiontitle#1{%
-      \vskip 50pt
-      \noindent\centerline{\smallcaps #1}%
-      \vskip 5pt
-      \hrule
-      \par
-      \vskip 10pt
-      }
-
-      \def\bulleteditem#1{%
-      \noindent
-      \hangindent=20pt
-      \hangafter=1
-      $\bullet$ \hskip 10pt #1\par
-      }
+      \input{../../lib/tex/resume-header.tex}
+      \begin{document}
+      \pagestyle{fancy}
     </xsl:text>
 
-    <!-- name --> 
-    <xsl:text>
-      \noindent\centerline{
-      \bigsmallcaps
-    </xsl:text>
-    <xsl:value-of select="resume/header/name"/>
-    <xsl:text>
-      }\par\vskip 5pt
-    </xsl:text>
+    <!-- name top --> 
+    <xsl:text>\section*{</xsl:text>
+    	<xsl:value-of select="resume/header/name"/>
+    <xsl:text>}</xsl:text>
 
-    <!-- top links -->    
-    <xsl:text>
-      \noindent\centerline{
-    </xsl:text>
-    <xsl:text>Resume: </xsl:text><xsl:value-of select="format-date(current-date(), '[D01] [MNn] [Y0001]')"/>
-    <xsl:text> --- \tt </xsl:text><xsl:value-of select="resume/header/email"/>
-    <xsl:text> \rm --- </xsl:text><xsl:value-of select="resume/header/address"/>
-    <xsl:text>
-      }\par
-    </xsl:text>
-    
+    <!-- top meta -->    
+        <xsl:text>Résumé: Updated </xsl:text><xsl:value-of select="format-date(current-date(), '[D01] [MNn] [Y0001]')"/>
+        <xsl:text> --- </xsl:text>
+        <xsl:text>\href{mailto:</xsl:text>
+        	<xsl:value-of select="resume/header/email/@mailto"/>
+        	<xsl:text>}</xsl:text>
+        	<xsl:text>{</xsl:text>
+        	<xsl:value-of select="resume/header/email"/>
+        <xsl:text>}</xsl:text>
+        <xsl:text> --- </xsl:text>
+        <xsl:value-of select="resume/header/address"/>
+        <xsl:text> --- </xsl:text>
+        <xsl:text>\chtex{華文姓名：}</xsl:text>
+        <xsl:text>\ruby{\chtex{</xsl:text>
+        	<xsl:value-of select="/resume/header/name-zh/family"/>
+        	<xsl:text>}}{</xsl:text>
+        	<xsl:value-of select="/resume/header/name-zh-pinyin/family"/>
+        <xsl:text>}</xsl:text>
+        <xsl:text>\ruby{\chtex{</xsl:text>
+        	<xsl:value-of select="/resume/header/name-zh/given-first"/>
+        	<xsl:text>}}{</xsl:text>
+        	<xsl:value-of select="/resume/header/name-zh-pinyin/given-first"/>
+        <xsl:text>}</xsl:text>
+        <xsl:text>\ruby{\chtex{</xsl:text>
+        	<xsl:value-of select="/resume/header/name-zh/given-second"/>
+        	<xsl:text>}}{</xsl:text>
+        	<xsl:value-of select="/resume/header/name-zh-pinyin/given-second"/>
+        <xsl:text>}</xsl:text>
+        <xsl:text> --- </xsl:text>
+        <xsl:text> \href{</xsl:text>
+        	<xsl:value-of select="resume/header/website/@href"/>
+        	<xsl:text>}</xsl:text>
+        	<xsl:text>{</xsl:text>
+        	<xsl:value-of select="resume/header/website"/>
+        <xsl:text>}</xsl:text>
+        <xsl:text> --- </xsl:text>
+        <xsl:text>\href{</xsl:text>
+        	<xsl:value-of select="resume/header/github/@href"/>
+        	<xsl:text>}</xsl:text>
+        	<xsl:text>{</xsl:text>
+        	<xsl:value-of select="resume/header/github"/>
+        <xsl:text>}</xsl:text>
+        <xsl:text> --- </xsl:text>
+        <xsl:text>Public key: \href{</xsl:text>
+        	<xsl:value-of select="resume/header/public-key/@href"/>
+        	<xsl:text>}</xsl:text>
+        	<xsl:text>{\texttt{</xsl:text>
+        	<xsl:value-of select="resume/header/public-key"/>
+        <xsl:text>}}</xsl:text>
+        <xsl:text> --- </xsl:text>
+        <xsl:text>References: </xsl:text>
+         	<xsl:value-of select="resume/header/references"/>
+        <xsl:text> --- </xsl:text>
+        <xsl:text>\href{</xsl:text>
+        	<xsl:value-of select="resume/header/name-audio/@href"/>
+        	<xsl:text>}</xsl:text>
+        	<xsl:text>{</xsl:text>
+        	<xsl:value-of select="resume/header/name-audio"/>
+        <xsl:text>}</xsl:text>
     <!-- about  -->
     <xsl:text>
-      \sectiontitle{About}
+    	\subsection*{About}
     </xsl:text>
     <xsl:value-of select="resume/about" />
-    <xsl:text>
-      \par
-    </xsl:text>
 
     <!-- experience -->
     <xsl:text>
-      \sectiontitle{Experience}
+      \subsection*{Experience}
     </xsl:text>
-
     <xsl:for-each select="resume/experience/experience-entry">
-      <xsl:text>\noindent\bf </xsl:text>
-      <xsl:value-of select="company"/><xsl:text>\rm, </xsl:text>
-      <xsl:value-of select="department"/><xsl:text>, </xsl:text>
-      <xsl:value-of select="address"/><xsl:text>\par
-    </xsl:text>
-    
-    <xsl:text>\noindent\it </xsl:text>
-    <xsl:value-of select="role"/>
-    <xsl:text>, \rm </xsl:text>
-    <xsl:value-of select="time-start"/><xsl:text> -- </xsl:text>
-    <xsl:value-of select="time-end"/><xsl:text> \par\vskip 5pt
-    <!-- space between lines -->
-  </xsl:text>
-  <xsl:for-each select=".//achievement">
-    <xsl:text>\bulleteditem{</xsl:text>
-    <xsl:value-of select="."/>
-    <xsl:text>}
-    <!-- add space -->
-    </xsl:text>
-  </xsl:for-each>
-  <!-- add space -->
-    </xsl:for-each>
-
-    <xsl:text>
-      \sectiontitle{Education}
-    </xsl:text>
-    <xsl:for-each select="resume/education/education-entry">
-      <xsl:text>\noindent\bf </xsl:text>
-      <xsl:value-of select="institute"/><xsl:text>\rm, </xsl:text>
-      <xsl:value-of select="result"/><xsl:text>, </xsl:text>
-      <xsl:value-of select="address"/><xsl:text>\par\vskip 2.5pt
-    </xsl:text>
-    </xsl:for-each>
-    
-    <xsl:text>
-      \sectiontitle{Training Courses}
-    </xsl:text>
-    <xsl:for-each select="resume/training/training-entry">
-      <xsl:text>\noindent\it </xsl:text>
-      <xsl:value-of select="name"/><xsl:text>\rm, </xsl:text>
-      <xsl:value-of select="institute"/><xsl:text>, </xsl:text>
-      <xsl:value-of select="training-hours"/><xsl:text> hrs., </xsl:text>
-      <xsl:value-of select="date"/>
-      <xsl:text>\par\vskip 2.5pt
+      <xsl:text>
+        \subsubsection*{
       </xsl:text>
+      <xsl:text>\textbf{</xsl:text>
+      	<xsl:value-of select="company"/>
+        <xsl:text>}</xsl:text>
+        <xsl:text>, </xsl:text>
+        <xsl:value-of select="department"/>
+        <xsl:text>, </xsl:text>
+        <xsl:value-of select="address"/>
+      <xsl:text>}</xsl:text>
+      <xsl:text>\begin{itemize}</xsl:text>
+      	<xsl:text>\item\emph{</xsl:text>
+      	<xsl:value-of select="role"/>
+      		<xsl:text>}, </xsl:text>
+        	<xsl:value-of select="time-start"/>
+       		<xsl:text> -- </xsl:text>
+        	<xsl:value-of select="time-end"/>
+                <xsl:text>\begin{itemize}</xsl:text>               
+                	<xsl:for-each select="role-achievements/achievement">
+                	  <xsl:text>\item </xsl:text>
+                	  <xsl:value-of select="."/>
+                	  <xsl:text> </xsl:text>
+                	</xsl:for-each>
+                <xsl:text>\end{itemize}</xsl:text>
+      <xsl:text>\end{itemize}</xsl:text>
     </xsl:for-each>
 
+
     <xsl:text>
-      \sectiontitle{Skills \&amp; Languages}
+      \subsection*{Education}
+    </xsl:text>
+    <xsl:text>\begin{itemize}</xsl:text>
+        <xsl:for-each select="resume/education/education-entry">
+              <xsl:text>\item </xsl:text>
+                  <xsl:text>\textbf{</xsl:text>
+                      <xsl:value-of select="institute"/>
+                  <xsl:text>}, </xsl:text>
+                  <xsl:value-of select="result"/>
+                  <xsl:text>, </xsl:text>
+                  <xsl:value-of select="address"/>
+        </xsl:for-each>
+    <xsl:text>\end{itemize}</xsl:text>
+    
+    <xsl:text>
+      \subsection*{Technical Training}
+    </xsl:text>
+    <xsl:text>\begin{itemize}</xsl:text>
+        <xsl:for-each select="resume/training/training-entry">
+              <xsl:text>\item </xsl:text>
+                  <xsl:text>\textit{</xsl:text>
+                      <xsl:value-of select="name"/>
+                  <xsl:text>}, </xsl:text>
+                  <xsl:value-of select="institute"/>
+                  <xsl:text>, </xsl:text>
+                  <xsl:value-of select="training-hours"/>
+                  <xsl:text> hrs., </xsl:text>
+                  <xsl:value-of select="date"/>
+        </xsl:for-each>
+    <xsl:text>\end{itemize}</xsl:text>
+
+    <xsl:text>
+      \subsection*{Technical Tools and Language Skills }
     </xsl:text>
     <xsl:for-each select="resume/skill-list/skill-entry">
-      <xsl:text>\noindent </xsl:text>
       <xsl:value-of select="."/>
       <xsl:if test="position() != last()">
         <xsl:text>, </xsl:text>
       </xsl:if>
     </xsl:for-each>
-    <xsl:text>.\par\vskip 5pt
-    <!-- space -->
-    </xsl:text>
+    <xsl:text> --- </xsl:text>
 
     <xsl:for-each select="resume/language-list/language-entry">
-      <xsl:text>\noindent </xsl:text>
       <xsl:value-of select="language"/>
       <xsl:text>: </xsl:text>
       <xsl:value-of select="level"/>
@@ -145,23 +177,9 @@
         <xsl:text>, </xsl:text>
       </xsl:if>
     </xsl:for-each>
-    <xsl:text>.\par\vskip 5pt
-    <!-- space -->
-    </xsl:text>
+    <xsl:text>.</xsl:text>
+  <xsl:text>\end{document}</xsl:text>
 
-    <xsl:text>\footline{\noindent\centerline{</xsl:text>
-    <xsl:text>\tt{}</xsl:text>
-    <xsl:value-of select="resume/header/link[1]"/>
-    <xsl:text>\rm{} --- \tt{}</xsl:text>
-    <xsl:value-of select="resume/header/link[2]"/>
-    <xsl:text>\rm{} --- References available on request.</xsl:text>
-    <xsl:text>}}</xsl:text>
-    
-    <xsl:text>
-      \vfill\eject
-      \bye
-    </xsl:text>
-  </xsl:template>
 
+</xsl:template>
 </xsl:stylesheet>
-
