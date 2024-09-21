@@ -4,10 +4,23 @@
   <header>
     <title>Ilmari Koria Resume</title>
     <name>Ilmari Koria</name>
+    <name-audio href="https://ilmarikoria.xyz/static/ilmari-koria-name.mp3">How to pronounce my name.</name-audio>
+    <name-zh>
+      <family>柯</family>
+      <given-first>萬</given-first>
+      <given-second>里</given-second>
+    </name-zh>
+    <name-zh-pinyin>
+      <family>Kē</family>
+      <given-first>Wàn</given-first>
+      <given-second>lǐ</given-second>
+    </name-zh-pinyin>
     <date/>
-    <link href="https://ilmarikoria.xyz">www.ilmarikoria.xyz</link>
-    <link href="https://github.com/ilmari-koria">www.github.com/ilmari-koria</link>
+    <website href="https://ilmarikoria.xyz">www.ilmarikoria.xyz</website>
+    <github href="https://github.com/ilmari-koria">github.com/ilmari-koria</github>
     <email mailto="ilmarikoria@posteo.net">ilmarikoria@posteo.net</email>
+    <references>(Available on request.)</references>
+    <public-key href="https://ilmarikoria.xyz/static/ilmari-koria-public-key.asc">D8DA 85D0 4C6A BD1F 8DA4 2895 3E3B 85AB 3A8D FFD4</public-key>
     <address>London</address>
   </header>
   <about>
@@ -105,6 +118,7 @@
     <skill-entry>Atlassian</skill-entry>
     <skill-entry>Jira</skill-entry>
     <skill-entry>Trello</skill-entry>
+    <skill-entry>Saxon</skill-entry>
   </skill-list>
   <language-list>
     <language-entry>
