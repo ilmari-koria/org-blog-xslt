@@ -12,139 +12,131 @@
               omit-xml-declaration="yes"/>
 
   <xsl:template match="/">
-    body {
+body {
     max-width: 65rem;
     margin: 1rem; /* top, right, bottom, and left */
     font-family: serif;
-    }
+}
 
-    #preamble li {
+#preamble li {
     list-style: none;
     padding: 0 0 0.25rem 0;
-    }
+}
 
-    #preamble ul {
+#preamble ul {
     padding: 0;
-    }
+}
 
-    p {
+p {
     text-align: justify;
     text-justify: inter-word;
     line-height: 175%;
-    }
+}
 
-    #recent-posts td:nth-child(1)::before {
+#recent-posts td:nth-child(1)::before {
     content:"📌 ";
     padding-right: 0.25rem;
     font-size: 75%;
-    }
+}
 
-    #post-meta {
-    border-left: 5px double black;
-    margin: 2.5rem 0 2rem 0;
-    }
-
-    .post-title {
+.post-title {
     margin-bottom: 0;
-    padding-left: 1rem;
-    }
+    font-size: 200%
+}
 
-    .post-date {
+.post-date {
     margin-top: 0.45rem;
     font-style: italic;
-    padding-left: 1rem;
-    
-    }
-    
-    #about p {
+}
+
+#about p {
     text-align: initial;
     text-justify: initial;
-    }
+}
 
-
-    #about img {
+#about img {
     height: auto;
     max-width: 185px;
     border: 2px solid black;
-    }
+}
 
-    #about figcaption {
+#about figcaption {
     font-style: italic;
-    }
+}
 
-    img {
+img {
     height: auto;
     max-width: 350px;
-    }
+}
 
-    figure {
+figure {
     display: block;
     width: auto;
-    }
+}
 
-    figure figcaption {
+figure figcaption {
     font-size: 85%;
-    }
+}
 
-    td {
+td {
     vertical-align: top;
     padding: 0 1rem 0.25rem 0;
-    }
+}
 
-    #references td {
+#references td {
     padding: 0 1rem 0.85rem 0;
-    }
+}
 
-    .footnotes td {
+.footnotes td {
     padding: 0 1rem 0.85rem 0;
-    }
+}
 
-    @media (max-width: 768px) {
+@media (max-width: 768px) {
     body {
-    font-size: 120%;
+        font-size: 120%;
     }
 
     #container {
-    display: initial;
+        display: initial;
     }
 
     p {
-    text-align: initial;
-    text-justify: initial;
+        text-align: initial;
+        text-justify: initial;
     }
 
     #preamble {
-    width: initial;
-    border: initial;
+        width: initial;
+        border: initial;
     }
 
     #content {
-    width: initial;
-    margin: 2rem 0 0 0;
-    border: initial
+        width: initial;
+        margin: 2rem 0 0 0;
+        border: initial
     }
 
     h1,h2,h3,h4,h5 {
-    font-size: 140%;
+        font-size: 140%;
     }
 
     #container-index {
-    display: initial;
+        display: initial;
     }
 
     #about {
-    display: initial;
+        display: initial;
     }
 
     #profile-pic {
-    display: initial;
-    margin: initial;
+        display: initial;
+        margin: initial;
     }
 
     #profile-pic figcaption {
-    text-align: left;
+        text-align: left;
     }
-    }
+}
   </xsl:template>
 
 </xsl:stylesheet>
