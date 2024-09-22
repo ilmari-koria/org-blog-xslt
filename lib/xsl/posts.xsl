@@ -109,7 +109,7 @@
     </sup>
   </xsl:template>
 
-  <xsl:template match="org:quote-block | org:verse-block">
+  <xsl:template match="org:quote-block">
     <blockquote>
       <xsl:apply-templates />
     </blockquote>
@@ -169,6 +169,18 @@
 
   <!-- TODO avoid // if possible -->
   <xsl:template match="//org:footnote-definition"/>
+
+ <xsl:template match="org:verse-block">
+    <blockquote class="verse-block">
+      <xsl:analyze-string select="."
+                          regex="([^\r\n]+)">
+        <xsl:matching-substring>
+          <xsl:value-of select="."/>
+          <br/>
+        </xsl:matching-substring>
+      </xsl:analyze-string>
+    </blockquote>
+  </xsl:template>
 
 </xsl:stylesheet>
 
