@@ -23,6 +23,7 @@
 \definecolor{navyblue}{RGB}{0,0,128}
 
 %% customize links to be colored blue and allow breaking links across lines.
+\usepackage{href-ul}
 \usepackage{hyperref}
 \hypersetup{
   colorlinks,
@@ -99,3 +100,11 @@
 \usepackage{ruby}
 \renewcommand{\rubysize}{0.4}
 \renewcommand{\rubysep}{0.25ex}
+
+%% environment for expanded header part
+\newenvironment{greynote}{%
+  \footnotesize
+  \color{gray}
+  \hypersetup{linkcolor=gray, urlcolor=gray, citecolor=gray}
+}{}
+
