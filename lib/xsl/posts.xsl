@@ -142,15 +142,13 @@
   <xsl:template match="org:link[@path and matches(@path, '\.(gif|jpg|jpeg|png)$')]">
     <figure>
       <img src="{@path}" alt="{@raw-link}" />
-      <xsl:apply-templates select="preceding-sibling::org:caption[1]" />
+          <figcaption>
+            <xsl:value-of select="preceding-sibling::org:caption[1]" />
+          </figcaption>
     </figure>
   </xsl:template>
-
-  <xsl:template match="org:caption">
-    <figcaption>
-      <xsl:apply-templates />
-    </figcaption>
-  </xsl:template>
+  
+  <xsl:template match="org:paragraph/org:caption" />
 
   <xsl:template match="org:export-block[@type='HTML']">
     <xsl:variable name="html-code-block"
