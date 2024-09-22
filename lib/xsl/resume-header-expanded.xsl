@@ -14,7 +14,22 @@
               omit-xml-declaration="yes"/>
 
   <xsl:template name="resume-header-expanded">
-        <xsl:text>\begin{greynote}</xsl:text>
+
+        <xsl:text>
+          \begin{footnotesize}
+          \centering
+          \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}l}
+        </xsl:text>
+
+        <!-- website -->
+        <xsl:text> Website: \href{</xsl:text>
+        	<xsl:value-of select="resume/header/website/@href"/>
+        	<xsl:text>}</xsl:text>
+        	<xsl:text>{</xsl:text>
+        	<xsl:value-of select="resume/header/website"/>
+        <xsl:text>} &amp; </xsl:text>
+
+        <!-- chinese name -->
         <xsl:text>\chtex{華文姓名：}</xsl:text>
         <xsl:text>\ruby{\chtex{</xsl:text>
         	<xsl:value-of select="/resume/header/name-zh/family"/>
@@ -30,38 +45,46 @@
         	<xsl:value-of select="/resume/header/name-zh/given-second"/>
         	<xsl:text>}}{</xsl:text>
         	<xsl:value-of select="/resume/header/name-zh-pinyin/given-second"/>
-        <xsl:text>}</xsl:text>
-        <xsl:text> --- </xsl:text>
-        <xsl:text> \href{</xsl:text>
-        	<xsl:value-of select="resume/header/website/@href"/>
-        	<xsl:text>}</xsl:text>
-        	<xsl:text>{</xsl:text>
-        	<xsl:value-of select="resume/header/website"/>
-        <xsl:text>}</xsl:text>
-        <xsl:text> --- </xsl:text>
-        <xsl:text>\href{</xsl:text>
+        <xsl:text>} \\ </xsl:text>
+
+        <!-- github -->
+        <xsl:text> GitHub: \href{</xsl:text>
         	<xsl:value-of select="resume/header/github/@href"/>
         	<xsl:text>}</xsl:text>
         	<xsl:text>{</xsl:text>
         	<xsl:value-of select="resume/header/github"/>
-        <xsl:text>}</xsl:text>
-        <xsl:text> --- </xsl:text>
+        <xsl:text>} </xsl:text>
+        <xsl:text> &amp; </xsl:text>
+
+        <!-- references -->
+        <xsl:text> References: </xsl:text>
+       	<xsl:value-of select="resume/header/references"/>
+        <xsl:text> \\ </xsl:text>
+
+        <!-- public key -->
         <xsl:text>Public key: \href{</xsl:text>
         	<xsl:value-of select="resume/header/public-key/@href"/>
         	<xsl:text>}</xsl:text>
         	<xsl:text>{\texttt{</xsl:text>
         	<xsl:value-of select="resume/header/public-key"/>
         <xsl:text>}}</xsl:text>
-        <xsl:text> --- </xsl:text>
-        <xsl:text>References: </xsl:text>
-         	<xsl:value-of select="resume/header/references"/>
-        <xsl:text> --- </xsl:text>
-        <xsl:text>\href{</xsl:text>
+        <xsl:text> &amp; </xsl:text>
+
+        <!-- name audio -->
+        <xsl:text>Name pronouncation: \href{</xsl:text>
         	<xsl:value-of select="resume/header/name-audio/@href"/>
         	<xsl:text>}</xsl:text>
         	<xsl:text>{</xsl:text>
         	<xsl:value-of select="resume/header/name-audio"/>
         <xsl:text>}</xsl:text>
-    <xsl:text>\end{greynote}</xsl:text>
+        <xsl:text> \\ </xsl:text>
+
+        <xsl:text>
+          \end{tabular*}
+          \end{footnotesize}
+        </xsl:text>
+
 </xsl:template>
 </xsl:stylesheet>
+
+
