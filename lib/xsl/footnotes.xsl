@@ -13,12 +13,12 @@
   <xsl:variable name="footnote-number"
                 select="org:footnote-reference/@label" />
 
- <xsl:template name="footnotes">
-    <xsl:if test="org:document/org:headline/org:section/org:footnote-definition != ''">
+  <xsl:template name="footnotes">
+    <xsl:if test="//org:footnote-definition != ''">
       <div class="footnotes">
         <h2>Footnotes</h2>
         <table>
-          <xsl:for-each-group select="org:document/org:headline/org:section/org:footnote-definition"
+          <xsl:for-each-group select="//org:footnote-definition"
                               group-by="org:paragraph">
             <xsl:for-each select="current-group()">
               <xsl:variable name="footnote-label"
@@ -32,7 +32,7 @@
                   <xsl:text>]</xsl:text>
                 </td>
                 <td>
-                  <xsl:value-of select="normalize-space(org:paragraph)" />
+                  <xsl:apply-templates />
                 </td>
               </tr>
             </xsl:for-each>
