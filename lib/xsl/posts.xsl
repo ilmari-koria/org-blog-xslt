@@ -22,15 +22,20 @@
         <xsl:with-param name="title" select="org:document/org:keyword[@key = 'TITLE']/@value" />
       </xsl:call-template>
       <body>
-        <xsl:apply-templates />
-        <xsl:call-template name="footnotes" />
-        <xsl:call-template name="bib" />
+        <xsl:call-template name="preamble" />
+        <div id="content">
+          <xsl:apply-templates select="org:keyword[@key = 'TITLE']"/>
+          <xsl:apply-templates select="org:keyword[@key = 'DATE']"/>
+          <xsl:apply-templates />
+          <xsl:call-template name="footnotes" />
+          <xsl:call-template name="bib" />
+        </div>
         <xsl:call-template name="footer" />
       </body>
     </html>
   </xsl:template>
 
-  <xsl:template match="org:document/org:headline/org:title">
+  <xsl:template match="org:headline/org:title">
     <xsl:if test="not(ancestor::org:headline[org:tags='ignore'])">
       <xsl:element name="h{../@level + 1}">
         <xsl:apply-templates />
@@ -39,6 +44,14 @@
   </xsl:template>
 
   <xsl:template match="org:document/org:headline/org:tags[. = 'ignore']"/>
+
+  <xsl:template match="org:keyword[@key = 'TITLE']">
+      <h2 class="post-title"><xsl:value-of select="@value" /></h2>
+  </xsl:template>
+
+  <xsl:template match="org:keyword[@key = 'DATE']">
+      <p class="post-date">Posted: <xsl:value-of select="@value" /></p>
+  </xsl:template>
 
   <xsl:template match="org:paragraph">
     <p>
@@ -95,14 +108,6 @@
       </a>
     </sup>
   </xsl:template>
-
-
-
-  <!-- <xsl:template match="org:a[@href]"> -->
-  <!--   <a href="{@href}"> -->
-  <!--     <xsl:apply-templates/> -->
-  <!--   </a> -->
-  <!-- </xsl:template> -->
 
   <xsl:template match="org:quote-block | org:verse-block">
     <blockquote>
@@ -162,6 +167,8 @@
     </a>
   </xsl:template>
 
-  <xsl:template match="org:document/org:headline/org:section/org:footnote-definition"/>
+  <!-- TODO avoid // if possible -->
+  <xsl:template match="//org:footnote-definition"/>
 
 </xsl:stylesheet>
+
