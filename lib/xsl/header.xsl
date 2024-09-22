@@ -10,7 +10,7 @@
               omit-xml-declaration="yes" />
 
   <xsl:variable name="meta-description"
-                select="//org:keyword[@key = 'DESCRIPTION']/@value" />
+                select="org:document/org:keyword[@key = 'DESCRIPTION']/@value" />
 
   <xsl:template name="header">
     <xsl:param name="title" />
