@@ -29,7 +29,7 @@
                           select="$bib-entry//*:a[@name = $key]/text()" />
             <tr>
               <td>
-                <p id="#{$key}">[<a href="#{$key}"><xsl:value-of select="$number" /></a>]</p>
+                <p id="{$key}">[<a href="#{$key}"><xsl:value-of select="$number" /></a>]</p>
               </td>
               <td>
                 <xsl:apply-templates select="$bib-entry//*:td[@class = 'bibtexitem']" />
