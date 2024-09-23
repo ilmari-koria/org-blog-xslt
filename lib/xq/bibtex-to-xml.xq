@@ -6,12 +6,13 @@ declare option saxon:output "indent=yes";
 declare variable $bibtex := fn:unparsed-text("../../bib/bibliography.bib");
 
 declare function b:bibtex-to-json($bibtex as xs:string) as element()* {
-    for $entry in tokenize($bibtex, "\n@")
-    let $entry := fn:normalize-space($entry)
+    let $entries := tokenize($bibtex, "\n@")
+    for $i in 1 to count($entries)
+    let $entry := fn:normalize-space($entries[$i])
     let $type := substring-before($entry, "{")
     let $citation-key := substring-before(substring-after($entry, "{"), ",")
     let $fields := 
-        for $field in tokenize(substring-after($entry, "{"), ",") 
+        for $field in tokenize(substring-after($entry, "{"), ",")
         return
             let $key := fn:normalize-space(substring-before($field, "="))
             let $value := fn:normalize-space(substring-after($field, "="))
@@ -23,11 +24,13 @@ declare function b:bibtex-to-json($bibtex as xs:string) as element()* {
                         element { $key } { fn:substring-before(fn:substring-after($value, "'"), "'") }
                 else
                     ()
-        return 
-        	<entry type="{$type}" key="{$citation-key}">
-        	    {$fields}      
-        	</entry>
+    return 
+        <entry type="{$type}" key="{$citation-key}">
+            <ref-num>{ $i }</ref-num>
+            {$fields}      
+        </entry>
 };
+
 
 let $json := b:bibtex-to-json($bibtex)
 return

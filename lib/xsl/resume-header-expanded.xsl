@@ -71,7 +71,7 @@
         <xsl:text> &amp; </xsl:text>
 
         <!-- name audio -->
-        <xsl:text>Name pronouncation: \href{</xsl:text>
+        <xsl:text>\href{</xsl:text>
         	<xsl:value-of select="resume/header/name-audio/@href"/>
         	<xsl:text>}</xsl:text>
         	<xsl:text>{</xsl:text>

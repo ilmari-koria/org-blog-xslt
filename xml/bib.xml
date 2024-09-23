@@ -1,0 +1,1558 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bib>
+   <entry type="@incollection" key="adkinsFragilityNoiseAtmosphere2019">
+      <ref-num>1</ref-num>
+      <title/>
+      <booktitle>Music Beyond Airports - Appraising Ambient Music</booktitle>
+      <author/>
+      <year>2019</year>
+      <pages>119--146</pages>
+      <publisher>University of Huddersfield Press</publisher>
+      <doi>10.5920/beyondairports.06</doi>
+      <url>https://unipress.hud.ac.uk/plugins/books/19/chapter/26</url>
+   </entry>
+   <entry type="incollection" key="andersonIntroductionBeautyJoy2022">
+      <ref-num>2</ref-num>
+      <title>An Introduction to the Beauty and Joy of Computing for Theological Librarians</title>
+      <booktitle>Digital Humanities and Libraries and Archives in Religious Studies</booktitle>
+      <author/>
+      <editor/>
+      <year>2022</year>
+      <month/>
+      <pages>123--144</pages>
+      <publisher>De Gruyter</publisher>
+      <doi>10.1515/9783110536539-009</doi>
+      <url>https://www.degruyter.com/document/doi/10.1515/9783110536539-009/html</url>
+   </entry>
+   <entry type="book" key="andersonXQueryHumanists2020">
+      <ref-num>3</ref-num>
+      <title>XQuery for Humanists</title>
+      <author/>
+      <year>2020</year>
+      <publisher>Texas A&amp;amp;M University Press</publisher>
+      <address>College Station</address>
+   </entry>
+   <entry type="article" key="appComputerCornerBuddhist1990">
+      <ref-num>4</ref-num>
+      <title>Computer Corner: Buddhist Database Project</title>
+      <editor/>
+      <year>1990</year>
+      <month/>
+      <journal/>
+      <volume>1</volume>
+      <pages>7--9</pages>
+   </entry>
+   <entry type="book" key="appElectronicBodhidharma1991">
+      <ref-num>5</ref-num>
+      <title>The Electronic Bodhidharma</title>
+      <author/>
+      <year>1991</year>
+      <number>1</number>
+      <publisher/>
+      <address>Kyoto</address>
+   </entry>
+   <entry type="book" key="appElectronicBodhidharma1992">
+      <ref-num>6</ref-num>
+      <title>The Electronic Bodhidharma</title>
+      <author/>
+      <year>1992</year>
+      <month/>
+      <number>2</number>
+      <publisher/>
+      <address>Kyoto</address>
+   </entry>
+   <entry type="book" key="appElectronicBodhidharma1995">
+      <ref-num>7</ref-num>
+      <title>The Electronic Bodhidharma</title>
+      <author/>
+      <year>1995</year>
+      <month/>
+      <number>4</number>
+      <publisher/>
+      <address>Kyoto</address>
+   </entry>
+   <entry type="book" key="aroraArtHardwareArchitecture2012">
+      <ref-num>8</ref-num>
+      <title>The Art of Hardware Architecture: Design Methods and Techniques for Digital Circuits</title>
+      <author/>
+      <year>2012</year>
+      <publisher>Springer New York</publisher>
+      <address/>
+      <doi>10.1007/978-1-4614-0397-5</doi>
+      <url>https://link.springer.com/10.1007/978-1-4614-0397-5</url>
+   </entry>
+   <entry type="incollection" key="asselineauCharacterizingAcousticsPlaces2020">
+      <ref-num>9</ref-num>
+      <title>Characterizing the Acoustics of Places of Worship: Should We Believe in Acoustic Indicators?</title>
+      <booktitle/>
+      <author/>
+      <editor/>
+      <year>2020</year>
+      <pages>13--30</pages>
+   </entry>
+   <entry type="incollection" key="barclayAcousticEcologyEcological2019">
+      <ref-num>10</ref-num>
+      <title>Acoustic Ecology and Ecological Sound Art: Listening to Changing Ecosystems</title>
+      <booktitle/>
+      <author/>
+      <editor/>
+      <year>2019</year>
+      <pages>153--177</pages>
+      <publisher>Palgrave Macmillan</publisher>
+      <doi>10.1007/978-3-030-16569-7_8</doi>
+   </entry>
+   <entry type="article" key="barclayInterdisciplinaryApproachesFreshwater2020">
+      <ref-num>11</ref-num>
+      <title>Interdisciplinary Approaches to Freshwater Ecoacoustics</title>
+      <author/>
+      <year>2020</year>
+      <month/>
+      <journal>Freshwater Science</journal>
+      <volume>39</volume>
+      <number>2</number>
+      <pages>356--361</pages>
+      <doi>10.1086/709130</doi>
+      <url>https://www.journals.uchicago.edu/doi/10.1086/709130</url>
+   </entry>
+   <entry type="article" key="batchelorLowercaseStrategiesPublic2013">
+      <ref-num>12</ref-num>
+      <title>Lowercase Strategies in Public Sound Art: Celebrating the Transient Audience</title>
+      <author/>
+      <year>2013</year>
+      <journal>Organised Sound</journal>
+      <volume>18</volume>
+      <number>1</number>
+      <pages>14--21</pages>
+   </entry>
+   <entry type="book" key="benjaminWorkArtAge2008">
+      <ref-num>13</ref-num>
+      <title>The Work of Art in the Age of Mechanical Reproduction</title>
+      <author/>
+      <translator/>
+      <year>2008</year>
+      <publisher>Penguin</publisher>
+      <address>London</address>
+   </entry>
+   <entry type="article" key="bielefeldtTreasuryEyeTrue2009">
+      <ref-num>14</ref-num>
+      <title/>
+      <author>Bielefeldt Carl</author>
+      <year>2009</year>
+      <journal>Dharma Eye</journal>
+      <volume>27</volume>
+      <pages>18--23</pages>
+      <url>https://www.sotozen.com/eng/dharma/pdf/27EC.pdf</url>
+   </entry>
+   <entry type="article" key="bielefeldtTreasuryTrueDharma2013">
+      <ref-num>15</ref-num>
+      <title/>
+      <author>Bielefeldt Carl</author>
+      <year>2013</year>
+      <journal>Dharma Eye</journal>
+      <volume>31</volume>
+      <pages>21--29</pages>
+      <url>https://www.sotozen.com/eng/dharma/pdf/31e.pdf</url>
+   </entry>
+   <entry type="article" key="bockCitizenVideoJournalists2012">
+      <ref-num>16</ref-num>
+      <title>Citizen Video Journalists and Authority in Narrative: Reviving the Role of the Witness</title>
+      <author/>
+      <year>2012</year>
+      <month/>
+      <journal>Journalism</journal>
+      <volume>13</volume>
+      <number>5</number>
+      <pages>639--653</pages>
+      <doi>10.1177/1464884911421703</doi>
+      <url>http://journals.sagepub.com/doi/10.1177/1464884911421703</url>
+   </entry>
+   <entry type="incollection" key="boyleInterviewBernieGlassman2015">
+      <ref-num>17</ref-num>
+      <title>Interview with Bernie Glassman</title>
+      <booktitle>Realizing Awakened Consciousness</booktitle>
+      <author/>
+      <year>2015</year>
+      <month/>
+      <pages>163--176</pages>
+      <publisher>Columbia University Press</publisher>
+      <doi>10.7312/boyl17074-011</doi>
+      <url>https://www.degruyter.com/document/doi/10.7312/boyl17074-011/html</url>
+   </entry>
+   <entry type="article" key="bronfmanBiographySonicArchive2016">
+      <ref-num>18</ref-num>
+      <title>Biography of a Sonic Archive</title>
+      <author/>
+      <year>2016</year>
+      <journal>Hispanic American Historical Review</journal>
+      <volume>96</volume>
+      <number>2</number>
+      <pages>225--231</pages>
+      <doi>10.1215/00182168-3484090</doi>
+      <url>https://read.dukeupress.edu/hahr/article/96/2/225/36522/Biography-of-a-Sonic-Archive</url>
+   </entry>
+   <entry type="article" key="burdorfAlertingMassesInquiry2019">
+      <ref-num>19</ref-num>
+      <title>Alerting the Masses: An Inquiry into Buddhist Communication through Bells in Song Dynasty (960–1279) China from the Perspective of Material Culture and Sound</title>
+      <author/>
+      <year>2019</year>
+      <journal>Monumenta Serica</journal>
+      <volume>67</volume>
+      <number>2</number>
+      <pages>319--361</pages>
+      <doi>10.1080/02549948.2019.1665826</doi>
+      <url>https://www.tandfonline.com/doi/full/10.1080/02549948.2019.1665826</url>
+   </entry>
+   <entry type="book" key="burgerOneMind2015">
+      <ref-num>20</ref-num>
+      <title>One Mind</title>
+      <author/>
+      <year>2015</year>
+      <publisher>One Mind Productions</publisher>
+      <address>Yangon</address>
+      <note/>
+   </entry>
+   <entry type="book" key="buswellPrincetonDictionaryBuddhism2014">
+      <ref-num>21</ref-num>
+      <title>The Princeton Dictionary of Buddhism</title>
+      <editor/>
+      <year>2014</year>
+      <publisher>Princeton University Press</publisher>
+      <address>Princeton</address>
+   </entry>
+   <entry type="book" key="chandlerEstablishingPureLand2004">
+      <ref-num>22</ref-num>
+      <title>Establishing a Pure Land on Earth: The Foguang Buddhist Perspective on Modernization and Globalization</title>
+      <author/>
+      <year>2004</year>
+      <publisher>University of Hawai'i Press</publisher>
+      <address>Honolulu</address>
+   </entry>
+   <entry type="incollection" key="chenBuddhaNatureInsentientBeings2014">
+      <ref-num>23</ref-num>
+      <title>Buddha Nature of Insentient Beings</title>
+      <booktitle>Encyclopedia of Psychology and Religion</booktitle>
+      <author/>
+      <editor/>
+      <year>2014</year>
+      <edition>2</edition>
+      <volume>1</volume>
+      <pages>208--212</pages>
+   </entry>
+   <entry type="article" key="chenChineseTiantaiDoctrine2011">
+      <ref-num>24</ref-num>
+      <title>Chinese Tiantai Doctrine on Insentient Things’ Buddha-Nature</title>
+      <author/>
+      <year>2011</year>
+      <journal>Chung-Hwa Buddhist Journal</journal>
+      <volume>24</volume>
+      <pages>71--104</pages>
+   </entry>
+   <entry type="book" key="chenFanbaiFanBaiChinese2010">
+      <ref-num>25</ref-num>
+      <title>Fanbai 梵唄: Chinese Buddhist monastic chants</title>
+      <author/>
+      <year>2010</year>
+      <series>Recent researches in the oral traditions of music</series>
+      <number>8</number>
+      <publisher/>
+      <address>Middleton</address>
+   </entry>
+   <entry type="incollection" key="chenLanguageReformModern2015">
+      <ref-num>26</ref-num>
+      <title>Language Reform in Modern China</title>
+      <booktitle>The Oxford Handbook of Chinese Linguistics</booktitle>
+      <author/>
+      <editor/>
+      <year>2015</year>
+      <series>Oxford Handbooks in Linguistics</series>
+      <pages>531--540</pages>
+      <publisher>Oxford University Press</publisher>
+      <address>Oxford</address>
+   </entry>
+   <entry type="article" key="chenSoundEmptinessMusic2001">
+      <ref-num>27</ref-num>
+      <title/>
+      <author/>
+      <year>2001</year>
+      <journal>History of Religions</journal>
+      <volume>41</volume>
+      <number>1</number>
+      <pages>24--48</pages>
+   </entry>
+   <entry type="incollection" key="cusackFieldRecordingSonic2013">
+      <ref-num>28</ref-num>
+      <title>Field Recording as Sonic Journalism</title>
+      <booktitle>On Listening</booktitle>
+      <author/>
+      <editor/>
+      <year>2013</year>
+      <pages>25--30</pages>
+      <publisher>Uniformbooks</publisher>
+      <address>Axminster</address>
+   </entry>
+   <entry type="book" key="cusackSoundsDangerousPlaces2012">
+      <ref-num>29</ref-num>
+      <title>Sounds from Dangerous Places</title>
+      <author/>
+      <year>2012</year>
+      <publisher>ReR Megacorp and Berliner Kunstlerprogramm des DAAD</publisher>
+      <address>Thornton Heath</address>
+      <note>DAAD LC-02677</note>
+   </entry>
+   <entry type="phdthesis" key="delaurentiActivistSoundField2020">
+      <ref-num>30</ref-num>
+      <title/>
+      <author/>
+      <year>2020</year>
+      <school/>
+   </entry>
+   <entry type="article" key="delaurentiImperfectSoundForever2021">
+      <ref-num>31</ref-num>
+      <title>Imperfect Sound Forever: A Letter to a Young Phonographer</title>
+      <author/>
+      <year>2021</year>
+      <month/>
+      <journal>Resonance: The Journal of Sound and Culture</journal>
+      <volume>2</volume>
+      <number>2</number>
+      <pages>125--167</pages>
+      <doi>10.1525/res.2021.2.2.125</doi>
+      <url>https://online.ucpress.edu/res/article/2/2/125/117706/Imperfect-Sound-ForeverA-letter-to-a-young</url>
+   </entry>
+   <entry type="article" key="delaurentiMakingActivistSound2015">
+      <ref-num>32</ref-num>
+      <title>Making Activist Sound</title>
+      <author/>
+      <year>2015</year>
+      <month/>
+      <journal>Leonardo Music Journal</journal>
+      <volume>25</volume>
+      <pages>93--94</pages>
+      <doi>10.1162/LMJ_a_00943</doi>
+      <url>https://direct.mit.edu/lmj/article/69543</url>
+   </entry>
+   <entry type="book" key="delaurentiN30LiveWTO2000">
+      <ref-num>33</ref-num>
+      <title/>
+      <author/>
+      <year>2000</year>
+      <publisher>un-American Archive</publisher>
+      <address>Seattle</address>
+      <url>https://soundcloud.com/delaurenti/n30</url>
+      <note>Compact Disc. 005.</note>
+   </entry>
+   <entry type="misc" key="delaurentiWhatAuralSafari2001">
+      <ref-num>34</ref-num>
+      <title>What Is an Aural Safari?</title>
+      <author/>
+      <year>2001</year>
+      <journal>Phonography.org</journal>
+      <url>http://www.phonography.org/safari.htm</url>
+   </entry>
+   <entry type="book" key="dewolffHydrohumanitiesWaterDiscourse2021">
+      <ref-num>35</ref-num>
+      <title>Hydrohumanities: Water Discourse and Environmental Futures</title>
+      <editor/>
+      <year>2021</year>
+      <publisher>University of California Press</publisher>
+      <address>Oakland</address>
+   </entry>
+   <entry type="article" key="diffieNewDirectionsCryptography1976">
+      <ref-num>36</ref-num>
+      <title>New Directions in Cryptography</title>
+      <author/>
+      <year>1976</year>
+      <month/>
+      <journal>IEEE Transactions on Information Theory</journal>
+      <volume>22</volume>
+      <number>6</number>
+      <pages>644--654</pages>
+      <doi>10.1109/TIT.1976.1055638</doi>
+      <url>http://ieeexplore.ieee.org/document/1055638/</url>
+   </entry>
+   <entry type="incollection"
+          key="diqianLunHanYiFoJingYinLeShiLiaoZhongSuoTiXianDeRenJianXing2018">
+      <ref-num>37</ref-num>
+      <title>論漢譯佛經音樂史料中所體現的人間性</title>
+      <booktitle>2017星雲大師人間佛教理論實踐研究</booktitle>
+      <author>狄其安</author>
+      <year>2018</year>
+      <pages>392--411</pages>
+      <publisher>佛光文化事業有限公司</publisher>
+      <address>高雄</address>
+      <url>https://buddhism.lib.ntu.edu.tw/DLMBS/en/search/search_detail.jsp?seq=577119</url>
+   </entry>
+   <entry type="misc" key="djsniffEpPsi112011">
+      <ref-num>38</ref-num>
+      <title>Ep. Psi 11.02</title>
+      <author/>
+      <year>2011</year>
+      <note>Compact Disc.</note>
+   </entry>
+   <entry type="incollection" key="dreverFieldRecordingCentered2017">
+      <ref-num>39</ref-num>
+      <title>Field Recording Centered Composition Practices: Negotiating the “out-There” with the “in-Here"</title>
+      <booktitle>The Routledge Companion to Sounding Art</booktitle>
+      <author/>
+      <editor/>
+      <year>2017</year>
+      <pages>71--80</pages>
+      <publisher>Routledge</publisher>
+      <address>New York</address>
+   </entry>
+   <entry type="article" key="dreverSoundscapeCompositionConvergence2002">
+      <ref-num>40</ref-num>
+      <title>Soundscape Composition: The Convergence of Ethnography and Acousmatic Music</title>
+      <author/>
+      <year>2002</year>
+      <journal>Organised Sound</journal>
+      <volume>7</volume>
+      <number>1</number>
+      <pages>21--27</pages>
+   </entry>
+   <entry type="article" key="duarteSoundscapeAnthropoceneOcean2021">
+      <ref-num>41</ref-num>
+      <title>The Soundscape of the Anthropocene Ocean</title>
+      <author/>
+      <year>2021</year>
+      <month/>
+      <journal/>
+      <volume>371</volume>
+      <number>6529</number>
+      <publisher>American Association for the Advancement of Science</publisher>
+   </entry>
+   <entry type="article" key="DuFoXueShuWeiZiYuanDeJianZhiYuKaiZhan2023">
+      <ref-num>42</ref-num>
+      <title>佛學數位資源的建置與開展</title>
+      <author/>
+      <year>2023</year>
+      <journal>法鼓佛學學報</journal>
+      <volume>第十期</volume>
+      <pages>147--210</pages>
+   </entry>
+   <entry type="article" key="duppsArtificialIntelligenceAcademic2023">
+      <ref-num>43</ref-num>
+      <title>Artificial Intelligence and Academic Publishing</title>
+      <author/>
+      <year>2023</year>
+      <month/>
+      <journal>Journal of Cataract and Refractive Surgery</journal>
+      <volume>49</volume>
+      <number>7</number>
+      <pages>655--656</pages>
+      <doi>10.1097/j.jcrs.0000000000001223</doi>
+      <url>https://journals.lww.com/10.1097/j.jcrs.0000000000001223</url>
+   </entry>
+   <entry type="article" key="ecksteinDesigningSoundscapesArgumentation2018">
+      <ref-num>44</ref-num>
+      <title>Designing Soundscapes for Argumentation</title>
+      <author/>
+      <year>2018</year>
+      <month/>
+      <journal>Philosophy &amp;amp; Rhetoric</journal>
+      <volume>51</volume>
+      <number>3</number>
+      <pages>269--292</pages>
+      <doi>10.5325/philrhet.51.3.0269</doi>
+      <url>https://scholarlypublishingcollective.org/p-n-r/article/51/3/269/200292/Designing-Soundscapes-for-Argumentation</url>
+   </entry>
+   <entry type="book" key="eijkhoutTEXTopicTEXnician1992">
+      <ref-num>45</ref-num>
+      <title>TEX by Topic: A TEXnician's Reference</title>
+      <author/>
+      <year>1992</year>
+      <publisher>Addison-Wesley Pub. Co</publisher>
+      <address/>
+   </entry>
+   <entry type="incollection" key="eisenbergIslamSoundSpace2013">
+      <ref-num>46</ref-num>
+      <title/>
+      <booktitle/>
+      <author/>
+      <editor/>
+      <year>2013</year>
+      <pages>186--202</pages>
+      <publisher>Cambridge University Press</publisher>
+      <address>Cambridge</address>
+      <doi>10.1017/CBO9780511675850.010</doi>
+   </entry>
+   <entry type="incollection" key="eisenbergSpace2015">
+      <ref-num>47</ref-num>
+      <title>Space</title>
+      <booktitle>Keywords in Sound</booktitle>
+      <author/>
+      <editor/>
+      <year>2015</year>
+      <pages>193-207</pages>
+      <publisher>Duke University Press</publisher>
+      <address>London</address>
+   </entry>
+   <entry type="incollection" key="feldAcoustemology2015">
+      <ref-num>48</ref-num>
+      <title>Acoustemology</title>
+      <booktitle>Keywords in Sound</booktitle>
+      <author/>
+      <editor/>
+      <year>2015</year>
+      <pages>12--21</pages>
+      <publisher>Duke University Press</publisher>
+      <address>London</address>
+   </entry>
+   <entry type="incollection" key="feldWaterfallSongsAcoustemology1996">
+      <ref-num>49</ref-num>
+      <title/>
+      <booktitle>Senses of Place</booktitle>
+      <author/>
+      <editor/>
+      <year>1996</year>
+      <pages>91--135</pages>
+      <publisher>NM: School of American Research Press</publisher>
+      <address>Santa Fe</address>
+   </entry>
+   <entry type="incollection" key="ferrariPresqueRienOu2012">
+      <ref-num>50</ref-num>
+      <title/>
+      <booktitle>Presque Rien</booktitle>
+      <author/>
+      <year>2012</year>
+      <publisher>Recollection GRM (REGRM 005)</publisher>
+      <address>Paris</address>
+      <note>Originally published in 1970.</note>
+   </entry>
+   <entry type="article" key="fiebigSonicWitnessPolitical2015">
+      <ref-num>51</ref-num>
+      <title>The Sonic Witness: On the Political Potential of Field Recordings in Acoustic Art</title>
+      <author/>
+      <year>2015</year>
+      <month/>
+      <journal>Leonardo Music Journal</journal>
+      <volume>25</volume>
+      <pages>14--16</pages>
+      <doi>10.1162/LMJ_a_00926</doi>
+      <url>https://direct.mit.edu/lmj/article/69528</url>
+   </entry>
+   <entry type="article" key="fortunatoCaseFreeOpen2021">
+      <ref-num>52</ref-num>
+      <title>The Case for Free and Open Source Software in Research and Scholarship</title>
+      <author/>
+      <year>2021</year>
+      <journal>Philosophical Transactions of the Royal Society A</journal>
+      <volume>379</volume>
+      <number>2197</number>
+      <doi>10.1098/rsta.2020.0079https://doi.org/10.1098/rsta.2020.0079</doi>
+      <url>https://doi.org/10.1098/rsta.2020.0079https://doi.org/10.1098/rsta.2020.0079</url>
+   </entry>
+   <entry type="book" key="froshMediaWitnessing2009">
+      <ref-num>53</ref-num>
+      <title>Media Witnessing</title>
+      <editor/>
+      <year>2009</year>
+      <publisher>Palgrave Macmillan UK</publisher>
+      <address>London</address>
+      <doi>10.1057/9780230235762</doi>
+      <url>http://link.springer.com/10.1057/9780230235762</url>
+   </entry>
+   <entry type="inbook" key="garcierExperienceNuclearWaste2021">
+      <ref-num>54</ref-num>
+      <title>The Experience of Nuclear Waste</title>
+      <booktitle>The Routledge Handbook of Waste Studies</booktitle>
+      <author/>
+      <year>2021</year>
+      <month/>
+      <edition>1</edition>
+      <pages>211--223</pages>
+      <publisher>Routledge</publisher>
+      <address>London</address>
+      <doi>10.4324/9781003019077-14</doi>
+      <url>https://www.taylorfrancis.com/books/9781003019077/chapters/10.4324/9781003019077-14</url>
+      <collaborator/>
+   </entry>
+   <entry type="article" key="garcierNuclearRenaissanceGeography2009">
+      <ref-num>55</ref-num>
+      <title>The Nuclear ‘Renaissance’ and the Geography of the Uranium Fuel Cycle</title>
+      <author/>
+      <year>2009</year>
+      <month/>
+      <journal>Geography</journal>
+      <volume>94</volume>
+      <number>3</number>
+      <pages>198--206</pages>
+      <doi>10.1080/00167487.2009.12094270</doi>
+      <url>https://www.tandfonline.com/doi/full/10.1080/00167487.2009.12094270</url>
+   </entry>
+   <entry type="book" key="glassmanBearingWitnessZen1998">
+      <ref-num>56</ref-num>
+      <title>Bearing Witness: A Zen Master's Lessons in Making Peace</title>
+      <author/>
+      <year>1998</year>
+      <edition>1st ed</edition>
+      <publisher>Bell Tower</publisher>
+      <address>New York</address>
+   </entry>
+   <entry type="article" key="golanReligiousLivestreamingConstructing2019">
+      <ref-num>57</ref-num>
+      <title>Religious Live-Streaming: Constructing the Authentic in Real Time</title>
+      <author/>
+      <year>2019</year>
+      <month/>
+      <journal/>
+      <volume>22</volume>
+      <number>3</number>
+      <pages>437--454</pages>
+      <doi>10.1080/1369118X.2017.1395472</doi>
+      <url>https://www.tandfonline.com/doi/full/10.1080/1369118X.2017.1395472</url>
+   </entry>
+   <entry type="incollection" key="guillebaudSoundwalksShivaTemple2020">
+      <ref-num>58</ref-num>
+      <title>Soundwalks in Shiva Temple: A Situated Approach to Perceived Ambiance</title>
+      <booktitle/>
+      <author/>
+      <editor/>
+      <year>2020</year>
+      <pages>104--121</pages>
+      <publisher>Routledge</publisher>
+      <address>Oxon</address>
+   </entry>
+   <entry type="book" key="guillebaudWorshipSoundSpaces2020">
+      <ref-num>59</ref-num>
+      <title/>
+      <editor/>
+      <year>2020</year>
+      <publisher>Routledge</publisher>
+      <address>Oxon</address>
+   </entry>
+   <entry type="article" key="guo-jingRealizationHearingChan2014">
+      <ref-num>60</ref-num>
+      <title>Realization through Hearing in Chan Literature</title>
+      <author/>
+      <translator/>
+      <year>2014</year>
+      <journal>Journal of Chinese Buddhist Studies</journal>
+      <volume>27</volume>
+      <pages>129--179</pages>
+      <note>Translated by Jeffrey Kotyk.</note>
+   </entry>
+   <entry type="incollection" key="hackettAuditoryMaterials2011">
+      <ref-num>61</ref-num>
+      <title>Auditory Materials</title>
+      <booktitle>The Routledge Handbook of Research Methods in the Study of Religion</booktitle>
+      <author/>
+      <editor/>
+      <year>2011</year>
+      <pages>447--458</pages>
+      <publisher>Routledge</publisher>
+      <address>London ; New York</address>
+   </entry>
+   <entry type="inbook" key="haukampIntroducingAsianSound2022">
+      <ref-num>62</ref-num>
+      <title>Introducing Asian Sound Cultures</title>
+      <booktitle>Asian Sound Cultures</booktitle>
+      <author/>
+      <year>2022</year>
+      <month/>
+      <publisher>Taylor &amp;amp; Francis</publisher>
+      <doi>10.4324/9781003143772-1</doi>
+      <url>https://library.oapen.org/handle/20.500.12657/57869</url>
+      <collaborator/>
+   </entry>
+   <entry type="article" key="hellerBuddhaBoxMateriality2014">
+      <ref-num>63</ref-num>
+      <title>Buddha in a Box: The Materiality of Recitation in Contemporary Chinese Buddhism</title>
+      <author/>
+      <year>2014</year>
+      <journal>Material Religion</journal>
+      <volume>10</volume>
+      <number>3</number>
+      <pages>294--314</pages>
+   </entry>
+   <entry type="incollection" key="helmreichUnderwaterMusicTuning2012">
+      <ref-num>64</ref-num>
+      <title>Underwater Music: Tuning Composition to the Sounds of Science</title>
+      <booktitle>The Oxford Handbook of Sound Studies</booktitle>
+      <author/>
+      <editor/>
+      <year>2012</year>
+      <pages>151--175</pages>
+      <publisher>Oxford University Press</publisher>
+      <address>New York</address>
+   </entry>
+   <entry type="book" key="hemptonEarthSolarPowered2016">
+      <ref-num>65</ref-num>
+      <title>Earth Is a Solar Powered Jukebox</title>
+      <author/>
+      <year>2016</year>
+      <publisher>Quiet Planet LLC</publisher>
+      <address>Port Townsend</address>
+   </entry>
+   <entry type="book" key="hemptonSoundtrackerPortraitGordon2010">
+      <ref-num>66</ref-num>
+      <title>Soundtracker: A Portrait of Gordon Hempton</title>
+      <author/>
+      <year>2010</year>
+      <publisher>Fou Films</publisher>
+      <note>Format: Digital Download. Total Time: 83 minutes.</note>
+   </entry>
+   <entry type="incollection" key="hirschkindReligion2015">
+      <ref-num>67</ref-num>
+      <title>Religion</title>
+      <booktitle>Keywords in Sound</booktitle>
+      <author/>
+      <editor/>
+      <year>2015</year>
+      <pages>165--174</pages>
+      <publisher>Duke University Press</publisher>
+      <address>Durham</address>
+   </entry>
+   <entry type="article" key="hsiehPianoTransductionsMusic2019">
+      <ref-num>68</ref-num>
+      <title/>
+      <author/>
+      <year>2019</year>
+      <journal>Sound Studies</journal>
+      <volume>5</volume>
+      <number>1</number>
+      <pages>4--21</pages>
+      <doi>10.1080/20551940.2018.1564459</doi>
+   </entry>
+   <entry type="misc" key="huiHongKongProtests2019">
+      <ref-num>69</ref-num>
+      <title>The Hong Kong Protests Are the Most Live-Streamed Protests Ever</title>
+      <author/>
+      <year>2019</year>
+      <month/>
+      <journal>Quartz</journal>
+      <url>https://qz.com/1737197/hong-kong-protests-are-most-live-streamed-ever</url>
+   </entry>
+   <entry type="article" key="hurvitzWeiShouTreatise1956">
+      <ref-num>70</ref-num>
+      <title/>
+      <author/>
+      <year>1956</year>
+      <journal>Jimbunkagaku Kenyusho</journal>
+      <volume>16 (supplement)</volume>
+      <pages>25--103</pages>
+   </entry>
+   <entry type="incollection" key="ingoldSoundscape2007">
+      <ref-num>71</ref-num>
+      <title>Against Soundscape</title>
+      <booktitle>Autumn Leaves: Sound and the Environment in Artistic Practice</booktitle>
+      <author/>
+      <editor/>
+      <year>2007</year>
+      <pages>11</pages>
+      <publisher>Double Entendre</publisher>
+      <address>Paris</address>
+   </entry>
+   <entry type="book" key="jonesChinesePureLand2019">
+      <ref-num>72</ref-num>
+      <title>Chinese Pure Land Buddhism: Understanding a Tradition of Practice</title>
+      <author/>
+      <year>2019</year>
+      <publisher>University of Hawai`i Press</publisher>
+      <address>Honolulu</address>
+   </entry>
+   <entry type="article" key="keatingNuclearMemoryArchival2023">
+      <ref-num>73</ref-num>
+      <title/>
+      <author/>
+      <year>2023</year>
+      <month/>
+      <journal>Progress in Environmental Geography</journal>
+      <volume>2</volume>
+      <number>1-2</number>
+      <pages>97--117</pages>
+      <doi>10.1177/27539687231174242</doi>
+      <url>http://journals.sagepub.com/doi/10.1177/27539687231174242</url>
+   </entry>
+   <entry type="misc" key="kirkegaardRooms2006">
+      <ref-num>74</ref-num>
+      <title>4 Rooms</title>
+      <author/>
+      <year>2006</year>
+      <publisher>Touch Records</publisher>
+      <url>https://touch33.net/catalogue/tone-26-jacob-kirkegaard-4-rooms.html</url>
+      <note>Tone 26. CD – 52 minutes</note>
+   </entry>
+   <entry type="book" key="knuthTeXbook1986">
+      <ref-num>75</ref-num>
+      <title>The TeXbook</title>
+      <author/>
+      <year>1986</year>
+      <series>Computers &amp;amp; Typesetting</series>
+      <number>A</number>
+      <publisher>Addison-Wesley</publisher>
+      <address/>
+   </entry>
+   <entry type="misc" key="konigGettingYourselfOrganised2016">
+      <ref-num>76</ref-num>
+      <title>Getting Yourself Organised with Org-mode</title>
+      <author/>
+      <year>2016</year>
+      <note>Streaming video (accessed: 2022-01-12)</note>
+   </entry>
+   <entry type="book" key="kottwitzLaTeXBeginnerGuide2021a">
+      <ref-num>77</ref-num>
+      <title>LaTeX Beginner's Guide - Second Edition</title>
+      <author/>
+      <year>2021</year>
+      <edition>2nd edition</edition>
+      <publisher>Packt Publishing</publisher>
+   </entry>
+   <entry type="book" key="kottwitzLaTeXCookbook902015a">
+      <ref-num>78</ref-num>
+      <title>LaTeX Cookbook: Over 90 Hands-on Recipes for Quickly Preparing LaTeX Documents to Solve Various Challenging Tasks</title>
+      <author/>
+      <year>2015</year>
+      <series>Quick Answers to Common Problems</series>
+      <publisher>Packt Publishing</publisher>
+      <address>Birmingham Mumbai</address>
+   </entry>
+   <entry type="incollection" key="krauseEcoacousticsItsExpression2017">
+      <ref-num>79</ref-num>
+      <title>Ecoacoustics and Its Expression through the Voice of the Arts: An Essay</title>
+      <booktitle>Ecoacoustics: The Ecological Role of Sounds</booktitle>
+      <author/>
+      <editor/>
+      <year>2017</year>
+      <pages>297--312</pages>
+      <publisher/>
+      <address>Hoboken</address>
+   </entry>
+   <entry type="article" key="lapeyrePracticalTransformationUsing2001">
+      <ref-num>80</ref-num>
+      <title>Practical Transformation Using XSLT and XPath XSL Transformations and the XML Path Language)</title>
+      <author/>
+      <year>2001</year>
+      <month/>
+      <journal>Markup Languages: Theory and Practice</journal>
+      <volume>3</volume>
+      <number>4</number>
+      <pages>455--458</pages>
+      <doi>10.1162/109966202760152211</doi>
+      <url>http://www.ingentaselect.com/rpsv/cgi-bin/cgi?ini=xref&amp;amp;body=linker&amp;amp;reqdoi=10.1162/109966202760152211</url>
+   </entry>
+   <entry type="article" key="lapeyrePracticalTransformationUsing2001a">
+      <ref-num>81</ref-num>
+      <title>Practical Transformation Using XSLT and XPath XSL Transformations and the XML Path Language)</title>
+      <author/>
+      <year>2001</year>
+      <month/>
+      <journal>Markup Languages: Theory and Practice</journal>
+      <volume>3</volume>
+      <number>4</number>
+      <pages>455--458</pages>
+      <doi>10.1162/109966202760152211</doi>
+      <url>http://www.ingentaselect.com/rpsv/cgi-bin/cgi?ini=xref&amp;amp;body=linker&amp;amp;reqdoi=10.1162/109966202760152211</url>
+   </entry>
+   <entry type="incollection" key="laplaceChurchWorshipExperiencing2020">
+      <ref-num>82</ref-num>
+      <title/>
+      <booktitle/>
+      <author/>
+      <editor/>
+      <year>2020</year>
+      <pages>161--177</pages>
+      <publisher>Routledge</publisher>
+      <address>Oxon</address>
+   </entry>
+   <entry type="article" key="lee-niiniojaUnisonOneselfGod2013">
+      <ref-num>83</ref-num>
+      <title>Unison with Oneself in God at the Sacred Kamppi Chapel of Silence”</title>
+      <author/>
+      <year>2013</year>
+      <month/>
+      <journal>Actas de Arquitectura Religiosa Contemporánea</journal>
+      <volume>3</volume>
+      <pages>236--241</pages>
+      <doi>10.17979/aarc.2013.3.0.5107</doi>
+      <url>https://revistas.udc.es/index.php/aarc/article/view/aarc.2013.3.0.5107</url>
+   </entry>
+   <entry type="incollection" key="leightonDogenVisionEnvironment2022">
+      <ref-num>84</ref-num>
+      <title>Dōgen’s Vision of the Environment and His Practice of Devotion and Faith</title>
+      <booktitle>The Theory and Practice of Zen Buddhism</booktitle>
+      <author/>
+      <editor/>
+      <year>2022</year>
+      <volume>6</volume>
+      <pages>103--121</pages>
+      <publisher>Springer Nature Singapore</publisher>
+      <address>Singapore</address>
+      <doi>10.1007/978-981-16-8286-5_6</doi>
+      <url>https://link.springer.com/10.1007/978-981-16-8286-5_6</url>
+   </entry>
+   <entry type="book" key="leightonJustThisIt2015">
+      <ref-num>85</ref-num>
+      <title>Just This Is It: Dongshan and the Practice of Suchness</title>
+      <author/>
+      <year>2015</year>
+      <publisher>Shambhala</publisher>
+      <address>Boston</address>
+   </entry>
+   <entry type="article" key="levy-landesbergSoundCityRethinking2021">
+      <ref-num>86</ref-num>
+      <title>Sound &amp;amp; the City: Rethinking Spatial Epistemologies with Urban Sound Maps</title>
+      <author/>
+      <year>2021</year>
+      <month/>
+      <doi>10.1080/20551940.2021.1982563</doi>
+   </entry>
+   <entry type="incollection" key="liLinguaFrancasGreater2015">
+      <ref-num>87</ref-num>
+      <title>Lingua Francas in Greater China</title>
+      <booktitle>The Oxford Handbook of Chinese Linguistics</booktitle>
+      <author/>
+      <editor/>
+      <year>2015</year>
+      <series>Oxford Handbooks in Linguistics</series>
+      <pages>590--600</pages>
+      <publisher>Oxford University Press</publisher>
+      <address>Oxford</address>
+   </entry>
+   <entry type="book" key="lockChineseBuddhistTexts2018a">
+      <ref-num>88</ref-num>
+      <title>Chinese Buddhist Texts: An Introductory Reader</title>
+      <editor/>
+      <year>2018</year>
+      <publisher>Routledge/ Taylor &amp;amp; Francis Group</publisher>
+      <address>New York</address>
+   </entry>
+   <entry type="misc" key="lockwoodSoundMapDanube2008">
+      <ref-num>89</ref-num>
+      <title>A Sound Map of the Danube. LCD 2083</title>
+      <author/>
+      <year>2008</year>
+      <publisher>Lovely Music Ltd.</publisher>
+      <note>Total time: 167 minutes. Three discs.</note>
+   </entry>
+   <entry type="article" key="lockwoodSoundMappingDanube2004">
+      <ref-num>90</ref-num>
+      <title/>
+      <author/>
+      <year>2004</year>
+      <journal>The Journal of Acoustic Ecology</journal>
+      <volume>5</volume>
+      <number>1</number>
+      <pages>32--34</pages>
+   </entry>
+   <entry type="article" key="lockwoodWhatRiver2007">
+      <ref-num>91</ref-num>
+      <title>What Is a River?</title>
+      <author/>
+      <year>2007</year>
+      <journal>The Journal of Acoustic Ecology</journal>
+      <volume>7</volume>
+      <number>1</number>
+      <pages>43--44</pages>
+   </entry>
+   <entry type="book" key="looriArtJustSitting2004">
+      <ref-num>92</ref-num>
+      <title>The Art of Just Sitting: Essential Writings on the Zen Practice of Shikantaza</title>
+      <editor/>
+      <year>2004</year>
+      <edition>2nd ed</edition>
+      <publisher>Wisdom Publications</publisher>
+      <address/>
+      <note>Includes index</note>
+   </entry>
+   <entry type="article" key="loreggiaSenTagWebBasedTool2022">
+      <ref-num>93</ref-num>
+      <title>SenTag: A Web-Based Tool for Semantic Annotation of Textual Documents</title>
+      <author/>
+      <year>2022</year>
+      <month/>
+      <journal>Proceedings of the AAAI Conference on Artificial Intelligence</journal>
+      <volume>36</volume>
+      <number>11</number>
+      <pages>13191--13193</pages>
+      <doi>10.1609/aaai.v36i11.21724</doi>
+      <url>https://ojs.aaai.org/index.php/AAAI/article/view/21724</url>
+   </entry>
+   <entry type="article" key="martiniOnlineDistantWitnessing2018">
+      <ref-num>94</ref-num>
+      <title>Online Distant Witnessing and Live-Streaming Activism: Emerging Differences in the Activation of Networked Publics</title>
+      <author/>
+      <year>2018</year>
+      <month/>
+      <journal>New Media &amp;amp; Society</journal>
+      <volume>20</volume>
+      <number>11</number>
+      <pages>4035--4055</pages>
+      <doi>10.1177/1461444818766703</doi>
+      <url>http://journals.sagepub.com/doi/10.1177/1461444818766703</url>
+   </entry>
+   <entry type="article" key="martiniUserSideYouTube2018">
+      <ref-num>95</ref-num>
+      <title>On the User’s Side: YouTube and Distant Witnessing in the Age of Technology-Enhanced Mediability</title>
+      <author/>
+      <year>2018</year>
+      <month/>
+      <journal>Convergence: The International Journal of Research into New Media Technologies</journal>
+      <volume>24</volume>
+      <number>1</number>
+      <pages>33--49</pages>
+      <doi>10.1177/1354856517736980</doi>
+      <url>http://journals.sagepub.com/doi/10.1177/1354856517736980</url>
+   </entry>
+   <entry type="article" key="mccartneyCircumscribedJourneysSoundscape2002">
+      <ref-num>96</ref-num>
+      <title>Circumscribed Journeys through Soundscape Composition</title>
+      <author/>
+      <year>2002</year>
+      <journal>Organised Sound</journal>
+      <volume>7</volume>
+      <number>1</number>
+      <pages>1--3</pages>
+   </entry>
+   <entry type="incollection" key="mullerSATTaishoText2017">
+      <ref-num>97</ref-num>
+      <title>The SAT Taishō Text Database: A Brief History</title>
+      <booktitle>Reinventing the Tripitaka: Transformation of the Buddhist Canon in Modern East Asia</booktitle>
+      <author/>
+      <editor/>
+      <year>2017</year>
+      <pages>175--186</pages>
+      <publisher>Lexington Books</publisher>
+      <address>Lanham</address>
+   </entry>
+   <entry type="book" key="myrickEthicsChristianMusicking2021">
+      <ref-num>98</ref-num>
+      <title>Ethics and Christian Musicking</title>
+      <author/>
+      <editor/>
+      <year>2021</year>
+      <month/>
+      <edition>1</edition>
+      <publisher>Routledge</publisher>
+      <doi>10.4324/9781003001485</doi>
+      <url>https://www.taylorfrancis.com/books/9781000360066</url>
+   </entry>
+   <entry type="book" key="narebskiMasteringGitAttain2016">
+      <ref-num>99</ref-num>
+      <title>Mastering Git: Attain Expert-Level Proficiency with Git for Enhanced Productivity and Efficient Collaboration by Mastering Advanced Distributed Version Control Features</title>
+      <author/>
+      <year>2016</year>
+      <publisher>Packt Publishing</publisher>
+      <address/>
+   </entry>
+   <entry type="book" key="okumuraMountainsWatersSutra2018">
+      <ref-num>100</ref-num>
+      <title>The Mountains and Waters Sūtra: A Practitioner's Guide to Dōgen's Sansuikyō</title>
+      <editor/>
+      <year>2018</year>
+      <publisher>Wisdom Publications</publisher>
+      <address/>
+   </entry>
+   <entry type="incollection" key="okumuraSansuikyo2018">
+      <ref-num>101</ref-num>
+      <title>Sansuikyō</title>
+      <booktitle>The Mountains and Waters Sūtra: A Practitioner's Guide to Dōgen's Sansuikyō</booktitle>
+      <editor/>
+      <translator>Bielefeldt Carl</translator>
+      <year>2018</year>
+      <publisher>Wisdom Publications</publisher>
+      <address>Somerville</address>
+      <note>Translated by Carl Bielefeldt</note>
+   </entry>
+   <entry type="book" key="oliverosDeepListeningComposer2005">
+      <ref-num>102</ref-num>
+      <title>Deep Listening a Composer's Sound Practice</title>
+      <author/>
+      <year>2005</year>
+      <publisher>iUniverse</publisher>
+      <address>New York</address>
+   </entry>
+   <entry type="book" key="oliverosQuantumListening2022">
+      <ref-num>103</ref-num>
+      <title>Quantum Listening</title>
+      <author/>
+      <year>2022</year>
+      <series>Terra Ignota</series>
+      <publisher>Ignota Books</publisher>
+      <address>London</address>
+      <note/>
+   </entry>
+   <entry type="incollection" key="parkesDogenMountainsWaters2009">
+      <ref-num>104</ref-num>
+      <title>Dōgen’s Mountains and Waters as Sūtras" Sansui-kyō)</title>
+      <booktitle>Buddhist Philosophy: Essential Readings</booktitle>
+      <author/>
+      <editor/>
+      <year>2009</year>
+      <pages>83--92</pages>
+      <publisher>Oxford University Press</publisher>
+      <address>Oxford</address>
+   </entry>
+   <entry type="incollection" key="petersWitnessing2009">
+      <ref-num>105</ref-num>
+      <title>Witnessing</title>
+      <booktitle>Media Witnessing: Testimony in the Age of Mass Communication</booktitle>
+      <author/>
+      <editor/>
+      <year>2009</year>
+      <pages>23--41</pages>
+      <publisher>Palgrave Macmillan</publisher>
+      <address>London</address>
+      <doi>10.1057/9780230235762</doi>
+      <url>http://link.springer.com/10.1057/9780230235762</url>
+   </entry>
+   <entry type="article" key="pisanoThirdSoundscapeHow2015">
+      <ref-num>106</ref-num>
+      <title>The Third Soundscape: How a Sonic Exploration of Abandoned Spaces Can Lead to the Discovery of Unforeseen Places and the Geographies of a Territory in the Post-Digital Era</title>
+      <author/>
+      <year>2015</year>
+      <month/>
+      <journal>Third Text</journal>
+      <volume>29</volume>
+      <number>1-2</number>
+      <pages>75--87</pages>
+      <doi>10.1080/09528822.2015.1049888</doi>
+      <url>http://www.tandfonline.com/doi/full/10.1080/09528822.2015.1049888</url>
+   </entry>
+   <entry type="book" key="plateKeyTermsMaterial2015">
+      <ref-num>107</ref-num>
+      <title>Key Terms in Material Religion</title>
+      <editor/>
+      <year>2015</year>
+      <publisher>Bloomsbury Academic</publisher>
+      <address>London</address>
+   </entry>
+   <entry type="incollection" key="porcelloAfterword2005">
+      <ref-num>108</ref-num>
+      <title>Afterword</title>
+      <booktitle>Wired for Sound: Engineering and Technologies in Sonic Cultures</booktitle>
+      <author/>
+      <editor/>
+      <year>2005</year>
+      <series>Music/Culture</series>
+      <pages>269--282</pages>
+      <publisher>Wesleyan University Press</publisher>
+      <address/>
+   </entry>
+   <entry type="book" key="powellRecordTungshan1986">
+      <ref-num>109</ref-num>
+      <title>The record of Tung-shan</title>
+      <author/>
+      <year>1986</year>
+      <publisher>University of Hawai'i Press</publisher>
+      <address>Honolulu</address>
+   </entry>
+   <entry type="book" key="prebishTheoryPracticeZen2022">
+      <ref-num>110</ref-num>
+      <title>The Theory and Practice of Zen Buddhism: A Festschrift in Honor of Steven Heine</title>
+      <editor/>
+      <year>2022</year>
+      <series>Chinese Culture</series>
+      <number>volume 6</number>
+      <publisher>Springer</publisher>
+      <address>Singapore</address>
+      <doi>10.1007/978-981-16-8286-5</doi>
+   </entry>
+   <entry type="article" key="raneRoleChallengesChatGPT2023">
+      <ref-num>111</ref-num>
+      <title>Role and Challenges of ChatGPT and Similar Generative Artificial Intelligence in Arts and Humanities</title>
+      <author/>
+      <year>2023</year>
+      <journal>SSRN Electronic Journal</journal>
+      <doi>10.2139/ssrn.4603208</doi>
+      <url>https://www.ssrn.com/abstract=4603208</url>
+   </entry>
+   <entry type="misc" key="rodenFormsPaperRemastered2011">
+      <ref-num>112</ref-num>
+      <title>Forms of Paper Remastered). LINE\_053</title>
+      <author/>
+      <year>2011</year>
+      <note>Digital Download. 54:00.</note>
+   </entry>
+   <entry type="incollection" key="rodgersAnneaLockwood2010">
+      <ref-num>113</ref-num>
+      <title>Annea Lockwood</title>
+      <booktitle>Pink Noises: Women on Electronic Music and Sound</booktitle>
+      <author/>
+      <year>2010</year>
+      <pages>114--127</pages>
+      <publisher>Duke University Press</publisher>
+      <address>Durham</address>
+   </entry>
+   <entry type="book" key="rossModernMandarinChinese2023">
+      <ref-num>114</ref-num>
+      <title>Modern Mandarin Chinese Grammar: A Practical Guide</title>
+      <author/>
+      <year>2023</year>
+      <month/>
+      <edition>3</edition>
+      <publisher>Routledge</publisher>
+      <address>London</address>
+      <doi>10.4324/9781003335078</doi>
+      <url>https://www.taylorfrancis.com/books/9781003335078</url>
+   </entry>
+   <entry type="book" key="sawakiYouZenSayings2021">
+      <ref-num>115</ref-num>
+      <title>To You: Zen Sayings of Kōdō Sawaki</title>
+      <author/>
+      <year>2021</year>
+      <edition>First english language</edition>
+      <publisher>Hohm Press</publisher>
+      <address/>
+      <note>Minimal Level Cataloging Plus</note>
+   </entry>
+   <entry type="book" key="schaferSoundscapeOurSonic1994">
+      <ref-num>116</ref-num>
+      <title>The Soundscape: Our Sonic Environment and the Tuning of the World</title>
+      <author/>
+      <year>1994</year>
+      <publisher>Destiny Books</publisher>
+      <address>Rochester</address>
+   </entry>
+   <entry type="article" key="schmidtNiklasLuhmannCard2018">
+      <ref-num>117</ref-num>
+      <title>Niklas Luhmann's Card Index: The Fabrication of Serendipity</title>
+      <author/>
+      <year>2018</year>
+      <journal>Sociologica</journal>
+      <volume>12</volume>
+      <number>1</number>
+      <pages>8</pages>
+   </entry>
+   <entry type="book" key="sharfComingTermsChinese2002">
+      <ref-num>118</ref-num>
+      <title>Coming to Terms with Chinese Buddhism: A Reading of the Treasure Store Treatise</title>
+      <author/>
+      <year>2002</year>
+      <publisher>University of Hawai'i Press</publisher>
+      <address>Honolulu</address>
+   </entry>
+   <entry type="book" key="shengkaiZhongGuoHanChuanFoJiaoLiYi2001">
+      <ref-num>119</ref-num>
+      <title>中国汉传佛教礼仪</title>
+      <author/>
+      <year>2001</year>
+      <publisher>宗教文化出版社</publisher>
+      <address>北京</address>
+   </entry>
+   <entry type="incollection" key="ShiGuoJingFoJiaoWuQingShuoFaDeXueLiTanJiu2017">
+      <ref-num>120</ref-num>
+      <title>佛教「無情說法」的學理探究--以聖嚴法師為例的現代應用</title>
+      <booktitle>聖嚴研究</booktitle>
+      <author>釋果鏡</author>
+      <editor>聖嚴教育基金會學術研究部</editor>
+      <year>2017</year>
+      <series>聖嚴思想論叢</series>
+      <volume>9</volume>
+      <pages>7--50</pages>
+      <publisher>法鼓文化</publisher>
+      <address>臺北</address>
+   </entry>
+   <entry type="book" key="siegelSchematronLanguageValidating2022">
+      <ref-num>121</ref-num>
+      <title>Schematron: A Language for Validating XML</title>
+      <author/>
+      <year>2022</year>
+      <edition>First edition</edition>
+      <publisher>XML Press</publisher>
+      <address/>
+   </entry>
+   <entry type="book" key="siegelXProcProgrammerReference2020">
+      <ref-num>122</ref-num>
+      <title>XProc 3.0: Programmer Reference</title>
+      <author/>
+      <year>2020</year>
+      <edition>First Edition</edition>
+      <publisher>XML Press</publisher>
+      <address/>
+   </entry>
+   <entry type="incollection" key="smithEcho2015">
+      <ref-num>123</ref-num>
+      <title>Echo</title>
+      <booktitle>Keywords in Sound</booktitle>
+      <author/>
+      <editor/>
+      <year>2015</year>
+      <pages>55--64</pages>
+      <publisher>Duke University Press</publisher>
+      <address>London</address>
+   </entry>
+   <entry type="article" key="soraceChinaLastCommunist2014">
+      <ref-num>124</ref-num>
+      <title>China's Last Communist: Ai Weiwei</title>
+      <author/>
+      <year>2014</year>
+      <month/>
+      <journal>Critical Inquiry</journal>
+      <volume>40</volume>
+      <number>2</number>
+      <pages>396--419</pages>
+      <doi>10.1086/674120</doi>
+      <url>https://www.journals.uchicago.edu/doi/10.1086/674120</url>
+   </entry>
+   <entry type="book" key="sterneAudibleCulturalOrigins2003">
+      <ref-num>125</ref-num>
+      <title>The Audible Past: Cultural Origins of Sound Reproduction</title>
+      <author/>
+      <year>2003</year>
+      <publisher>Durham University Press</publisher>
+      <address>Durham</address>
+   </entry>
+   <entry type="incollection" key="sturgeonYijingYiJingWestern">
+      <ref-num>126</ref-num>
+      <title>Yijing 易經 Western Zhou 西周]</title>
+      <booktitle>Chinese Text Project</booktitle>
+      <editor/>
+      <year>2022</year>
+      <note>Translated by James Legge (1815-1897)</note>
+   </entry>
+   <entry type="misc" key="tengOpenYourEars2018">
+      <ref-num>127</ref-num>
+      <title>Open Your Ears and Listen Anew - Redesigning the Metro Soundscape</title>
+      <author/>
+      <year>2018</year>
+      <url>https://www.taiwan-panorama.com/en/Articles/Details?Guid=07c45eba-5f60-420c-804d-b91f313b6e18</url>
+      <note>Translated by Phil Newell.</note>
+   </entry>
+   <entry type="incollection" key="thibaudAfterwordWorldAttunements2020">
+      <ref-num>128</ref-num>
+      <title>Afterword: A World of Attunements</title>
+      <booktitle/>
+      <author/>
+      <editor/>
+      <year>2020</year>
+      <pages>212--219</pages>
+      <publisher>Routledge</publisher>
+      <address>Oxon</address>
+   </entry>
+   <entry type="misc" key="thoughtbotEmacsWriters2015">
+      <ref-num>129</ref-num>
+      <title>Emacs For Writers</title>
+      <author/>
+      <year>2015</year>
+      <note>Streaming video (accessed 2022-01-12)</note>
+   </entry>
+   <entry type="book" key="tidwellXSLTMasteringXML2008">
+      <ref-num>130</ref-num>
+      <title>XSLT: Mastering XML Transformations ; New Covers XSLT 2.0</title>
+      <author/>
+      <year>2008</year>
+      <edition>2. ed</edition>
+      <publisher>O'Reilly Media</publisher>
+      <address/>
+      <note>Previous ed.: 2001</note>
+   </entry>
+   <entry type="article" key="truaxGenresTechniquesSoundscape2002">
+      <ref-num>131</ref-num>
+      <title>Genres and Techniques of Soundscape Composition as Developed at Simon Fraser University</title>
+      <author/>
+      <year>2002</year>
+      <month/>
+      <journal>Organised Sound</journal>
+      <volume>7</volume>
+      <number>1</number>
+      <pages>5--14</pages>
+      <doi>10.1017/S1355771802001024</doi>
+      <url>https://www.cambridge.org/core/product/identifier/S1355771802001024/type/journal_article</url>
+   </entry>
+   <entry type="book" key="truaxHandbookAcousticEcology1999">
+      <ref-num>132</ref-num>
+      <title>Handbook for Acoustic Ecology</title>
+      <editor/>
+      <year>1999</year>
+      <publisher>Cambridge Street Publishing</publisher>
+      <address>Vancouver</address>
+      <note>Online version.</note>
+   </entry>
+   <entry type="misc" key="truaxIslands2001">
+      <ref-num>133</ref-num>
+      <title>Islands</title>
+      <author/>
+      <year>2001</year>
+      <publisher>Cambridge Street Records – CSR-CD 0101</publisher>
+      <note>Cambridge Street Records. CSR-CD 0101. Compact Disc. 63 min.</note>
+   </entry>
+   <entry type="article" key="truaxSoundscapeCompositionGlobal2008">
+      <ref-num>134</ref-num>
+      <title>Soundscape Composition as Global Music: Electroacoustic Music as Soundscape</title>
+      <author/>
+      <year>2008</year>
+      <journal>Organised Sound</journal>
+      <volume>13</volume>
+      <number>2</number>
+      <pages>103--109</pages>
+   </entry>
+   <entry type="book" key="tuanSpacePlacePerspective2011">
+      <ref-num>135</ref-num>
+      <title>Space and Place: The Perspective of Experience</title>
+      <author/>
+      <year>2011</year>
+      <edition>7. print</edition>
+      <publisher>Univ. of Minnesota Press</publisher>
+      <address/>
+   </entry>
+   <entry type="incollection" key="tuCreationCBETAChinese2015">
+      <ref-num>136</ref-num>
+      <title>The Creation of the CBETA Chinese Electronic Tripitaka Collection in Taiwan</title>
+      <booktitle>Spreading Buddha's Word in East Asia</booktitle>
+      <author/>
+      <editor/>
+      <year>2015</year>
+      <month/>
+      <pages>321--336</pages>
+      <publisher>Columbia University Press</publisher>
+      <doi>10.7312/wu--17160-015</doi>
+      <url>https://www.degruyter.com/document/doi/10.7312/wu--17160-015/html</url>
+      <note>Translated by Xin Zi</note>
+   </entry>
+   <entry type="incollection" key="tweedSpace2015">
+      <ref-num>137</ref-num>
+      <title>Space</title>
+      <booktitle>Key Terms in Material Religion</booktitle>
+      <author/>
+      <editor/>
+      <year>2015</year>
+      <edition>1</edition>
+      <pages>223--230</pages>
+      <publisher>Bloomsbury</publisher>
+      <address>London</address>
+   </entry>
+   <entry type="book" key="vanherwijnenPracticalSGML1994">
+      <ref-num>138</ref-num>
+      <title>Practical SGML</title>
+      <author/>
+      <year>1994</year>
+      <publisher>Springer US</publisher>
+      <address/>
+      <doi>10.1007/978-1-4615-2752-7</doi>
+      <url>http://link.springer.com/10.1007/978-1-4615-2752-7</url>
+      <copyright>http://www.springer.com/tdm</copyright>
+   </entry>
+   <entry type="article" key="vukovichSoundFurySignifying2020">
+      <ref-num>139</ref-num>
+      <title/>
+      <author/>
+      <year>2020</year>
+      <journal>Journal of the European Institute for Communication and Culture</journal>
+      <volume>27</volume>
+      <number>2</number>
+      <pages>200--209</pages>
+      <doi>10.1080/13183222.2020.1727278</doi>
+      <url>https://www.tandfonline.com/doi/full/10.1080/13183222.2020.1727278</url>
+   </entry>
+   <entry type="book" key="wangOxfordHandbookChinese2015">
+      <ref-num>140</ref-num>
+      <title>The Oxford Handbook of Chinese Linguistics</title>
+      <editor/>
+      <year>2015</year>
+      <series>Oxford Handbooks in Linguistics</series>
+      <publisher>Oxford University Press</publisher>
+      <address>Oxford ; New York</address>
+   </entry>
+   <entry type="incollection" key="weinerSound2015">
+      <ref-num>141</ref-num>
+      <title>Sound</title>
+      <booktitle>Key Terms in Material Religion</booktitle>
+      <author/>
+      <editor/>
+      <year>2015</year>
+      <pages>215--220</pages>
+      <publisher>Bloomsbury</publisher>
+      <address>London</address>
+   </entry>
+   <entry type="book" key="werthnerPerspectivesDigitalHumanism2022">
+      <ref-num>142</ref-num>
+      <title>Perspectives on Digital Humanism</title>
+      <editor/>
+      <year>2022</year>
+      <publisher>Springer International Publishing</publisher>
+      <address>Cham</address>
+      <doi>10.1007/978-3-030-86144-5</doi>
+      <url>https://link.springer.com/10.1007/978-3-030-86144-5</url>
+   </entry>
+   <entry type="incollection" key="westerkampKitsBeachSoundwalk2010">
+      <ref-num>143</ref-num>
+      <title>Kits Beach Soundwalk</title>
+      <booktitle>Transformations</booktitle>
+      <author/>
+      <year>2010</year>
+      <publisher>empreintes DIGITALes (IMED 1031)</publisher>
+      <address>Montréal</address>
+      <url>https://electrocd.com/en/album/2369/hildegard-westerkamp/transformations</url>
+      <note>Format: Digital audio. Total duration: 67:10</note>
+   </entry>
+   <entry type="article" key="westerkampLinkingSoundscapeComposition2002">
+      <ref-num>144</ref-num>
+      <title>Linking Soundscape Composition and Acoustic Ecology</title>
+      <author/>
+      <year>2002</year>
+      <journal>Organised Sound</journal>
+      <volume>7</volume>
+      <number>1</number>
+      <pages>51--56</pages>
+      <doi>10.1017/S1355771802001085</doi>
+      <url>https://www.cambridge.org/core/product/identifier/S1355771802001085/type/journal_article</url>
+   </entry>
+   <entry type="book" key="whitingtonPDFExplained2011">
+      <ref-num>145</ref-num>
+      <title>PDF Explained</title>
+      <author/>
+      <year>2011</year>
+      <edition>1st ed</edition>
+      <publisher>O'Reilly Media</publisher>
+      <address/>
+   </entry>
+   <entry type="article" key="witternDigitalTextsPractice2020">
+      <ref-num>146</ref-num>
+      <title>Digital Texts in Practice</title>
+      <author/>
+      <year>2020</year>
+      <journal>Journal of the Text Encoding Initiative</journal>
+      <number>13</number>
+   </entry>
+   <entry type="incollection" key="witternDigitalTripitakaModern2017">
+      <ref-num>147</ref-num>
+      <title>The Digital Tripitaka and the Modern World</title>
+      <booktitle>Reinventing the Tripitaka: Transformation of the Buddhist Canon in Modern East Asia</booktitle>
+      <author/>
+      <editor/>
+      <year>2017</year>
+      <pages>155--174</pages>
+      <publisher>Lexington Books</publisher>
+      <address>Lanham</address>
+   </entry>
+   <entry type="book" key="wuReinventingTripitakaTransformation2017">
+      <ref-num>148</ref-num>
+      <title>Reinventing the Tripitaka: Transformation of the Buddhist Canon in Modern East Asia</title>
+      <editor/>
+      <year>2017</year>
+      <publisher>Lexington Books</publisher>
+      <address>Lanham</address>
+   </entry>
+   <entry type="book" key="yanghsuan-chihRecordBuddhistMonasteries1984">
+      <ref-num>149</ref-num>
+      <title>A Record of Buddhist Monasteries in Lo-yang</title>
+      <author>Yang Hsüan-chih</author>
+      <year>1984</year>
+      <publisher>Princeton University Press</publisher>
+      <address>Princeton</address>
+      <note>Translated by Wang Yi-t'ung</note>
+   </entry>
+   <entry type="book" key="yipIntermediateCantoneseGrammar2017">
+      <ref-num>150</ref-num>
+      <title>Intermediate Cantonese: A Grammar and Workbook</title>
+      <author/>
+      <year>2017</year>
+      <series>Grammar Workbooks</series>
+      <edition>Second edition</edition>
+      <publisher>Routledge</publisher>
+      <address>London</address>
+   </entry>
+   <entry type="incollection" key="yueYueLanguage2015">
+      <ref-num>151</ref-num>
+      <title>The Yue Language</title>
+      <booktitle>The Oxford Handbook of Chinese Linguistics</booktitle>
+      <author/>
+      <editor/>
+      <year>2015</year>
+      <series>Oxford Handbooks in Linguistics</series>
+      <pages>173--188</pages>
+      <publisher>Oxford University Press</publisher>
+      <address>Oxford</address>
+   </entry>
+</bib>
