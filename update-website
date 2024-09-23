@@ -25,9 +25,6 @@ emacs --batch -l convert-blog-posts-to-xml.el -f convert-blog-posts-to-xml
 cd ../..
 mv $DIR_POSTS/*.xml $DIR_XML/posts
 
-
-# java -cp saxon-he-12.4.jar net.sf.saxon.Query
-
 # TODO consolidate these
 java -cp $SAXON net.sf.saxon.Transform -t -s:"$DIR_XML/posts/2021-06-07-blog.xml" -xsl:"$XSL_CONCAT_POSTS" -o:"$XML_CONCAT"
 java -cp $SAXON net.sf.saxon.Transform -t -s:"$XML_CONCAT" -xsl:"$XSL_ATOM" -o:"$DIR_HTML/atom.xml"
