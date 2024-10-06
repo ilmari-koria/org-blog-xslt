@@ -101,6 +101,8 @@
   <skill-list>
     <skill-entry>XSLT</skill-entry>
     <skill-entry>XQuery</skill-entry>
+    <skill-entry>XProc</skill-entry>
+    <skill-entry>Saxon</skill-entry>
     <skill-entry>Schematron</skill-entry>
     <skill-entry>DocBook</skill-entry>
     <skill-entry>TEI</skill-entry>
@@ -110,7 +112,7 @@
     <skill-entry>Bash</skill-entry>
     <skill-entry>Batch/cmd.exe</skill-entry>
     <skill-entry>BaseX</skill-entry>
-    <skill-entry>oXygen</skill-entry>
+    <skill-entry>PostgreSQL</skill-entry>
     <skill-entry>GNU/Linux</skill-entry>
     <skill-entry>Debian</skill-entry>
     <skill-entry>Git</skill-entry>
@@ -118,8 +120,6 @@
     <skill-entry>Atlassian</skill-entry>
     <skill-entry>Jira</skill-entry>
     <skill-entry>Trello</skill-entry>
-    <skill-entry>SaxonJ</skill-entry>
-    <skill-entry>XProc</skill-entry>
   </skill-list>
   <language-list>
     <language-entry>
@@ -134,9 +134,9 @@
       <language>Mandarin</language>
       <level>high-intermediate</level>
     </language-entry>
-    <language-entry>
-      <language>Cantonese</language>
-      <level>basic</level>
-    </language-entry>
+    <!-- <language-entry> -->
+    <!--   <language>Cantonese</language> -->
+    <!--   <level>basic</level> -->
+    <!-- </language-entry> -->
   </language-list>
 </resume>
